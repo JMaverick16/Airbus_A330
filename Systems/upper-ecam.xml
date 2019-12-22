@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
+
+<PropertyList>
+	
+	<filter>
+		<name>EPR 1</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/options/eng</property>
+						<value>PW</value>
+					</equals>
+					<equals>
+						<property>/options/eng</property>
+						<value>RR</value>
+					</equals>
+				</or>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[0]/epr-actual</property>
+					<entry><ind>0.800</ind><dep>-133</dep></entry>
+					<entry><ind>1.000</ind><dep> -90</dep></entry>
+					<entry><ind>1.400</ind><dep>  -6</dep></entry>
+					<entry><ind>1.800</ind><dep>  80</dep></entry>
+					<entry><ind>1.900</ind><dep> 101</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<input>0</input>
+		<output>/ECAM/Upper/EPR[0]</output>
+	</filter>
+	
+	<filter>
+		<name>EPR THR 1</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/options/eng</property>
+						<value>PW</value>
+					</equals>
+					<equals>
+						<property>/options/eng</property>
+						<value>RR</value>
+					</equals>
+				</or>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[0]/epr-cmd</property>
+					<entry><ind>0.800</ind><dep>-133</dep></entry>
+					<entry><ind>1.000</ind><dep> -90</dep></entry>
+					<entry><ind>1.400</ind><dep>  -6</dep></entry>
+					<entry><ind>1.800</ind><dep>  80</dep></entry>
+					<entry><ind>1.900</ind><dep> 101</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<input>0</input>
+		<output>/ECAM/Upper/EPRthr[0]</output>
+	</filter>
+	
+	<filter>
+		<name>EPR 2</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/options/eng</property>
+						<value>PW</value>
+					</equals>
+					<equals>
+						<property>/options/eng</property>
+						<value>RR</value>
+					</equals>
+				</or>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[1]/epr-actual</property>
+					<entry><ind>0.800</ind><dep>-133</dep></entry>
+					<entry><ind>1.000</ind><dep> -90</dep></entry>
+					<entry><ind>1.400</ind><dep>  -6</dep></entry>
+					<entry><ind>1.800</ind><dep>  80</dep></entry>
+					<entry><ind>1.900</ind><dep> 101</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<input>0</input>
+		<output>/ECAM/Upper/EPR[1]</output>
+	</filter>
+	
+	<filter>
+		<name>EPR THR 2</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/options/eng</property>
+						<value>PW</value>
+					</equals>
+					<equals>
+						<property>/options/eng</property>
+						<value>RR</value>
+					</equals>
+				</or>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[1]/epr-cmd</property>
+					<entry><ind>0.800</ind><dep>-133</dep></entry>
+					<entry><ind>1.000</ind><dep> -90</dep></entry>
+					<entry><ind>1.400</ind><dep>  -6</dep></entry>
+					<entry><ind>1.800</ind><dep>  80</dep></entry>
+					<entry><ind>1.900</ind><dep> 101</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<input>0</input>
+		<output>/ECAM/Upper/EPRthr[1]</output>
+	</filter>
+	
+	<filter>
+		<name>EPR LIMIT</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/options/eng</property>
+						<value>PW</value>
+					</equals>
+					<equals>
+						<property>/options/eng</property>
+						<value>RR</value>
+					</equals>
+				</or>
+			</condition>
+			<expression>
+				<table>
+					<property>/systems/thrust/epr/toga-lim</property>
+					<entry><ind>0.800</ind><dep>-133</dep></entry>
+					<entry><ind>1.000</ind><dep> -90</dep></entry>
+					<entry><ind>1.400</ind><dep>  -6</dep></entry>
+					<entry><ind>1.800</ind><dep>  80</dep></entry>
+					<entry><ind>1.900</ind><dep> 101</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<input>0</input>
+		<output>/ECAM/Upper/EPRylim</output>
+	</filter>
+	
+	<filter>
+		<name>EGT 1</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<equals>
+					<property>/options/eng</property>
+					<value>GE</value>
+				</equals>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[0]/egt-actual</property>
+					<entry><ind>   0</ind><dep>-90</dep></entry>
+					<entry><ind> 500</ind><dep>  0</dep></entry>
+					<entry><ind>1000</ind><dep> 90</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/options/eng</property>
+						<value>PW</value>
+					</equals>
+					<equals>
+						<property>/options/eng</property>
+						<value>RR</value>
+					</equals>
+				</or>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[0]/egt-actual</property>
+					<entry><ind>   0</ind><dep>-90</dep></entry>
+					<entry><ind> 600</ind><dep>  0</dep></entry>
+					<entry><ind>1200</ind><dep> 90</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>/ECAM/Upper/EGT[0]</output>
+	</filter>
+	
+	<filter>
+		<name>EGT 2</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<equals>
+					<property>/options/eng</property>
+					<value>GE</value>
+				</equals>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[1]/egt-actual</property>
+					<entry><ind>   0</ind><dep>-90</dep></entry>
+					<entry><ind> 500</ind><dep>  0</dep></entry>
+					<entry><ind>1000</ind><dep> 90</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/options/eng</property>
+						<value>PW</value>
+					</equals>
+					<equals>
+						<property>/options/eng</property>
+						<value>RR</value>
+					</equals>
+				</or>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[1]/egt-actual</property>
+					<entry><ind>   0</ind><dep>-90</dep></entry>
+					<entry><ind> 600</ind><dep>  0</dep></entry>
+					<entry><ind>1200</ind><dep> 90</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>/ECAM/Upper/EGT[1]</output>
+	</filter>
+	
+	<filter>
+		<name>N1 1</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<equals>
+					<property>/options/eng</property>
+					<value>GE</value>
+				</equals>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[0]/n1-actual</property>
+					<entry><ind> 20.0</ind><dep>-131</dep></entry>
+					<entry><ind> 40.0</ind><dep> -87</dep></entry>
+					<entry><ind> 60.0</ind><dep> -42</dep></entry>
+					<entry><ind>100.0</ind><dep>  48</dep></entry>
+					<entry><ind>120.0</ind><dep>  82</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/options/eng</property>
+						<value>PW</value>
+					</equals>
+					<equals>
+						<property>/options/eng</property>
+						<value>RR</value>
+					</equals>
+				</or>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[0]/n1-actual</property>
+					<entry><ind> 20.0</ind><dep>-112.5</dep></entry>
+					<entry><ind> 40.0</ind><dep> -67.5</dep></entry>
+					<entry><ind> 60.0</ind><dep> -22.5</dep></entry>
+					<entry><ind>100.0</ind><dep>  67.5</dep></entry>
+					<entry><ind>110.0</ind><dep>  90.0</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>/ECAM/Upper/N1[0]</output>
+	</filter>
+	
+	<filter>
+		<name>N1 THR 1</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<equals>
+					<property>/options/eng</property>
+					<value>GE</value>
+				</equals>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[0]/n1-actual-cmd</property>
+					<entry><ind> 20.0</ind><dep>-131</dep></entry>
+					<entry><ind> 40.0</ind><dep> -87</dep></entry>
+					<entry><ind> 60.0</ind><dep> -42</dep></entry>
+					<entry><ind>100.0</ind><dep>  48</dep></entry>
+					<entry><ind>120.0</ind><dep>  82</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/options/eng</property>
+						<value>PW</value>
+					</equals>
+					<equals>
+						<property>/options/eng</property>
+						<value>RR</value>
+					</equals>
+				</or>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[0]/n1-actual-cmd</property>
+					<entry><ind> 20.0</ind><dep>-112.5</dep></entry>
+					<entry><ind> 40.0</ind><dep> -67.5</dep></entry>
+					<entry><ind> 60.0</ind><dep> -22.5</dep></entry>
+					<entry><ind>100.0</ind><dep>  67.5</dep></entry>
+					<entry><ind>110.0</ind><dep>  90.0</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>/ECAM/Upper/N1thr[0]</output>
+	</filter>
+	
+	<filter>
+		<name>N1 2</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<equals>
+					<property>/options/eng</property>
+					<value>GE</value>
+				</equals>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[1]/n1-actual</property>
+					<entry><ind> 20.0</ind><dep>-131</dep></entry>
+					<entry><ind> 40.0</ind><dep> -87</dep></entry>
+					<entry><ind> 60.0</ind><dep> -42</dep></entry>
+					<entry><ind>100.0</ind><dep>  48</dep></entry>
+					<entry><ind>120.0</ind><dep>  82</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/options/eng</property>
+						<value>PW</value>
+					</equals>
+					<equals>
+						<property>/options/eng</property>
+						<value>RR</value>
+					</equals>
+				</or>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[1]/n1-actual</property>
+					<entry><ind> 20.0</ind><dep>-112.5</dep></entry>
+					<entry><ind> 40.0</ind><dep> -67.5</dep></entry>
+					<entry><ind> 60.0</ind><dep> -22.5</dep></entry>
+					<entry><ind>100.0</ind><dep>  67.5</dep></entry>
+					<entry><ind>110.0</ind><dep>  90.0</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>/ECAM/Upper/N1[1]</output>
+	</filter>
+	
+	<filter>
+		<name>N1 THR 2</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<condition>
+				<equals>
+					<property>/options/eng</property>
+					<value>GE</value>
+				</equals>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[1]/n1-actual-cmd</property>
+					<entry><ind> 20.0</ind><dep>-131</dep></entry>
+					<entry><ind> 40.0</ind><dep> -87</dep></entry>
+					<entry><ind> 60.0</ind><dep> -42</dep></entry>
+					<entry><ind>100.0</ind><dep>  48</dep></entry>
+					<entry><ind>120.0</ind><dep>  82</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/options/eng</property>
+						<value>PW</value>
+					</equals>
+					<equals>
+						<property>/options/eng</property>
+						<value>RR</value>
+					</equals>
+				</or>
+			</condition>
+			<expression>
+				<table>
+					<property>/engines/engine[1]/n1-actual-cmd</property>
+					<entry><ind> 20.0</ind><dep>-112.5</dep></entry>
+					<entry><ind> 40.0</ind><dep> -67.5</dep></entry>
+					<entry><ind> 60.0</ind><dep> -22.5</dep></entry>
+					<entry><ind>100.0</ind><dep>  67.5</dep></entry>
+					<entry><ind>110.0</ind><dep>  90.0</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<output>/ECAM/Upper/N1thr[1]</output>
+	</filter>
+	
+	<filter>
+		<name>N1 LIMIT</name>
+		<type>gain</type>
+		<gain>1.0</gain>
+		<input>
+			<expression>
+				<table>
+					<property>/systems/thrust/n1/toga-lim</property>
+					<entry><ind> 20.0</ind><dep>-131</dep></entry>
+					<entry><ind> 40.0</ind><dep> -87</dep></entry>
+					<entry><ind> 60.0</ind><dep> -42</dep></entry>
+					<entry><ind>100.0</ind><dep>  48</dep></entry>
+					<entry><ind>120.0</ind><dep>  82</dep></entry>
+				</table>
+			</expression>
+		</input>
+		<input>0</input>
+		<output>/ECAM/Upper/N1ylim</output>
+	</filter>
+
+</PropertyList>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
+
+<PropertyList>
+	<name>A330-243F</name>
+	<path>empty.ac</path>
+
+	<model>
+		<name>A330-243F Main</name>
+		<path>Aircraft/Airbus_A330/Models/A330-243F-main.xml</path>
+	</model>
+
+	<!-- LIVERY SELECT -->
+	<!-- Animation -->
+	<animation>
+		<type>material</type>
+		<!-- Fuselage -->
+		<object-name>fuselage</object-name>
+		<object-name>nosecone</object-name>
+		<object-name>vstab</object-name>
+		<object-name>rudder</object-name>
+		<object-name>bellyfairing</object-name>
+		<!-- Wings -->
+		<object-name>winglet0</object-name>
+		<object-name>winglet1</object-name>
+		<!-- Engines -->
+		<object-name>rr.nacelle0</object-name>
+		<object-name>rr.nacelle1</object-name>
+		<object-name>rr.reverser.ul0</object-name>
+		<object-name>rr.reverser.ur0</object-name>
+		<object-name>rr.reverser.dl0</object-name>
+		<object-name>rr.reverser.dr0</object-name>
+		<object-name>rr.reverser.ul1</object-name>
+		<object-name>rr.reverser.ur1</object-name>
+		<object-name>rr.reverser.dl1</object-name>
+		<object-name>rr.reverser.dr1</object-name>
+		<property-base>sim/model/livery</property-base>
+		<texture-prop>texture</texture-prop>
+	</animation>
+
+	<!-- Nasal code -->
+	<nasal>
+		<load>
+			var livery_update = aircraft.livery_update.new("Aircraft/Airbus_A330/Models/Liveries/A332FRR/");
+		</load>
+		<unload>
+			livery_update.stop();
+		</unload>
+	</nasal>
+
+</PropertyList>

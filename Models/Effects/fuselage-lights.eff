@@ -1,0 +1,27 @@
+<PropertyList>
+	<name>fuselage_lights</name>
+	<inherits-from>Effects/model-combined-deferred</inherits-from>
+	<parameters>
+		<lightmap-enabled type="int">1</lightmap-enabled>
+		<lightmap-multi type="int">1</lightmap-multi>
+		<texture n="3">
+			<image>Aircraft/IDG-A33X/Models/Effects/res/land-lightmap-multi.png</image>
+			<filter>linear-mipmap-linear</filter>
+			<wrap-s>clamp</wrap-s>
+			<wrap-t>clamp</wrap-t>
+			<internal-format>normalized</internal-format>
+		</texture>
+		<lightmap-factor type="float" n="0">
+			<use>controls/lighting/landing-lights[2]</use>
+		</lightmap-factor>
+		<!--lightmap-color type="vec3d" n="0">0.7 0.7 0.7</lightmap-color-->
+		<lightmap-factor type="float" n="1">
+			<use>controls/lighting/landing-lights[0]</use>
+		</lightmap-factor>
+		<!--lightmap-color type="vec3d" n="1">0.7 0.7 0.7</lightmap-color-->
+		<lightmap-factor type="float" n="2">
+			<use>controls/lighting/cabin-lights</use>
+		</lightmap-factor>
+		<lightmap-factor type="float" n="3">0.0</lightmap-factor>
+	</parameters>
+</PropertyList>

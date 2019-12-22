@@ -1,0 +1,18 @@
+<!-- Airbus A330-200 JSBsim -->
+
+<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
+
+<external_reactions>
+	<force name="tractor" frame="BODY">
+		<location unit="M">
+			<x> -15.9664 </x>
+			<y> 0 </y>
+			<z> -5.43654 </z> 
+		</location>
+		<direction>
+			<x> 1 </x>
+			<y> 0 </y>
+			<z> 0 </z>
+		</direction>
+	</force>
+</external_reactions>

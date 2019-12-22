@@ -1,0 +1,32 @@
+<!-- Airbus A330-200 JSBsim -->
+
+<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
+
+<metrics>
+	<wingarea  unit="FT2"> 3892.00 </wingarea>
+	<wingspan  unit="FT" >  197.83 </wingspan>
+	<wing_incidence      >    1.03 </wing_incidence>
+	<chord     unit="FT" >   31.03 </chord>
+	<htailarea unit="FT2">  222.16 </htailarea>
+	<htailarm  unit="FT" >  107.29 </htailarm>
+	<vtailarea unit="FT2">  496.25 </vtailarea>
+	<vtailarm  unit="FT" >  107.19 </vtailarm>
+	
+	<location name="AERORP" unit="M">
+		<x> 1.48086 </x>
+		<y> 0 </y>
+		<z> 0.25204 </z>
+	</location>
+	
+	<location name="EYEPOINT" unit="M">
+		<x> 0 </x>
+		<y> 0 </y>
+		<z> 0 </z>
+	</location>
+	
+	<location name="VRP" unit="M">
+		<x> 0 </x>
+		<y> 0 </y>
+		<z> 0 </z>
+	</location>
+</metrics>

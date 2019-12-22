@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
+
+<PropertyList>
+	<name>General Electric CF6-80E1</name>
+	<path>cf6-80e1.ac</path>
+
+	<!-- Fans Spin Animation -->
+
+	<animation>
+		<name>Left Engine Fan</name>
+		<type>spin</type>
+		<object-name>fan.cone0</object-name>
+		<object-name>fan0</object-name>
+		<factor>80</factor>
+		<property>engines/engine[3]/n1</property>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.7034</x-m>
+			<y-m>-9.4014</y-m>
+			<z-m>-2.6508</z-m>
+		</center>
+	</animation>
+	
+	<animation>
+		<name>Right Engine Fan</name>
+		<type>spin</type>
+		<object-name>fan.cone1</object-name>
+		<object-name>fan1</object-name>
+		<factor>80</factor>
+		<property>engines/engine[4]/n1</property>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-2.7034</x-m>
+			<y-m>9.4014</y-m>
+			<z-m>-2.6508</z-m>
+		</center>
+	</animation>
+	
+	<!-- Reverser Animations -->
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ge.reverser0</object-name>
+		<property>sim/multiplay/generic/float[2]</property>
+		<factor>0.6</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>ge.reverser1</object-name>
+		<property>sim/multiplay/generic/float[3]</property>
+		<factor>0.6</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+</PropertyList>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
+
+<PropertyList>
+	<name>Rolls Royce Trent772B-60 Engines</name>
+	<path>trent772b-60.ac</path>
+
+	<!-- Fans Spin Animation -->
+
+	<animation>
+		<name>Left Engine Fan</name>
+		<type>spin</type>
+		<object-name>fan.cone0</object-name>
+		<object-name>fan0</object-name>
+		<factor>80</factor>
+		<property>engines/engine[3]/n1</property>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.9984</x-m>
+			<y-m>-9.3101</y-m>
+			<z-m>-2.4685</z-m>
+		</center>
+	</animation>
+	
+	<animation>
+		<name>Right Engine Fan</name>
+		<type>spin</type>
+		<object-name>fan.cone1</object-name>
+		<object-name>fan1</object-name>
+		<factor>80</factor>
+		<property>engines/engine[4]/n1</property>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.9984</x-m>
+			<y-m>9.3101</y-m>
+			<z-m>-2.4685</z-m>
+		</center>
+	</animation>
+	
+	<!-- Reverser Animations -->
+	
+	<!-- Left Reversers -->
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rr.reverser.ul0</object-name>
+		<object-name>rr.reverser.ul0i</object-name>
+		<property>sim/multiplay/generic/float[2]</property>
+		<factor>-40</factor>
+		<axis>
+			<x1-m>0.8326</x1-m>
+			<y1-m>-9.9779</y1-m>
+			<z1-m>-1.3055</z1-m>
+			<x2-m>0.8263</x2-m>
+			<y2-m>-10.5721</y2-m>
+			<z2-m>-2.0783</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rr.reverser.dl0</object-name>
+		<object-name>rr.reverser.dl0i</object-name>
+		<property>sim/multiplay/generic/float[2]</property>
+		<factor>-40</factor>
+		<axis>
+			<x1-m>0.8166</x1-m>
+			<y1-m>-10.494</y1-m>
+			<z1-m>-2.9383</z1-m>
+			<x2-m>0.8166</x2-m>
+			<y2-m>-10.0183</y2-m>
+			<z2-m>-3.5927</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rr.reverser.dr0</object-name>
+		<object-name>rr.reverser.dr0i</object-name>
+		<property>sim/multiplay/generic/float[2]</property>
+		<factor>-40</factor>
+		<axis>
+			<x1-m>0.8166</x1-m>
+			<y1-m>-8.5891</y1-m>
+			<z1-m>-3.5842</z1-m>
+			<x2-m>0.8166</x2-m>
+			<y2-m>-8.0639</y2-m>
+			<z2-m>-2.9257</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rr.reverser.ur0</object-name>
+		<object-name>rr.reverser.ur0i</object-name>
+		<property>sim/multiplay/generic/float[2]</property>
+		<factor>-40</factor>
+		<axis>
+			<x1-m>0.8166</x1-m>
+			<y1-m>-8.0331</y1-m>
+			<z1-m>-2.0758</z1-m>
+			<x2-m>0.8166</x2-m>
+			<y2-m>-8.5239</y2-m>
+			<z2-m>-1.3932</z2-m>
+		</axis>
+	</animation>
+	
+	<!-- Right Reversers -->
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rr.reverser.ur1</object-name>
+		<object-name>rr.reverser.ur1i</object-name>
+		<property>sim/multiplay/generic/float[3]</property>
+		<factor>40</factor>
+		<axis>
+			<x1-m>0.8326</x1-m>
+			<y1-m>9.9779</y1-m>
+			<z1-m>-1.3055</z1-m>
+			<x2-m>0.8263</x2-m>
+			<y2-m>10.5721</y2-m>
+			<z2-m>-2.0783</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rr.reverser.dr1</object-name>
+		<object-name>rr.reverser.dr1i</object-name>
+		<property>sim/multiplay/generic/float[3]</property>
+		<factor>40</factor>
+		<axis>
+			<x1-m>0.8166</x1-m>
+			<y1-m>10.494</y1-m>
+			<z1-m>-2.9383</z1-m>
+			<x2-m>0.8166</x2-m>
+			<y2-m>10.0183</y2-m>
+			<z2-m>-3.5927</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rr.reverser.dl1</object-name>
+		<object-name>rr.reverser.dl1i</object-name>
+		<property>sim/multiplay/generic/float[3]</property>
+		<factor>40</factor>
+		<axis>
+			<x1-m>0.8166</x1-m>
+			<y1-m>8.5891</y1-m>
+			<z1-m>-3.5842</z1-m>
+			<x2-m>0.8166</x2-m>
+			<y2-m>8.0639</y2-m>
+			<z2-m>-2.9257</z2-m>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rr.reverser.ul1</object-name>
+		<object-name>rr.reverser.ul1i</object-name>
+		<property>sim/multiplay/generic/float[3]</property>
+		<factor>40</factor>
+		<axis>
+			<x1-m>0.8166</x1-m>
+			<y1-m>8.0331</y1-m>
+			<z1-m>-2.0758</z1-m>
+			<x2-m>0.8166</x2-m>
+			<y2-m>8.5239</y2-m>
+			<z2-m>-1.3932</z2-m>
+		</axis>
+	</animation>
+
+</PropertyList>

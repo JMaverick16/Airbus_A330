@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>Etihad (F1 2017)</name>
+				<texture>Liveries/A332RR/ETD1.png</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

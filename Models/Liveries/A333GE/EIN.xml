@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>Aer Lingus (1996 - 2019)</name>
+				<texture>Liveries/A333GE/EIN.png</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+##############################################
+# Copyright (c) Joshua Davidson (Octal450) #
+##############################################
+# modified ground services (D-ECHO)
+-->
+
+<PropertyList>
+	<name>A330-groundservices</name>
+	
+	<!-- Chocks -->
+	
+	<model>
+		<name>chock_nose</name>
+		<path>Aircraft/Airbus_A330/Models/Services/Chocks/chock_nose.ac</path>
+		<condition>
+			<equals>
+				<property>services/chokes/nose</property>
+				<value>1</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-2.97</x-m>
+			<z-m>0.6</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>chock_left</name>
+		<path>Aircraft/Airbus_A330/Models/Services/Chocks/chock_left.ac</path>
+		<condition>
+			<equals>
+				<property>services/chokes/left</property>
+				<value>1</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-0.1</x-m>
+			<y-m>-0.2</y-m>
+			<z-m>0.6</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>chock_right</name>
+		<path>Aircraft/Airbus_A330/Models/Services/Chocks/chock_right.ac</path>
+		<condition>
+			<equals>
+				<property>services/chokes/right</property>
+				<value>1</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-0.1</x-m>
+			<y-m>0.2</y-m>
+			<z-m>0.6</z-m>
+		</offsets>
+	</model>
+	
+</PropertyList>

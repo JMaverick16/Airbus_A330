@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
+
+<PropertyList include="A330-main.xml">
+
+	<sim>
+
+		<sound>
+			<path>Aircraft/Airbus_A330/Sounds/cf680-sound.xml</path>
+		</sound>
+		<checklists include="A33X-Checklists.xml"/>
+		<description>Airbus KC-30A (GE CF6-80E1A3)</description>
+		<flight-model>jsb</flight-model>
+		<aero>A330-KC-30A</aero>
+		<variant-of>A330-Voyager-KC</variant-of>
+		<model>
+			<path>Aircraft/Airbus_A330/Models/KC-30A.xml</path>
+			<livery>
+				<file>Grey</file>
+			</livery>
+		</model>
+		
+		<rating>
+			<FDM type="int">4</FDM>
+			<systems type="int">5</systems>
+			<cockpit type="int">5</cockpit>
+			<model type="int">5</model>
+		</rating>
+		
+		<previews>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/KC-30A.png</path>
+			</preview>
+		</previews>
+		
+		<chase-distance-m type="double" archive="y">-110.0</chase-distance-m>
+		<view>
+			<name>Pilot View</name>
+			<internal archive="y">true</internal>
+			<config>
+				<x-offset-m archive="y">-0.45</x-offset-m>
+				<y-offset-m archive="y">1.353</y-offset-m>
+				<z-offset-m archive="y">-20.063</z-offset-m>
+				<pitch-offset-deg archive="y">-14.6</pitch-offset-deg>
+				<default-field-of-view-deg type="double">63</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="100">
+			<name>Copilot View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0.45</x-offset-m>
+				<y-offset-m archive="y">1.353</y-offset-m>
+				<z-offset-m archive="y">-20.063</z-offset-m>
+				<pitch-offset-deg archive="y">-14.6</pitch-offset-deg>
+				<default-field-of-view-deg type="double">63</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="101">
+			<name>Overhead Panel View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0</x-offset-m>
+				<y-offset-m archive="y">1.353</y-offset-m>
+				<z-offset-m archive="y">-20.033</z-offset-m>
+				<pitch-offset-deg archive="y">65.5</pitch-offset-deg>
+				<default-field-of-view-deg type="double">115</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="102">
+			<name>Forward Pedestal View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0.0</x-offset-m>
+				<y-offset-m archive="y">1.353</y-offset-m>
+				<z-offset-m archive="y">-20.463</z-offset-m>
+				<pitch-offset-deg archive="y">-76</pitch-offset-deg>
+				<default-field-of-view-deg type="double">63</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="103">
+			<name>Aft Pedestal View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0.0</x-offset-m>
+				<y-offset-m archive="y">1.353</y-offset-m>
+				<z-offset-m archive="y">-20.113</z-offset-m>
+				<pitch-offset-deg archive="y">-82</pitch-offset-deg>
+				<default-field-of-view-deg type="double">63</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="104">
+			<name>FCU Panel View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0.0</x-offset-m>
+				<y-offset-m archive="y">1.353</y-offset-m>
+				<z-offset-m archive="y">-20.063</z-offset-m>
+				<pitch-offset-deg archive="y">-14.6</pitch-offset-deg>
+				<default-field-of-view-deg type="double">52</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="105">
+			<name>Left Front View</name>
+			<type>lookfrom</type>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">-3.68</x-offset-m>
+				<y-offset-m archive="y">1.47</y-offset-m>
+				<z-offset-m archive="y">-6.49</z-offset-m>
+				<heading-offset-deg>129</heading-offset-deg>
+				<default-field-of-view-deg type="double">85</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="106">
+			<name>Right Mid View</name>
+			<type>lookfrom</type>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">3.68</x-offset-m>
+				<y-offset-m archive="y">1.47</y-offset-m>
+				<z-offset-m archive="y">4.52</z-offset-m>
+				<heading-offset-deg>257</heading-offset-deg>
+				<default-field-of-view-deg type="double">85</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="107">
+			<name>Left Aft View</name>
+			<type>lookfrom</type>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">-3.68</x-offset-m>
+				<y-offset-m archive="y">1.47</y-offset-m>
+				<z-offset-m archive="y">11.6</z-offset-m>
+				<heading-offset-deg>75</heading-offset-deg>
+				<default-field-of-view-deg type="double">85</default-field-of-view-deg>
+			</config>
+		</view>
+		
+		<menubar>
+			<default>
+				<menu n="101">
+					<item n="2">
+						<label>Toggle Boom</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							refuel_control.toggleBoom();
+							</script>
+						</binding>
+					</item>
+					<item n="3">
+						<label>Toggle Drogues</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							refuel_control.toggleDrogues();
+							</script>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+		
+		<systems n="0">
+            <autopilot n="0">
+                <path>Aircraft/Airbus_A330/Systems/fadec-ge.xml</path>
+            </autopilot>
+			<autopilot n="10">
+				<path>Aircraft/Airbus_A330/Systems/cf6-sound.xml</path>
+			</autopilot>
+		</systems>
+		
+	</sim>
+	
+	<payload>
+		<weight n="0">
+			<name>Cockpit Crew</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+			<min-lb type="double">200</min-lb>
+			<max-lb type="double">440</max-lb>
+		</weight>
+		<weight n="1">
+			<name>Fuel Tank</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+			<min-lb type="double">0</min-lb>
+			<max-lb type="double">109200</max-lb>
+		</weight>
+		<weight n="2">
+			<name>Forward Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+			<min-lb type="double">0</min-lb>
+			<max-lb type="double">41667</max-lb>
+		</weight>
+		<weight n="3">
+			<name>Aft Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
+			<min-lb type="double">0</min-lb>
+			<max-lb type="double">33444</max-lb>
+		</weight>
+		<weight n="4">
+			<name>Aft Bulk Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
+			<min-lb type="double">0</min-lb>
+			<max-lb type="double">7716</max-lb>
+		</weight>
+	</payload>
+	
+	<limits>
+		<mass-and-balance> <!-- Data source: https://en.wikipedia.org/wiki/Airbus_A330_MRTT#Specifications -->
+			<maximum-takeoff-mass-lbs>514000</maximum-takeoff-mass-lbs>
+			<maximum-landing-mass-lbs>401241</maximum-landing-mass-lbs>
+			<maximum-zero-fuel-mass-lbs>374786</maximum-zero-fuel-mass-lbs>
+		</mass-and-balance>
+	</limits>
+
+	<tanker type="bool">true</tanker>
+	
+	<options n="0">
+		<!--EIS2 type="bool">0</EIS2-->
+		<eng>GE</eng>
+		<maxblock>306.6</maxblock>
+		<hasboom type="bool">0</hasboom>
+		<boom-pos-cmd type="double">0</boom-pos-cmd>
+		<drogue-pos-cmd type="double">0</drogue-pos-cmd>
+	</options>
+	
+	<MCDUC n="0">
+		<type>KC-30A</type>
+		<eng>CF6-80E1A3</eng>
+	</MCDUC>
+	
+	<nasal>
+		<specific>
+			<file>Aircraft/Airbus_A330/Nasal/a332livery-kcge.nas</file>
+		</specific>
+		<damage>
+			<file>Aircraft/Airbus_A330/Nasal/damage.nas</file>
+		</damage>
+		<aar>
+			<file>Aircraft/Generic/aar.nas</file>
+		</aar>
+		<refuel_control>
+			<file>Aircraft/Airbus_A330/Nasal/refuel-control.nas</file>
+		</refuel_control>
+	</nasal>
+
+</PropertyList>

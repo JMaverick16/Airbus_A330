@@ -1,0 +1,65 @@
+<!-- Airbus A330-200 JSBsim -->
+
+<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
+
+<mass_balance>
+	<ixx unit="SLUG*FT2"> 2375399 </ixx>
+	<iyy unit="SLUG*FT2"> 5004014 </iyy>
+	<izz unit="SLUG*FT2"> 4408984 </izz>
+	
+	<ixy unit="SLUG*FT2">       0 </ixy>
+	<ixz unit="SLUG*FT2">       0 </ixz>
+	<iyz unit="SLUG*FT2">       0 </iyz>
+	<emptywt unit="LBS" >  214000 </emptywt>
+	
+	<location name="CG" unit="M">
+		<x> 0.48086 </x>
+		<y> 0 </y>
+		<z> 0.25204 </z>
+	</location>
+	
+	<pointmass name="Crew">
+		<weight unit="LBS">320</weight>
+		<location name="POINTMASS" unit="M">
+			<x> -20.1707 </x>
+			<y> 0 </y>
+			<z> 1.2 </z>
+		</location>
+	</pointmass>
+	
+	<pointmass name="Fuel Tank">
+		<weight unit="LBS">54600</weight>
+		<location name="POINTMASS" unit="M"> 
+			<x> 0.48086 </x>
+			<y> 0 </y>
+			<z> 1.2 </z>
+		</location>
+	</pointmass>
+	
+	<pointmass name="Forward Cargo">
+		<weight unit="LBS">20594</weight>
+		<location name="POINTMASS" unit="M"> 
+			<x> -5.7</x>
+			<y> 0 </y>
+			<z> -1.2 </z>
+		</location>
+	</pointmass>
+	
+	<pointmass name="Aft Cargo">
+		<weight unit="LBS">20594</weight>
+		<location name="POINTMASS" unit="M"> 
+			<x> 5.6 </x>
+			<y> 0 </y>
+			<z> -1.2 </z>
+		</location>
+	</pointmass>
+	
+	<pointmass name="Aft Bulk Cargo">
+		<weight unit="LBS">0</weight>
+		<location name="POINTMASS" unit="M"> 
+			<x> 14.3 </x>
+			<y> 0 </y>
+			<z> -1.2 </z>
+		</location>
+	</pointmass>
+</mass_balance>

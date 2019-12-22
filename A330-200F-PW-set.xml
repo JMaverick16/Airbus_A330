@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
+
+<PropertyList include="A330-main.xml">
+
+	<sim>
+
+		<sound>
+			<path>Aircraft/Airbus_A330/Sounds/pw4000-sound.xml</path>
+		</sound>
+		<checklists include="A33X-Checklists.xml"/>
+		<description>Airbus A330-223F (PW4170)</description>
+		<flight-model>jsb</flight-model>
+		<aero>A330-200F-PW</aero>
+		<primary-set>true</primary-set>
+		<model>
+			<path>Aircraft/Airbus_A330/Models/A330-223F-PW.xml</path>
+			<livery>
+				<file>White</file>
+			</livery>
+		</model>
+		
+		<rating>
+			<FDM type="int">4</FDM>
+			<systems type="int">5</systems>
+			<cockpit type="int">5</cockpit>
+			<model type="int">5</model>
+		</rating>
+		
+		<previews>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/A330-243F.png</path>
+			</preview>
+		</previews>
+		
+		<chase-distance-m type="double" archive="y">-110.0</chase-distance-m>
+		<view>
+			<name>Pilot View</name>
+			<internal archive="y">true</internal>
+			<config>
+				<x-offset-m archive="y">-0.45</x-offset-m>
+				<y-offset-m archive="y">1.353</y-offset-m>
+				<z-offset-m archive="y">-20.063</z-offset-m>
+				<pitch-offset-deg archive="y">-14.6</pitch-offset-deg>
+				<default-field-of-view-deg type="double">63</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="100">
+			<name>Copilot View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0.45</x-offset-m>
+				<y-offset-m archive="y">1.353</y-offset-m>
+				<z-offset-m archive="y">-20.063</z-offset-m>
+				<pitch-offset-deg archive="y">-14.6</pitch-offset-deg>
+				<default-field-of-view-deg type="double">63</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="101">
+			<name>Overhead Panel View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0</x-offset-m>
+				<y-offset-m archive="y">1.353</y-offset-m>
+				<z-offset-m archive="y">-20.033</z-offset-m>
+				<pitch-offset-deg archive="y">65.5</pitch-offset-deg>
+				<default-field-of-view-deg type="double">115</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="102">
+			<name>Forward Pedestal View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0.0</x-offset-m>
+				<y-offset-m archive="y">1.353</y-offset-m>
+				<z-offset-m archive="y">-20.463</z-offset-m>
+				<pitch-offset-deg archive="y">-76</pitch-offset-deg>
+				<default-field-of-view-deg type="double">63</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="103">
+			<name>Aft Pedestal View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0.0</x-offset-m>
+				<y-offset-m archive="y">1.353</y-offset-m>
+				<z-offset-m archive="y">-20.113</z-offset-m>
+				<pitch-offset-deg archive="y">-82</pitch-offset-deg>
+				<default-field-of-view-deg type="double">63</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="104">
+			<name>FCU Panel View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">0.0</x-offset-m>
+				<y-offset-m archive="y">1.353</y-offset-m>
+				<z-offset-m archive="y">-20.063</z-offset-m>
+				<pitch-offset-deg archive="y">-14.6</pitch-offset-deg>
+				<default-field-of-view-deg type="double">52</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="105">
+			<name>Left Front View</name>
+			<type>lookfrom</type>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">-3.68</x-offset-m>
+				<y-offset-m archive="y">1.47</y-offset-m>
+				<z-offset-m archive="y">-6.49</z-offset-m>
+				<heading-offset-deg>129</heading-offset-deg>
+				<default-field-of-view-deg type="double">85</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="106">
+			<name>Right Mid View</name>
+			<type>lookfrom</type>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">3.68</x-offset-m>
+				<y-offset-m archive="y">1.47</y-offset-m>
+				<z-offset-m archive="y">4.52</z-offset-m>
+				<heading-offset-deg>257</heading-offset-deg>
+				<default-field-of-view-deg type="double">85</default-field-of-view-deg>
+			</config>
+		</view>
+		<view n="107">
+			<name>Left Aft View</name>
+			<type>lookfrom</type>
+			<internal archive="y">false</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<x-offset-m archive="y">-3.68</x-offset-m>
+				<y-offset-m archive="y">1.47</y-offset-m>
+				<z-offset-m archive="y">11.6</z-offset-m>
+				<heading-offset-deg>75</heading-offset-deg>
+				<default-field-of-view-deg type="double">85</default-field-of-view-deg>
+			</config>
+		</view>
+		
+		<systems n="0">
+            <autopilot n="0">
+                <path>Aircraft/Airbus_A330/Systems/fadec-pw.xml</path>
+            </autopilot>
+			<autopilot n="10">
+				<path>Aircraft/Airbus_A330/Systems/pw4000-sound.xml</path>
+			</autopilot>
+		</systems>
+		
+	</sim>
+	
+	<payload>
+		<weight n="0">
+			<name>Cockpit Crew</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+			<min-lb type="double">200</min-lb>
+			<max-lb type="double">440</max-lb>
+		</weight>
+		<weight n="1">
+			<name>Foward Upper Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+			<min-lb type="double">0</min-lb>
+			<max-lb type="double">31200</max-lb>
+		</weight>
+		<weight n="2">
+			<name>Mid Upper Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+			<min-lb type="double">0</min-lb>
+			<max-lb type="double">39187</max-lb>
+		</weight>
+		<weight n="3">
+			<name>Aft Upper Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
+			<min-lb type="double">0</min-lb>
+			<max-lb type="double">48570</max-lb>
+		</weight>
+		<weight n="4">
+			<name>Aft Upper Bulk Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
+			<min-lb type="double">0</min-lb>
+			<max-lb type="double">24310</max-lb>
+		</weight>
+		<weight n="5">
+			<name>Forward Lower Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]"/>
+			<min-lb type="double">0</min-lb>
+			<max-lb type="double">41667</max-lb>
+		</weight>
+		<weight n="6">
+			<name>Mid Lower Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[6]"/>
+			<min-lb type="double">0</min-lb>
+			<max-lb type="double">33444</max-lb>
+		</weight>
+		<weight n="7">
+			<name>Aft Lower Bulk Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[7]"/>
+			<min-lb type="double">0</min-lb>
+			<max-lb type="double">7716</max-lb>
+		</weight>
+	</payload>
+	
+	<limits>
+		<mass-and-balance> <!-- Data source: https://en.wikipedia.org/wiki/Airbus_A330#Specifications -->
+			<maximum-takeoff-mass-lbs>513677</maximum-takeoff-mass-lbs>
+			<maximum-landing-mass-lbs>412264</maximum-landing-mass-lbs>
+			<maximum-zero-fuel-mass-lbs>392423</maximum-zero-fuel-mass-lbs>
+		</mass-and-balance>
+	</limits>
+	
+	<options n="0">
+		<!--EIS2 type="bool">0</EIS2-->
+		<eng>PW</eng>
+		<maxblock>306.6</maxblock>
+	</options>
+	
+	<MCDUC n="0">
+		<type>A330-223F</type>
+		<eng>PW4170</eng>
+	</MCDUC>
+	
+	<nasal>
+		<specific>
+			<file>Aircraft/Airbus_A330/Nasal/a332livery-fpw.nas</file>
+		</specific>
+	</nasal>
+
+</PropertyList>

@@ -1,0 +1,17 @@
+<PropertyList>
+    <name>logo</name>
+    <inherits-from>Effects/model-combined-deferred</inherits-from>
+    <parameters>
+        <lightmap-enabled type="int">1</lightmap-enabled>
+        <lightmap-multi type="int">0</lightmap-multi>
+        <texture n="3">
+            <image>Aircraft/IDG-A33X/Models/Effects/res/logo-lightmap.png</image>
+            <filter>linear-mipmap-linear</filter>
+            <wrap-s>clamp</wrap-s>
+            <wrap-t>clamp</wrap-t>
+            <internal-format>normalized</internal-format>
+        </texture>
+		 <lightmap-factor type="float" n="0"><use>/sim/model/lights/logo-lights</use></lightmap-factor>
+        <lightmap-color type="vec3d" n="0">1.0 1.0 1.0</lightmap-color>
+    </parameters>
+</PropertyList>

@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
+
+<PropertyList include="a333-animations.xml">
+	<name>A330-323</name>
+	<path>a330-300-main.ac</path>
+
+	<model>
+		<name>General Electric Engines</name>
+		<path>Aircraft/Airbus_A330/Models/cf6-80e1.xml</path>
+	</model>
+	
+	<model>
+		<name>Flightdeck</name>
+		<path>Aircraft/Airbus_A330/Models/FlightDeck/a330.flightdeck.xml</path>
+		<offsets>
+			<x-m>-23.08736</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.7129</z-m>
+		</offsets>
+	</model>
+	
+	<!-- Ground Services -->    
+	<model>
+		<name>ground_services</name>
+		<path>Aircraft/Airbus_A330/Models/A333-groundservices.xml</path>
+	</model>
+	
+	<!-- Contrails -->
+	<model>
+		<path>Aircraft/Airbus_A330/Models/Effects/contrail-eng1.xml</path>
+		<offsets>
+			<x-m>44</x-m>
+			<y-m>-9.4014</y-m>
+			<z-m>-2.6508</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Airbus_A330/Models/Effects/contrail-eng2.xml</path>
+		<offsets>
+			<x-m>44</x-m>
+			<y-m>9.4014</y-m>
+			<z-m>-2.6508</z-m>
+		</offsets>
+	</model>
+
+	<!-- New Lights -->
+	<model>
+		<name>Left nav light</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/rednav.xml</path> 
+		<offsets>
+			<x-m>12.764</x-m>
+			<y-m>-28.821</y-m>
+			<z-m>0.916</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Left nav light ALS</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/ALS/rednav.xml</path>
+		<offsets>
+			<x-m>12.764</x-m>
+			<y-m>-28.821</y-m>
+			<z-m>0.916</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Right nav light</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/greennav.xml</path>
+		<offsets>
+			<x-m>12.764</x-m>
+			<y-m>28.821</y-m>
+			<z-m>0.916</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Right nav light ALS</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/ALS/greennav.xml</path>
+		<offsets>
+			<x-m>12.764</x-m>
+			<y-m>28.821</y-m>
+			<z-m>0.916</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Left strobe light</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/strobe.xml</path>
+		<offsets>
+			<x-m>12.764</x-m>
+			<y-m>-28.821</y-m>
+			<z-m>0.916</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Left strobe light ALS</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/ALS/left-strobe.xml</path>
+		<offsets>
+			<x-m>12.764</x-m>
+			<y-m>-28.821</y-m>
+			<z-m>0.916</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Right strobe light</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/strobe.xml</path>
+		<offsets>
+			<x-m>12.764</x-m>
+			<y-m>28.821</y-m>
+			<z-m>0.916</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Right strobe light ALS</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/ALS/right-strobe.xml</path>
+		<offsets>
+			<x-m>12.764</x-m>
+			<y-m>28.821</y-m>
+			<z-m>0.916</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Top beacon light</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/beacon.xml</path>
+		<offsets>
+			<x-m>7.34</x-m>
+			<y-m>0</y-m>
+			<z-m>3.16</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Bottom beacon light</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/beacon.xml</path>
+		<offsets>
+			<x-m>-5.08</x-m>
+			<y-m>0</y-m>
+			<z-m>-2.98</z-m>
+		</offsets>
+	</model>
+
+		 <model>
+		<name>Top beacon light ALS</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/ALS/beacon.xml</path>
+		<offsets>
+			<x-m>7.34</x-m>
+			<y-m>0</y-m>
+			<z-m>3.16</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Bottom beacon light ALS</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/ALS/beacon.xml</path>
+		<offsets>
+			<x-m>-5.08</x-m>
+			<y-m>0</y-m>
+			<z-m>-2.98</z-m>
+		</offsets>
+	</model>
+
+		 <model>
+		<name>Port landing light ALS</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/ALS/landinglightL.xml</path>
+		 <offsets>
+			<x-m>-1.89</x-m>
+			<y-m>-3.53</y-m>
+			<z-m>-1.2</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Nosegear landing light ALS</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/ALS/taxilight.xml</path>
+		 <offsets>
+				  <x-m>-19.4</x-m>
+				  <y-m>-0.2</y-m>
+				  <z-m>-3.0</z-m>
+				 </offsets>
+	</model>
+	
+	<model>
+		<name>Second Nosegear landing light ALS</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/ALS/taxilight.xml</path>
+		 <offsets>
+				  <x-m>-19.4</x-m>
+				  <y-m>0.2</y-m>
+				  <z-m>-3.0</z-m>
+				 </offsets>
+	</model>
+	
+	<model>
+		<name>left turnoff light ALS</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/ALS/turnoffL.xml</path>
+		 <offsets>
+				  <x-m>-19.4</x-m>
+				  <y-m>-0.35</y-m>
+				  <z-m>-3.0</z-m>
+				 </offsets>
+	</model>
+	
+	<model>
+		<name>right turnoff light ALS</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/ALS/turnoffR.xml</path>
+		 <offsets>
+				  <x-m>-19.4</x-m>
+				  <y-m>0.35</y-m>
+				  <z-m>-3.0</z-m>
+				 </offsets>
+	</model>
+
+	<model>
+		<name>Starboard landing light ALS</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/ALS/landinglightR.xml</path>
+		 <offsets>
+			<x-m>-1.89</x-m>
+			<y-m>3.53</y-m>
+			<z-m>-1.2</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Tail nav light</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/tailnav.xml</path>
+		<offsets>
+			<x-m>36.2135</x-m>
+			<y-m>0.0495674</y-m>
+			<z-m>2.84668</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Tail nav light ALS</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/ALS/tailnav.xml</path>
+		<offsets>
+			<x-m>36.2135</x-m>
+			<y-m>0.0495674</y-m>
+			<z-m>2.84668</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Tail strobe light</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/tailstrobe.xml</path>
+		<offsets>
+			<x-m>36.2135</x-m>
+			<y-m>-0.0495674</y-m>
+			<z-m>2.84668</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<name>Tail strobe light ALS</name>
+		<path>Aircraft/Airbus_A330/Models/Lights/ALS/tail-strobe.xml</path>
+		<offsets>
+			<x-m>36.2135</x-m>
+			<y-m>-0.0495674</y-m>
+			<z-m>2.84668</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Pushback</name>
+		<path>Aircraft/Airbus_A330/Models/Services/Pushback/Douglas.xml</path>
+		<offsets>
+			<x-m>-20.25</x-m>
+			<y-m>0</y-m>
+			<z-m>-5.49</z-m>
+		</offsets>
+	</model>
+
+</PropertyList>
