@@ -669,4 +669,5 @@ if (getprop("/controls/flight/auto-coordination") == 1) {
 	setprop("/controls/flight/aileron-drives-tiller", 0);
 }
 
+setprop("sim/multiplay/visibility-range-nm", 125);
 setprop("/systems/acconfig/libraries-loaded", 1);

@@ -34,7 +34,7 @@
 		
 		<text>
 			<halign>left</halign>
-			<label>Airbus A330 by J Maverick 16 based on Immersive Design Group version</label>
+			<label>Airbus A330 by J Maverick 16 based on the Immersive Design Group A33X version</label>
 		</text>
 		
 		<hrule/>
@@ -54,6 +54,10 @@
 		<text>
 			<halign>left</halign>
 			<label>Instruments: Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)</label>
+		</text>
+		<text>
+			<halign>left</halign>
+			<label>Effects: J Maverick 16</label>
 		</text>
 		<text>
 			<halign>left</halign>

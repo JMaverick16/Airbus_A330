@@ -17,7 +17,7 @@
 		<model>
 			<path>Aircraft/Airbus_A330/Models/A330-203-GE.xml</path>
 			<livery>
-				<file>White</file>
+				<file>Airbus_1K</file>
 			</livery>
 		</model>
 		

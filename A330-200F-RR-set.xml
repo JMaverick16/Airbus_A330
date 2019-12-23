@@ -17,7 +17,7 @@
 		<model>
 			<path>Aircraft/Airbus_A330/Models/A330-243F-RR.xml</path>
 			<livery>
-				<file>White</file>
+				<file>Airbus</file>
 			</livery>
 		</model>
 		

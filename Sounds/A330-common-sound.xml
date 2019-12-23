@@ -1379,6 +1379,7 @@
 				<factor>0.39</factor>
 			</volume>
 		</rain>
+
 		<rain>
 			<name>RainInside</name>
 			<mode>looped</mode>
@@ -1395,6 +1396,7 @@
 				<factor>0.105</factor>
 			</volume>
 		</rain>
+
 		<rain-windshield>
 			<name>RainWindshieldInside</name>
 			<mode>looped</mode>
@@ -1413,6 +1415,7 @@
 				<max>0.30</max>
 			</volume>
 		</rain-windshield>
+
 		<ambience>
 			<name>AmbienceOutside</name>
 			<mode>looped</mode>
@@ -1433,6 +1436,7 @@
 				<factor>0.265</factor>
 			</volume>
 		</ambience>
+
 		<pushback>
 			<name>Pushback_outside</name>
 			<mode>looped</mode>
@@ -1459,6 +1463,7 @@
 				<max>0.6</max>
 			</volume>
 		</pushback>
+
 		<pushback>
 			<name>Pushback_inside</name>
 			<mode>looped</mode>
@@ -1481,6 +1486,24 @@
 				<max>0.21</max>
 			</volume>
 		</pushback>
+
+		<roll>
+			<name>GroundRoll</name>
+			<mode>looped</mode>
+			<path>Aircraft/Airbus_A330/Sounds/Effects/roll.wav</path>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<or>
+					<property>gear/gear[0]/wow</property>
+					<property>gear/gear[1]/wow</property>
+					<property>gear/gear[2]/wow</property>
+				</or>
+			</condition>
+			<volume>
+				<property>velocities/groundspeed-kt</property>
+				<factor>0.02</factor>
+			</volume>
+		</roll>
 	
   </fx>
 </PropertyList>

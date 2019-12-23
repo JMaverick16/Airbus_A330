@@ -2,7 +2,7 @@
 
 <!-- Copyright (c) 2019 Joshua Davidson (Octal450) -->
 
-<PropertyList>
+<PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
 
 	<sim>
 
@@ -383,6 +383,7 @@
 				<int n="12" alias="/sharklet"/>
 				<int n="13" alias="/options/hasboom"/>
 			</generic>
+			<visibility-range-nm type="int">125</visibility-range-nm>
 		</multiplay>
 		
 		<flight-recorder include="Systems/flight-recorder.xml"/>
@@ -395,7 +396,7 @@
 			<z-offset-max-m type="float">300.0</z-offset-max-m>
 		</current-view>
 		
-		<minimum-fg-version>2018.1.0</minimum-fg-version>
+		<minimum-fg-version>2018.2.0</minimum-fg-version>
 	</sim>
 
 	<consumables>

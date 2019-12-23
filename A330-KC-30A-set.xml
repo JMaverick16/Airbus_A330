@@ -17,7 +17,7 @@
 		<model>
 			<path>Aircraft/Airbus_A330/Models/KC-30A.xml</path>
 			<livery>
-				<file>Grey</file>
+				<file>MRTT1</file>
 			</livery>
 		</model>
 		
