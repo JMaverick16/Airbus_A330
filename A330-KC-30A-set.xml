@@ -10,7 +10,7 @@
 			<path>Aircraft/Airbus_A330/Sounds/cf680-sound.xml</path>
 		</sound>
 		<checklists include="A33X-Checklists.xml"/>
-		<description>Airbus KC-30A (GE CF6-80E1A3)</description>
+		<description>Airbus KC-30A (General Electric CF6-80E1A3)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-KC-30A</aero>
 		<variant-of>A330-Voyager-KC</variant-of>

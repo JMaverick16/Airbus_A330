@@ -10,7 +10,7 @@
 			<path>Aircraft/Airbus_A330/Sounds/rrtrent-sound.xml</path>
 		</sound>
 		<checklists include="A33X-Checklists.xml"/>
-		<description>Airbus A330-243F (RR Trent 772B-60)</description>
+		<description>Airbus A330-243F (Rolls Royce Trent 772B-60)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-200F-RR</aero>
 		<variant-of>A330-200F-PW</variant-of>

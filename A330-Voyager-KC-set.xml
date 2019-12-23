@@ -10,7 +10,7 @@
 			<path>Aircraft/Airbus_A330/Sounds/rrtrent-sound.xml</path>
 		</sound>
 		<checklists include="A33X-Checklists.xml"/>
-		<description>Airbus Voyager KC2/KC3 (RR Trent 772C-60)</description>
+		<description>Airbus Voyager KC2/KC3 (Rolls Royce Trent 772C-60)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-Voyager-KC</aero>
 		<primary-set>true</primary-set>

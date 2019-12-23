@@ -7,15 +7,16 @@ A very advanced simulation of the Airbus A330 Family for FlightGear originally b
 - Systems: Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp), J Maverick 16
 - Cockpit: Thorsten Herrmann (TH-555), Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
 - Instruments: Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
+- Effects: J Maverick 16
 
 Present pack includes the following Airbus A330 Family variants:
-- A330-203
-- A330-223
-- A330-243
-- A330-223F
-- A330-243F
-- A330-303
-- A330-323
-- A330-343
-- Voyager KC2/KC3 (A330 MRTT, RAF)
-- KC-30A (A330 MRTT, RAAF)
+- A330-203 (GE engines)
+- A330-223 (PW engines)
+- A330-243 (RR engines)
+- A330-223F (PW engines)
+- A330-243F (RR engines)
+- A330-303 (GE engines)
+- A330-323 (PW engines)
+- A330-343 (RR engines)
+- Voyager KC2/KC3 (RAF A330 MRTT, RR engines)
+- KC-30A (RAAF A330 MRTT, GE engines)

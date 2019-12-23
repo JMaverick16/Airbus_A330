@@ -10,7 +10,7 @@
 			<path>Aircraft/Airbus_A330/Sounds/pw4000-sound.xml</path>
 		</sound>
 		<checklists include="A33X-Checklists.xml"/>
-		<description>Airbus A330-223F (PW4170)</description>
+		<description>Airbus A330-223F (Pratt and Whitney PW4170)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-200F-PW</aero>
 		<primary-set>true</primary-set>
