@@ -8,7 +8,7 @@
 
 	<model>
 		<name>A330-203 Main</name>
-		<path>Aircraft/Airbus_A330/Models/A330-KC-30A-main.xml</path>
+		<path>Aircraft/Airbus_A330/Models/MRTT-KC-30A-main.xml</path>
 	</model>
 
 	<!-- LIVERY SELECT -->

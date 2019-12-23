@@ -6,7 +6,7 @@
 
 	<sim>
 
-		<author>Immersive Design Group: Joshua Davidson (Octal450), Jonathan Redpath (legoboyvdlp), Thorsten Herrmann (TH-555), J Maverick 16</author>
+		<author>Joshua Davidson (Octal450), Jonathan Redpath (legoboyvdlp), Thorsten Herrmann (TH-555), J Maverick 16; Based on IDG-A33X</author>
 		
 		<status>V0.2</status>
 		
@@ -387,7 +387,7 @@
 		
 		<flight-recorder include="Systems/flight-recorder.xml"/>
 		
-		<gui n="0" include="gui/it-gui.xml"/>
+		<!--gui n="0" include="gui/it-gui.xml"/-->
 		
 		<current-view>
 			<z-offset-default type="float">110.0</z-offset-default>

@@ -3,10 +3,10 @@ A very advanced simulation of the Airbus A330 Family for FlightGear originally b
 
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Logo_Airbus_A330.svg/640px-Logo_Airbus_A330.svg.png)
 
-- FDM: Joshua Davidson (it0uchpods)
-- Systems: Joshua Davidson (it0uchpods), Jonanthan Redpath (legoboyvdlp), J Maverick 16
-- Cockpit: Thorsten Herrmann (TH-555), Joshua Davidson (it0uchpods), Jonanthan Redpath (legoboyvdlp)
-- Instruments: Joshua Davidson (it0uchpods), Jonanthan Redpath (legoboyvdlp)
+- FDM: Joshua Davidson (Octal450)
+- Systems: Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp), J Maverick 16
+- Cockpit: Thorsten Herrmann (TH-555), Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
+- Instruments: Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
 
 Present pack includes the following Airbus A330 Family variants:
 - A330-203

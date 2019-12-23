@@ -4,7 +4,7 @@
 
 <PropertyList include="a332-animations-kc.xml">
 	<name>A330-203</name>
-	<path>a330-200kc2-main.ac</path>
+	<path>a330-mrtt2-main.ac</path>
 
 	<model>
 		<name>General Electric Engines</name>

@@ -4,7 +4,7 @@
 
 <PropertyList include="a332-animations-kc.xml">
 	<name>A330-243</name>
-	<path>a330-200kc-main.ac</path>
+	<path>a330-mrtt-main.ac</path>
 
 	<model>
 		<name>Rolls Royce Engines</name>
