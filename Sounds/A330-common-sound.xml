@@ -1501,7 +1501,7 @@
 			</condition>
 			<volume>
 				<property>velocities/groundspeed-kt</property>
-				<factor>0.02</factor>
+				<factor>0.015</factor>
 			</volume>
 		</roll>
 	
