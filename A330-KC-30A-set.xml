@@ -236,7 +236,7 @@
 		<!--EIS2 type="bool">0</EIS2-->
 		<eng>GE</eng>
 		<maxblock>306.6</maxblock>
-		<hasboom type="bool">0</hasboom>
+		<hasboom type="bool">1</hasboom>
 		<boom-pos-cmd type="double">0</boom-pos-cmd>
 		<drogue-pos-cmd type="double">0</drogue-pos-cmd>
 	</options>

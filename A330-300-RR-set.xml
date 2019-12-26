@@ -13,7 +13,7 @@
 		<description>Airbus A330-343 (Rolls Royce Trent 772B-60)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-300-RR</aero>
-		<variant-of>A330-300-PW</variant-of>
+		<variant-of>A330-300-GE</variant-of>
 		<model>
 			<path>Aircraft/Airbus_A330/Models/A330-343-RR.xml</path>
 			<livery>

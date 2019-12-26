@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>KLM New livery</name>
+				<texture>Liveries/A333GE/KLM2.png</texture>
+			</livery>
+		</model>
+	</sim>
+</PropertyList>

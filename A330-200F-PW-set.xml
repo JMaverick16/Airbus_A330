@@ -13,7 +13,7 @@
 		<description>Airbus A330-223F (Pratt and Whitney PW4170)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-200F-PW</aero>
-		<primary-set>true</primary-set>
+		<variant-of>A330-200F-RR</variant-of>
 		<model>
 			<path>Aircraft/Airbus_A330/Models/A330-223F-PW.xml</path>
 			<livery>

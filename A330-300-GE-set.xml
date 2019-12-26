@@ -13,7 +13,7 @@
 		<description>Airbus A330-303 (General Electric CF6-80E1)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-300-GE</aero>
-		<variant-of>A330-300-PW</variant-of>
+		<primary-set>true</primary-set>
 		<model>
 			<path>Aircraft/Airbus_A330/Models/A330-303-GE.xml</path>
 			<livery>

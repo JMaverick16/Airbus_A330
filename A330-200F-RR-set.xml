@@ -13,7 +13,7 @@
 		<description>Airbus A330-243F (Rolls Royce Trent 772B-60)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-200F-RR</aero>
-		<variant-of>A330-200F-PW</variant-of>
+		<primary-set>true</primary-set>
 		<model>
 			<path>Aircraft/Airbus_A330/Models/A330-243F-RR.xml</path>
 			<livery>

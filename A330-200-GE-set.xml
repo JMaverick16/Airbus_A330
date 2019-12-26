@@ -13,7 +13,7 @@
 		<description>Airbus A330-203 (General Electric CF6-80E1)</description>
 		<flight-model>jsb</flight-model>
 		<aero>A330-200-GE</aero>
-		<variant-of>A330-200-PW</variant-of>
+		<primary-set>true</primary-set>
 		<model>
 			<path>Aircraft/Airbus_A330/Models/A330-203-GE.xml</path>
 			<livery>
