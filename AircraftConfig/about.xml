@@ -34,7 +34,7 @@
 		
 		<text>
 			<halign>left</halign>
-			<label>Airbus A330 by J Maverick 16 based on the Immersive Design Group A33X version</label>
+			<label>Airbus A330 by J Maverick 16 based on the former Immersive Design Group A33X version</label>
 		</text>
 		
 		<hrule/>
@@ -57,7 +57,11 @@
 		</text>
 		<text>
 			<halign>left</halign>
-			<label>Effects: J Maverick 16</label>
+			<label>Effects, Sounds, Textures: J Maverick 16</label>
+		</text>
+		<text>
+			<halign>left</halign>
+			<label>Liveries: Enrico Castaldi (Spectre), J Maverick 16, others</label>
 		</text>
 		<text>
 			<halign>left</halign>

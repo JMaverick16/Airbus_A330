@@ -14,7 +14,7 @@
         <layout>hbox</layout>
         <text>
             <halign>left</halign>
-            <label>Please wait...</label>
+            <label>Airbus A330 - Please Wait...</label>
         </text>
     </group>
 	
