@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 	
@@ -96,11 +96,11 @@
 						</expression>
 					</blue>
 					<alpha>
-						<value>0.2</value>
+						<value>0.25</value>
 					</alpha>
 				</color>
 				<size>
-					<value>1.5</value>
+					<value>1.75</value>
 				</size>
 			</start>
 
@@ -144,7 +144,7 @@
 			</life-sec>
 
 			<mass-kg>0.5</mass-kg>
-			<radius-m>2.5</radius-m>
+			<radius-m>0.5</radius-m>
 		</particle>
 
 		<program>

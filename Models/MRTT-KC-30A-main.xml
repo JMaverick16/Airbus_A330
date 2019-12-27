@@ -31,7 +31,7 @@
 	<model>
 		<path>Aircraft/Airbus_A330/Models/Effects/contrail-eng1.xml</path>
 		<offsets>
-			<x-m>44</x-m>
+			<x-m>22</x-m>
 			<y-m>-9.4014</y-m>
 			<z-m>-2.6508</z-m>
 		</offsets>
@@ -39,7 +39,7 @@
 	<model>
 		<path>Aircraft/Airbus_A330/Models/Effects/contrail-eng2.xml</path>
 		<offsets>
-			<x-m>44</x-m>
+			<x-m>22</x-m>
 			<y-m>9.4014</y-m>
 			<z-m>-2.6508</z-m>
 		</offsets>
