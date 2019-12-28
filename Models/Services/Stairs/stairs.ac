@@ -7,7 +7,7 @@ kids 37
 OBJECT poly
 name "cover-under"
 loc 17.0279 0.0486726 -2.29236
-texture "blank.png"
+texture "white-grey.png"
 crease 45.000000
 numvert 82
 -16.0295 2.09511 2.22165
@@ -11326,7 +11326,7 @@ kids 0
 OBJECT poly
 name "block"
 loc 17.0279 0.0486726 -2.29236
-texture "blank.png"
+texture "white-grey.png"
 crease 45.000000
 numvert 46
 -18.016 -0.0516206 4.2894
@@ -11776,7 +11776,7 @@ kids 0
 OBJECT poly
 name "cover"
 loc 17.0279 0.0486726 -2.29236
-texture "blank.png"
+texture "white-grey.png"
 crease 45.000000
 numvert 48
 -15.9991 -2.92508 11.5601
@@ -17126,7 +17126,7 @@ kids 0
 OBJECT poly
 name "paint"
 loc 17.0279 0.0486726 -2.29236
-texture "blank.png"
+texture "white-grey.png"
 crease 45.000000
 numvert 24
 -16.0374 1.3219 4.11063

@@ -28,7 +28,7 @@
 			</text>
 			<button>
 				<halign>center</halign>
-				<legend>Go Away</legend>
+				<legend>Close This</legend>
 				<pref-width>160</pref-width>
 				<key>Esc</key>
 				<binding>

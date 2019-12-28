@@ -156,6 +156,16 @@
 			</binding>
 			<live>true</live>
 		</checkbox>
+
+		<checkbox>
+			<label>Center Left</label>
+			<halign>left</halign>
+			<property>/services/stairs/l2</property>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+			<live>true</live>
+		</checkbox>
 		
 		<checkbox>
 			<label>Rear Left</label>

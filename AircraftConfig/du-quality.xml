@@ -233,7 +233,7 @@
 		</button>
 		<button>
 			<halign>center</halign>
-			<legend>Apply/Save/Go Away</legend>
+			<legend>Apply/Save/Close This</legend>
 			<pref-width>200</pref-width>
 			<binding>
 				<command>nasal</command>
