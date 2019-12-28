@@ -1539,6 +1539,9 @@
 		<atc>
 			<file>Aircraft/Airbus_A330/Nasal/atc.nas</file>
 		</atc>
+		<ground-services>
+			<file>Aircraft/Airbus_A330/Nasal/ground-services.nas</file>
+		</ground-services>
 	</nasal>
 
 </PropertyList>

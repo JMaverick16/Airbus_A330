@@ -13,14 +13,14 @@
 	-->
 	<path>Catering_Loader_Truck_VolvoFM-stowed.ac</path>
 	
-	<animation>
+	<!--animation>
 		<type>translate</type>
 		<property>aircraft/nose-compression</property>
-		<factor>0.3125</factor> <!-- 3.2 ft = 1 m -->
+		<factor>0.3125</factor> <!- 3.2 ft = 1 m ->
 		<axis>
 			<z>1</z>
 		</axis>
-	</animation>
+	</animation-->
 
 	<animation>
 		<name>cargo_box_all</name>

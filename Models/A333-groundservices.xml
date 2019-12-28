@@ -58,5 +58,129 @@
 			<z-m>0.6</z-m>
 		</offsets>
 	</model>
+
+	<model>
+		<name>de-ice-truck</name>
+		<path>Aircraft/Airbus_A330/Models/Services/De-Icing/volvo_deicing_truck.xml</path>
+		<condition>
+			<equals>
+				<property>/services/deicing_truck/enable</property>
+				<value>1</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-15</x-m>
+			<y-m>9.5</y-m>
+			<z-m>-5</z-m>
+			<heading-deg>160</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Airbus_A330/Models/Services/Stairs/stairs.xml</path>
+		<name>l1</name>
+		<offsets>
+			<x-m>-19.77</x-m>
+			<y-m>-2.69</y-m>
+			<z-m>0.0060</z-m>
+			<heading-deg>-8</heading-deg>
+		</offsets>
+		<condition>
+			<property>/services/stairs/l1</property>
+		</condition>
+	</model>
+
+	<model>
+ 		<path>Aircraft/Airbus_A330/Models/Services/Stairs/stairs.xml</path>
+ 		<name>l2</name>
+		<offsets>
+			<x-m>-8.15</x-m>
+			<y-m>-2.99</y-m>
+			<z-m>0.0060</z-m>
+		</offsets>
+		<condition>
+			<property>/services/stairs/l2</property>
+		</condition>
+	</model>
+
+	<model>
+		<path>Aircraft/Airbus_A330/Models/Services/Stairs/stairs.xml</path>
+		<name>l4</name>
+		<offsets>
+			<x-m>24.37</x-m>
+			<y-m>-2.56</y-m>
+			<z-m>0.0060</z-m>
+			<heading-deg>6</heading-deg>
+		</offsets>
+		<condition>
+			<property>/services/stairs/l4</property>
+ 		</condition>
+	</model>
+
+	<model>
+		<name>cater-truck</name>
+		<path>Aircraft/Airbus_A330/Models/Services/Catering/Catering_Loader_Truck_VolvoFM.xml</path>
+		<condition>
+			<equals>
+				<property>/services/catering/enable</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</model>
+
+	<model>
+		<name>baggage-truck</name>
+		<path>Aircraft/Airbus_A330/Models/Services/Baggage/cargo_ramp.ac</path>
+		<condition>
+			<equals>
+				<property>/services/baggage/enable</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</model>
+
+	<!--model>
+		<name>ext-pwr</name>
+		<path>Aircraft/Airbus_A330/Models/Services/External-Power/ext-pwr-box.ac</path>
+		<condition>
+			<equals>
+				<property>/services/ext-pwr/enable</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</model-->
+
+	<model>
+		<name>fuel-truck</name>
+		<path>Aircraft/Airbus_A330/Models/Services/Fuel-Truck/Fuel_Truck_Short_VolvoFM.ac</path>
+		<condition>
+			<equals>
+				<property>/services/fuel-truck/enable</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</model>
+
+	<animation>
+		<type>select</type>
+		<object-name>fuel_pipe</object-name>
+		<condition>
+			<equals>
+				<property>/services/fuel-truck/connect</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>fuel_pipe_disconnected</object-name>
+		<condition>
+			<equals>
+				<property>/services/fuel-truck/connect</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
 	
 </PropertyList>
