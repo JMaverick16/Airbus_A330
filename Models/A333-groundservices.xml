@@ -69,10 +69,10 @@
 			</equals>
 		</condition>
 		<offsets>
-			<x-m>-10</x-m>
+			<x-m>-11</x-m>
 			<y-m>9.5</y-m>
 			<z-m>-5</z-m>
-			<heading-deg>160</heading-deg>
+			<heading-deg>155</heading-deg>
 		</offsets>
 	</model>
 
@@ -109,7 +109,7 @@
 		<offsets>
 			<x-m>24.37</x-m>
 			<y-m>-2.56</y-m>
-			<z-m>0.0060</z-m>
+			<z-m>-0.50</z-m>
 			<heading-deg>6</heading-deg>
 		</offsets>
 		<condition>
@@ -131,6 +131,11 @@
 	<model>
 		<name>baggage-truck</name>
 		<path>Aircraft/Airbus_A330/Models/Services/Baggage/cargo_ramp.ac</path>
+		<offsets>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.65</z-m>
+		</offsets>
 		<condition>
 			<equals>
 				<property>/services/baggage/enable</property>
@@ -139,20 +144,31 @@
 		</condition>
 	</model>
 
-	<!--model>
+	<model>
 		<name>ext-pwr</name>
 		<path>Aircraft/Airbus_A330/Models/Services/External-Power/ext-pwr-box.ac</path>
+		<offsets>
+			<x-m>-2.1</x-m>
+			<y-m>-1.2</y-m>
+			<z-m>-0.2</z-m>
+			<heading-deg>45</heading-deg>
+		</offsets>
 		<condition>
 			<equals>
-				<property>/services/ext-pwr/enable</property>
+				<property>/controls/switches/cart</property>
 				<value>1</value>
 			</equals>
 		</condition>
-	</model-->
+	</model>
 
 	<model>
 		<name>fuel-truck</name>
 		<path>Aircraft/Airbus_A330/Models/Services/Fuel-Truck/Fuel_Truck_Short_VolvoFM.ac</path>
+		<offsets>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.2</z-m>
+		</offsets>
 		<condition>
 			<equals>
 				<property>/services/fuel-truck/enable</property>
