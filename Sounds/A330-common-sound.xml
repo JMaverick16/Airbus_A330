@@ -1393,7 +1393,7 @@
 			</condition>
 			<volume>
 				<property>/environment/rain-norm</property>
-				<factor>0.105</factor>
+				<factor>0.095</factor>
 			</volume>
 		</rain>
 
@@ -1412,7 +1412,7 @@
 				<property>velocities/airspeed-kt</property>
 				<factor>0.0075</factor>
 				<min>0.04</min>
-				<max>0.30</max>
+				<max>0.38</max>
 			</volume>
 		</rain-windshield>
 
@@ -1483,7 +1483,7 @@
 				<factor>1.00</factor>
 				<offset>0.00</offset>
 				<min>0.05</min>
-				<max>0.21</max>
+				<max>0.25</max>
 			</volume>
 		</pushback>
 

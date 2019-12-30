@@ -12,15 +12,15 @@ var ground_services = {
 	
 	# Chokes and Parking Brakes
 	
-	setprop("/services/chokes/nose", 1);
-	setprop("/services/chokes/left", 1);
-	setprop("/services/chokes/right", 1);
+	setprop("/services/chokes/nose", 0);
+	setprop("/services/chokes/left", 0);
+	setprop("/services/chokes/right", 0);
 	
-	setprop("/controls/parking-brake", 1);
+	# setprop("/controls/parking-brake", 0); Temporary fix: disables chocks functionality until better solution is found.
 	
 	# External Power
 	
-	setprop("/services/ext-pwr/enable", 1);
+	setprop("/services/ext-pwr/enable", 0);
 	
 	# Catering Truck
 	
@@ -58,10 +58,11 @@ var ground_services = {
 	
 		# Chokes and Parking Brakes Control
 		
-		if ((getprop("/services/chokes/nose") == 1) or (getprop("/services/chokes/left") == 1) or (getprop("/services/chokes/right") == 1) or (getprop("/controls/parking-brake") == 1))
-			setprop("/controls/gear/brake-parking", 1);
-		else
-			setprop("/controls/gear/brake-parking", 0);
+		#if ((getprop("/services/chokes/nose") == 1) or (getprop("/services/chokes/left") == 1) or (getprop("/services/chokes/
+		#right") == 1) or (getprop("/controls/parking-brake") == 1))
+		#	setprop("/controls/gear/brake-parking", 1);
+		#else
+		#	setprop("/controls/gear/brake-parking", 0);
 				
 		# External Power Stuff
 		
@@ -169,16 +170,16 @@ var ground_services = {
 	}
 };
 
-var toggle_parkingbrakes = func {
-
-	if (getprop("/controls/parking-brake") == 1)
-		setprop("/controls/parking-brake", 0);
-	else	
-		setprop("/controls/parking-brake", 1);	
-
-}
+#var toggle_parkingbrakes = func {
+#
+#	if (getprop("/controls/parking-brake") == 1)
+#		setprop("/controls/parking-brake", 0);
+#	else	
+#		setprop("/controls/parking-brake", 1);	
+#
+#}
 
 setlistener("sim/signals/fdm-initialized", func {
 	ground_services.init();
-	print("Ground Services ..... Initialized");
+	print("Ground Services... Ready");
 });
