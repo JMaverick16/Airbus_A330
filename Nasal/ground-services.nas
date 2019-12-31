@@ -10,11 +10,11 @@ var ground_services = {
 	
 	me.ice_time = 0;
 	
-	# Chokes and Parking Brakes
+	# chocks and Parking Brakes
 	
-	setprop("/services/chokes/nose", 0);
-	setprop("/services/chokes/left", 0);
-	setprop("/services/chokes/right", 0);
+	setprop("/services/chocks/nose", 0);
+	setprop("/services/chocks/left", 0);
+	setprop("/services/chocks/right", 0);
 	
 	# setprop("/controls/parking-brake", 0); Temporary fix: disables chocks functionality until better solution is found.
 	
@@ -43,9 +43,9 @@ var ground_services = {
 	# Set them all to 0 if the aircraft is not stationary
 	
 	if (getprop("/velocities/groundspeed-kt") > 10) {
-		setprop("/services/chokes/nose", 0);
-		setprop("/services/chokes/left", 0);
-		setprop("/services/chokes/right", 0);
+		setprop("/services/chocks/nose", 0);
+		setprop("/services/chocks/left", 0);
+		setprop("/services/chocks/right", 0);
 		setprop("/services/fuel-truck/enable", 0);
 		setprop("/services/ext-pwr/enable", 0);
 		setprop("/services/deicing_truck/enable", 0);
@@ -56,9 +56,9 @@ var ground_services = {
 	},
 	update : func {
 	
-		# Chokes and Parking Brakes Control
+		# chocks and Parking Brakes Control
 		
-		#if ((getprop("/services/chokes/nose") == 1) or (getprop("/services/chokes/left") == 1) or (getprop("/services/chokes/
+		#if ((getprop("/services/chocks/nose") == 1) or (getprop("/services/chocks/left") == 1) or (getprop("/services/chocks/
 		#right") == 1) or (getprop("/controls/parking-brake") == 1))
 		#	setprop("/controls/gear/brake-parking", 1);
 		#else

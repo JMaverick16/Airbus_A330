@@ -221,7 +221,7 @@ var systemsLoop = maketimer(0.1, func {
 	fadec.FADEC.loop();
 	rmp.rmpUpdate();
 	
-	if ((getprop("/controls/pneumatic/switches/groundair") or getprop("/controls/switches/cart")) and ((getprop("/velocities/groundspeed-kt") > 2) or getprop("/controls/gear/brake-parking") == 0)) {
+	if ((getprop("/controls/pneumatic/switches/groundair") or getprop("/controls/electrical/ground-cart")) and ((getprop("/velocities/groundspeed-kt") > 2) or (getprop("/controls/gear/brake-parking") == 0 and getprop("/services/chocks/nose") == 0 and getprop("/services/chocks/left") == 0 and getprop("/services/chocks/right") == 0))) {
 		setprop("/controls/switches/cart", 0);
 		setprop("/controls/pneumatic/switches/groundair", 0);
 	}
