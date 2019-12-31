@@ -1,4 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- SETTINGS -->
+
+<!DOCTYPE PropertyList [
+ <!-- Property defining whether the pushback is connected. -->
+ <!ENTITY CONNECTED-PROP "sim/model/autopush/connected">
+ <!-- Property for aircraft's front wheel rollspeed in m/s. -->
+ <!ENTITY ROLLSPEED-PROP "gear/gear[0]/rollspeed-ms">
+ <!-- Property for front wheel steering. -->
+ <!ENTITY YAW-PROP "sim/model/autopush/yaw">
+ <!-- Scaling factor for the steering property, must be equal to /sim/model/autopush/yaw-mult. -->
+ <!ENTITY YAW-MULT "60.0">
+ <!-- Property for gear compression in ft. -->
+ <!ENTITY COMPRESSION-PROP "gear/gear[0]/compression-ft">
+ <!-- Property for aircraft pitch in degrees, or pushback's pitch if it is variable. -->
+ <!ENTITY PITCH-PROP "orientation/pitch-deg">
+ <!-- Scaling factor for the pitch property. -->
+ <!ENTITY PITCH-FACTOR "0.0">
+ <!-- Pitch offset, must be equal to /sim/model/autopush/pitch-deg. If pitch is variable, must be "0.0". -->
+ <!ENTITY PITCH-OFFSET "-7.0">
+]>
+
+
 <!--
 
 AUTOPUSH
@@ -11,6 +35,8 @@ Original code (c) FlightGear
 Distribute under the terms of GPLv2.
 
 -->
+
+
 <PropertyList>
   <path>Models/Airport/Pushback/Goldhofert.ac</path>
 
@@ -41,8 +67,7 @@ Distribute under the terms of GPLv2.
    <type>spin</type>
    <object-name>wheelfl</object-name>
    <object-name>wheelfr</object-name>
-   <!-- SETTING The aircraft's front wheel rollspeed in m/s. -->
-   <property>gear/gear[0]/rollspeed-ms</property>
+   <property>&ROLLSPEED-PROP;</property>
    <factor>-16.3</factor>
    <center>
      <x-m>-2.8976</x-m>
@@ -60,8 +85,7 @@ Distribute under the terms of GPLv2.
    <type>spin</type>
    <object-name>wheelrl</object-name>
    <object-name>wheelrr</object-name>
-   <!-- SETTING The aircraft's front wheel rollspeed in m/s. -->
-   <property>gear/gear[0]/rollspeed-ms</property>
+   <property>&ROLLSPEED-PROP;</property>
    <factor>-16.3</factor>
    <center>
      <x-m>2.0501</x-m>
@@ -78,16 +102,14 @@ Distribute under the terms of GPLv2.
  <animation>
    <type>select</type>
    <condition>
-     <!-- SETTING Whether connected: /sim/model/autopush/connected -->
-     <property>sim/model/autopush/connected</property>
+     <property>&CONNECTED-PROP;</property>
    </condition>
  </animation>
 
  <animation>
    <type>rotate</type>
-   <property>sim/model/autopush/yaw</property>
-   <!-- SETTING The value of /sim/model/autopush/yaw-mult. -->
-   <factor>60.0</factor>
+   <property>&YAW-PROP;</property>
+   <factor>&YAW-MULT;</factor>
    <center>
      <x-m>0</x-m>
      <y-m>0</y-m>
@@ -102,8 +124,7 @@ Distribute under the terms of GPLv2.
 
  <animation>
    <type>translate</type>
-   <!-- SETTING Gear compression. -->
-   <property>gear/gear[0]/compression-ft</property>
+   <property>&COMPRESSION-PROP;</property>
    <factor>0.3048</factor>
    <axis>
      <x>0</x>
@@ -114,10 +135,9 @@ Distribute under the terms of GPLv2.
 
  <animation>
    <type>rotate</type>
-   <!-- SETTING Aircraft pitch. -->
-   <property>orientation/pitch-deg</property>
-   <!-- SETTING Average ground pitch. -->
-   <offset-deg>-7.0</offset-deg>
+   <property>&PITCH-PROP;</property>
+   <factor>&PITCH-FACTOR;</factor>
+   <offset-deg>&PITCH-OFFSET;</offset-deg>
    <center>
      <x-m>0</x-m>
      <y-m>0</y-m>

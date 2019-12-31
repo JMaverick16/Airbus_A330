@@ -1,14 +1,18 @@
 <?xml version="1.0"?>
 
 <!--
- AUTOPUSH
+
+AUTOPUSH
 Pushback dialog.
- Copyright (c) 2018 Autopush authors:
+
+Copyright (c) 2018 Autopush authors:
  Michael Danilov <mike.d.ft402 -eh- gmail.com>
  Joshua Davidson http://github.com/Octal450
  Merspieler http://gitlab.com/merspieler
+Original code (c) FlightGear
 Distribute under the terms of GPLv2.
- -->
+
+-->
 
 <PropertyList>
 
@@ -29,9 +33,9 @@ Distribute under the terms of GPLv2.
 
 		<button>
 			<halign>right</halign>
-			<pref-width>20</pref-width>
-			<pref-height>20</pref-height>
-			<legend>X</legend>
+			<pref-width>16</pref-width>
+			<pref-height>16</pref-height>
+			<legend/>
 			<key>Esc</key>
 			<binding>
 				<command>dialog-close</command>
@@ -90,8 +94,8 @@ Distribute under the terms of GPLv2.
 				<col>2</col>
 				<min>-1.0</min>
 				<max>1.0</max>
-				<step>0.1</step>
 				<property>/sim/model/autopush/steer-cmd-norm</property>
+				<step>0.1</step>
 				<live>true</live>
 				<binding>
 					<command>dialog-apply</command>
@@ -123,7 +127,7 @@ Distribute under the terms of GPLv2.
 				<binding>
 					<command>property-assign</command>
 					<property>/sim/model/autopush/steer-cmd-norm</property>
-					<value>0</value>
+					<value>0.0</value>
 				</binding>
 			</button>
 
@@ -188,7 +192,7 @@ Distribute under the terms of GPLv2.
 				<binding>
 					<command>property-assign</command>
 					<property>/sim/model/autopush/target-speed-km_h</property>
-					<value>0</value>
+					<value>0.0</value>
 				</binding>
 				<binding>
 					<command>nasal</command>
@@ -223,7 +227,7 @@ Distribute under the terms of GPLv2.
 			<text>
 				<row>0</row>
 				<col>0</col>
-				<label>Auto push:</label>
+				<label>Auto Push:</label>
 				<halign>left</halign>
 			</text>
 
@@ -248,6 +252,19 @@ Distribute under the terms of GPLv2.
 				<binding>
 					<command>nasal</command>
 					<script>autopush_driver.pause();</script>
+				</binding>
+			</button>
+
+			<button>
+				<row>0</row>
+				<col>3</col>
+				<pref-width>50</pref-width>
+				<pref-height>25</pref-height>
+				<legend>View</legend>
+				<halign>left</halign>
+				<binding>
+					<command>nasal</command>
+					<script>autopush_route.top_view();</script>
 				</binding>
 			</button>
 
@@ -287,21 +304,17 @@ Distribute under the terms of GPLv2.
 				<col>3</col>
 				<halign>left</halign>
 				<label>Always Show</label>
-				<live>true</live>
 				<property>/sim/model/autopush/route/show</property>
+				<live>true</live>
 				<binding>
 					<command>dialog-apply</command>
-				</binding>
-				<binding>
-					<command>nasal</command>
-					<script>acconfig.writeSettings();</script>
 				</binding>
 			</checkbox>
 
 			<text>
 				<row>2</row>
 				<col>0</col>
-				<label>Last point:</label>
+				<label>Last Point:</label>
 				<halign>left</halign>
 			</text>
 
@@ -338,10 +351,6 @@ Distribute under the terms of GPLv2.
 				<property>/sim/model/autopush/route/show-wingtip</property>
 				<binding>
 					<command>dialog-apply</command>
-				</binding>
-				<binding>
-					<command>nasal</command>
-					<script>acconfig.writeSettings();</script>
 				</binding>
 			</checkbox>
 

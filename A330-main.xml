@@ -26,9 +26,9 @@
 				<yaw alias="/fdm/jsbsim/fcs/steer-deg"/>
 				<yaw-mult type="float">1.0</yaw-mult>
 				<target-speed-km_h type="float">0.0</target-speed-km_h>
-				<K_p type="float">0.5</K_p>
-				<F_p type="float">0.15</F_p>
-				<K_i type="float">0.25</K_i>
+				<K_p type="float">1.5</K_p>
+				<F_p type="float">0.05</F_p>
+				<K_i type="float">0.05</K_i>
 				<F_i type="float">0.1</F_i>
 				<K_d type="float">0.0</K_d>
 				<F_d type="float">0.0</F_d>
@@ -38,6 +38,9 @@
 				<driver>
 					<F_V type="float">5.5</F_V>
 					<K_psi type="float">0.03</K_psi>
+					<F_psi type="float">1.0</F_psi>
+					<K_psidot type="float">0.03</K_psidot>
+					<F_psidot type="float">1.0</F_psidot>
 				</driver>
 				<route>
 					<show type="bool"/>
@@ -1519,16 +1522,16 @@
 			<file>Aircraft/Airbus_A330/Nasal/icing.nas</file>
 		</icing>
 		<autopush>
-			<file>Aircraft/Airbus_A330/Nasal/autopush.nas</file>
+			<file>Aircraft/Airbus_A330/Nasal/Autopush/autopush.nas</file>
 		</autopush>
 		<autopush_driver>
-			<file>Aircraft/Airbus_A330/Nasal/autopush_driver.nas</file>
+			<file>Aircraft/Airbus_A330/Nasal/Autopush/driver.nas</file>
 		</autopush_driver>
 		<dynarr>
-			<file>Aircraft/Airbus_A330/Nasal/dynarr.nas</file>
+			<file>Aircraft/Airbus_A330/Nasal/Autopush/dynarr.nas</file>
 		</dynarr>
 		<autopush_route>
-			<file>Aircraft/Airbus_A330/Nasal/autopush_route.nas</file>
+			<file>Aircraft/Airbus_A330/Nasal/Autopush/route.nas</file>
 		</autopush_route>
 		<rmp>
 			<file>Aircraft/Airbus_A330/Nasal/rmp.nas</file>
