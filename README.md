@@ -8,6 +8,7 @@ A very advanced simulation of the Airbus A330 Family for FlightGear originally b
 - Cockpit: Thorsten Herrmann (TH-555), Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
 - Instruments: Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
 - Textures, Effects, Sounds, Misc: J Maverick 16
+- Liveries: Enrico Castaldi (Spectre), J Maverick 16, others
 
 Present pack includes the following Airbus A330 Family variants:
 - A330-203 (GE engines)

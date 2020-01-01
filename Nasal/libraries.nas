@@ -5,7 +5,7 @@
 
 print("-----------------------------------------------------------------------------");
 print("Copyright (c) 2017-2018-2019 Joshua Davidson (Octal450)");
-print("Copyright (c) 2017-2019 J Maverick 16");
+print("Copyright (c) 2017-2019-2020 J Maverick 16");
 print("-----------------------------------------------------------------------------");
 
 setprop("/sim/replay/was-active", 0);
