@@ -33,7 +33,7 @@ var ground_services = {
 	setprop("/services/fuel-truck/connect", 0);
 	setprop("/services/fuel-truck/transfer", 0);
 	setprop("/services/fuel-truck/clean", 0);
-	setprop("/services/fuel-truck/request-kg", 0);
+	setprop("/services/fuel-truck/request-lbs", 0);
 	
 	# De-icing Truck
 	
@@ -87,32 +87,31 @@ var ground_services = {
 		
 			if (getprop("/services/fuel-truck/transfer")) {
 			
-				if (getprop("consumables/fuel/total-fuel-kg") < getprop("/services/fuel-truck/request-kg")) {
-					setprop("/consumables/fuel/tank[1]/level-kg", getprop("/consumables/fuel/tank[1]/level-kg") + 5);
-					setprop("/consumables/fuel/tank[2]/level-kg", getprop("/consumables/fuel/tank[2]/level-kg") + 20);
-					setprop("/consumables/fuel/tank[3]/level-kg", getprop("/consumables/fuel/tank[3]/level-kg") + 35);
-					setprop("/consumables/fuel/tank[4]/level-kg", getprop("/consumables/fuel/tank[4]/level-kg") + 20);
-					setprop("/consumables/fuel/tank[5]/level-kg", getprop("/consumables/fuel/tank[5]/level-kg") + 5);
+				if (getprop("consumables/fuel/total-fuel-lbs") < getprop("/services/fuel-truck/request-lbs")) {
+					setprop("/consumables/fuel/tank/level-lbs", getprop("/consumables/fuel/tank/level-lbs") + 40);
+					setprop("/consumables/fuel/tank[1]/level-lbs", getprop("/consumables/fuel/tank[1]/level-lbs") + 35);
+					setprop("/consumables/fuel/tank[2]/level-lbs", getprop("/consumables/fuel/tank[2]/level-lbs") + 40);
+					setprop("/consumables/fuel/tank[3]/level-lbs", getprop("/consumables/fuel/tank[3]/level-lbs") + 10);
+					setprop("/consumables/fuel/tank[4]/level-lbs", getprop("/consumables/fuel/tank[4]/level-lbs") + 10);
 				} else {
 					setprop("/services/fuel-truck/transfer", 0);
-					screen.log.write("Re-fueling complete! Have a nice flight... :)", 1, 1, 1);
+					screen.log.write("Re-fueling complete! Have a nice flight.", 1, 1, 1);
 				}				
 			
 			}
 			
 			if (getprop("/services/fuel-truck/clean")) {
 			
-				if (getprop("consumables/fuel/total-fuel-kg") > 90) {
-				
-					setprop("/consumables/fuel/tank[1]/level-kg", getprop("/consumables/fuel/tank[1]/level-kg") - 80);
-					setprop("/consumables/fuel/tank[2]/level-kg", getprop("/consumables/fuel/tank[2]/level-kg") - 80);
-					setprop("/consumables/fuel/tank[3]/level-kg", getprop("/consumables/fuel/tank[3]/level-kg") - 80);
-					setprop("/consumables/fuel/tank[4]/level-kg", getprop("/consumables/fuel/tank[4]/level-kg") - 80);
-					setprop("/consumables/fuel/tank[5]/level-kg", getprop("/consumables/fuel/tank[5]/level-kg") - 80);
+				if (getprop("consumables/fuel/total-fuel-lbs") > 90) {
+					setprop("/consumables/fuel/tank/level-lbs", getprop("/consumables/fuel/tank/level-lbs") - 120);
+					setprop("/consumables/fuel/tank[1]/level-lbs", getprop("/consumables/fuel/tank[1]/level-lbs") - 120);
+					setprop("/consumables/fuel/tank[2]/level-lbs", getprop("/consumables/fuel/tank[2]/level-lbs") - 120);
+					setprop("/consumables/fuel/tank[3]/level-lbs", getprop("/consumables/fuel/tank[3]/level-lbs") - 120);
+					setprop("/consumables/fuel/tank[4]/level-lbs", getprop("/consumables/fuel/tank[4]/level-lbs") - 120);
 				
 				} else {
 					setprop("/services/fuel-truck/clean", 0);
-					screen.log.write("Finished draining the fuel tanks...", 1, 1, 1);
+					screen.log.write("Finished draining the fuel tanks.", 1, 1, 1);
 				}	
 			
 			}
@@ -126,22 +125,22 @@ var ground_services = {
 		
 			if (me.ice_time == 2){
 				door.move(1);
-				print ("Lifting De-icing Crane...");
+				print ("Lifting De-icing Crane.");
 			}
 			
 			if (me.ice_time == 220){
 				door3.move(1);
-				print ("Starting De-icing Process...");
+				print ("Starting De-icing Process.");
 			}
 			
 			if (me.ice_time == 420){
 				door3.move(0);
-				print ("De-icing Process Completed...");
+				print ("De-icing Process Completed.");
 			}
 				
 			if (me.ice_time == 650){
 				door.move(0);
-				print ("Lowering De-icing Crane...");
+				print ("Lowering De-icing Crane.");
 			}
 			
 			if (me.ice_time == 900) {

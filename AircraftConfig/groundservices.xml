@@ -81,6 +81,75 @@
 			</binding>
 			<live>true</live>
 		</checkbox>
+
+		<text>
+		    <label>Total Fuel Quantity (lbs)</label>
+		    <halign>right</halign>
+		    <row>0</row>
+		    <col>0</col>
+		</text>
+		
+		<input>
+            <row>0</row>
+            <col>1</col>
+            <property>consumables/fuel/total-fuel-lbs</property>
+            <live>true</live>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+        </input>
+
+        <text>
+		    <label>Request Fuel Quantity (lbs)</label>
+		    <halign>right</halign>
+		    <row>1</row>
+		    <col>0</col>
+		</text>
+	
+		<input>
+            <row>1</row>
+            <col>1</col>
+            <property>/services/fuel-truck/request-lbs</property>
+            <live>true</live>
+            <binding>
+                <command>dialog-apply</command>
+            </binding>
+        </input>
+
+		<button>
+			<legend>Re-fuel</legend>
+			<padding>5</padding>
+			<binding>
+				<command>nasal</command>
+				<script>
+					if ((getprop("services/fuel-truck/enable") == 1) and (getprop("services/fuel-truck/connect") == 1)) {
+						setprop("/services/fuel-truck/transfer", 1);
+						screen.log.write("Re-fueling process started.", 0, 0.584, 1);
+					} else
+						screen.log.write("Please Enable and Connect the Fuel Truck First!", 1, 0, 0);
+				</script>
+			</binding>
+		</button>
+			
+		<button>
+			<legend>Drain Tanks</legend>
+			<padding>5</padding>
+			<binding>
+				<command>nasal</command>
+				<script>
+					if ((getprop("services/fuel-truck/enable") == 1) and (getprop("services/fuel-truck/connect") == 1)) {
+					
+						if (getprop("/services/fuel-truck/transfer") == 1)
+							screen.log.write("You can't clean the tanks while loading fuel!'", 1, 0, 0);
+						else {
+							setprop("/services/fuel-truck/clean", 1);
+							screen.log.write("Cleaning Fuel Tanks.", 0, 0.584, 1);
+						}
+					} else
+						screen.log.write("Please Enable and Connect the Fuel Truck First!", 1, 0, 0);
+				</script>
+			</binding>
+		</button>
 		
 		<checkbox>
 			<label>Enable Catering Truck</label>

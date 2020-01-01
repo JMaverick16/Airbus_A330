@@ -14,7 +14,7 @@
 		<layout>hbox</layout>
 		<text>
 			<halign>left</halign>
-			<label>IT-AUTOFLIGHT System (A3XX)</label>
+			<label>IT-AUTOFLIGHT System (A330)</label>
 		</text>
 		<button>
 			<halign>right</halign>
