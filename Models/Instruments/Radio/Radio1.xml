@@ -1818,7 +1818,7 @@
 	</animation>
 	
 	<effect>
-		<inherits-from>Aircraft/A330-family/Models/Effects/cockpit-irradiance</inherits-from>
+		<inherits-from>Aircraft/Airbus_A330/Models/Effects/cockpit-irradiance</inherits-from>
 		<object-name>radio_body</object-name>
 		<object-name>radio_glare</object-name>
 		<object-name>radio_rot0</object-name>
