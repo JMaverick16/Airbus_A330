@@ -55,6 +55,15 @@
 				<value>1</value>
 			</binding>
 		</button>
+
+		<group>
+			<layout>hbox</layout>
+
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+
+		</group>
 		
 		<checkbox>
 			<label>Enable Fuel Truck</label>
@@ -83,41 +92,38 @@
 		</checkbox>
 
 		<text>
-		    <label>Total Fuel Quantity (lbs)</label>
-		    <halign>right</halign>
-		    <row>0</row>
-		    <col>0</col>
+			<label>Total Fuel Quantity (lbs)</label>
+			<halign>left</halign>
 		</text>
 		
 		<input>
-            <row>0</row>
-            <col>1</col>
-            <property>consumables/fuel/total-fuel-lbs</property>
-            <live>true</live>
-            <binding>
-                <command>dialog-apply</command>
-            </binding>
-        </input>
+			<halign>center</halign>
+			<padding>5</padding>
+			<property>consumables/fuel/total-fuel-lbs</property>
+			<live>true</live>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+		</input>
 
-        <text>
-		    <label>Request Fuel Quantity (lbs)</label>
-		    <halign>right</halign>
-		    <row>1</row>
-		    <col>0</col>
+		<text>
+			<label>Request Fuel Quantity (lbs)</label>
+			<halign>left</halign>
 		</text>
 	
 		<input>
-            <row>1</row>
-            <col>1</col>
-            <property>/services/fuel-truck/request-lbs</property>
-            <live>true</live>
-            <binding>
-                <command>dialog-apply</command>
-            </binding>
-        </input>
+			<halign>center</halign>
+			<padding>5</padding>
+			<property>/services/fuel-truck/request-lbs</property>
+			<live>true</live>
+			<binding>
+				<command>dialog-apply</command>
+			</binding>
+		</input>
 
 		<button>
 			<legend>Re-fuel</legend>
+			<halign>center</halign>
 			<padding>5</padding>
 			<binding>
 				<command>nasal</command>
@@ -133,6 +139,7 @@
 			
 		<button>
 			<legend>Drain Tanks</legend>
+			<halign>center</halign>
 			<padding>5</padding>
 			<binding>
 				<command>nasal</command>
@@ -150,6 +157,15 @@
 				</script>
 			</binding>
 		</button>
+
+		<group>
+			<layout>hbox</layout>
+
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+
+		</group>
 		
 		<checkbox>
 			<label>Enable Catering Truck</label>
@@ -191,6 +207,15 @@
 				<time>5</time>
 			</binding>
 		</button>
+
+		<group>
+			<layout>hbox</layout>
+
+			<hrule>
+				<stretch type="bool">true</stretch>
+			</hrule>
+
+		</group>
 		
 		<checkbox>
 			<label>Enable Baggage Ramp</label>
