@@ -181,7 +181,7 @@
 					<enabled type="bool">false</enabled>
 				</menu>
 				<menu n="101">
-					<label>System</label>
+					<label>Airbus A330</label>
 					<item>
 						<label>Aircraft Config</label>
 						<binding>
@@ -399,7 +399,7 @@
 			<z-offset-max-m type="float">300.0</z-offset-max-m>
 		</current-view>
 		
-		<minimum-fg-version>2018.2.0</minimum-fg-version>
+		<minimum-fg-version>2018.3.0</minimum-fg-version>
 	</sim>
 
 	<consumables>

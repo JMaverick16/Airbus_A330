@@ -7,7 +7,6 @@ var ground_services = {
 	init : func {
 		me.UPDATE_INTERVAL = 0.1;
 	me.loopid = 0;
-	
 	me.ice_time = 0;
 	
 	# chocks and Parking Brakes
@@ -42,7 +41,7 @@ var ground_services = {
 	
 	# Set them all to 0 if the aircraft is not stationary
 	
-	if (getprop("/velocities/groundspeed-kt") > 10) {
+	if (getprop("/velocities/groundspeed-kt") >= 5) {
 		setprop("/services/chocks/nose", 0);
 		setprop("/services/chocks/left", 0);
 		setprop("/services/chocks/right", 0);
@@ -68,25 +67,20 @@ var ground_services = {
 		
 		if (getprop("/velocities/groundspeed-kt") > 10)
 			setprop("/services/ext-pwr/enable", 0);
-		
 		if (getprop("/services/ext-pwr/enable") == 0)
 			setprop("controls/electric/external-power", 0);
 	
 		# Catering Truck Controls
 		
 		var cater_pos = getprop("/sim/model/door-positions/cater_pos/position-norm");
-		
 		var scissor_deg = 3.325 * RAD2DEG * math.asin(cater_pos / (2 * 3.6612));
-		
 		setprop("/services/catering/scissor-deg", scissor_deg);
 		
 			
 		# Fuel Truck Controls
 		
 		if (getprop("/services/fuel-truck/enable") and getprop("/services/fuel-truck/connect")) {
-		
 			if (getprop("/services/fuel-truck/transfer")) {
-			
 				if (getprop("consumables/fuel/total-fuel-lbs") < getprop("/services/fuel-truck/request-lbs")) {
 					setprop("/consumables/fuel/tank/level-lbs", getprop("/consumables/fuel/tank/level-lbs") + 40);
 					setprop("/consumables/fuel/tank[1]/level-lbs", getprop("/consumables/fuel/tank[1]/level-lbs") + 35);
@@ -108,7 +102,6 @@ var ground_services = {
 					setprop("/consumables/fuel/tank[2]/level-lbs", getprop("/consumables/fuel/tank[2]/level-lbs") - 120);
 					setprop("/consumables/fuel/tank[3]/level-lbs", getprop("/consumables/fuel/tank[3]/level-lbs") - 120);
 					setprop("/consumables/fuel/tank[4]/level-lbs", getprop("/consumables/fuel/tank[4]/level-lbs") - 120);
-				
 				} else {
 					setprop("/services/fuel-truck/clean", 0);
 					screen.log.write("Finished draining the fuel tanks.", 1, 1, 1);

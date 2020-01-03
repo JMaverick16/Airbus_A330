@@ -834,9 +834,9 @@
 		</gear>
 		
 		<wind>
+			<name>wind</name>
 			<path>FL2070/320wind.wav</path>
 			<mode>looped</mode>
-			<name>wind</name>
 			<condition>
 				<property>sim/current-view/internal</property>
 			</condition>
@@ -1229,6 +1229,32 @@
 				<factor>0.75</factor>
 			</volume>
 		</switch>
+
+		<brakes>
+			<name>Park break on</name>
+			<mode>once</mode>
+			<path>Aircraft/Airbus_A330/Sounds/Cockpit/switch.wav</path>
+			<condition>
+				<property>/controls/gear/brake-parking</property>
+			</condition>
+			<volume>
+				<factor>0.75</factor>
+			</volume>
+		</brakes>
+
+		<brakes>
+			<name>Park break off</name>
+			<mode>once</mode>
+			<path>Aircraft/Airbus_A330/Sounds/Cockpit/switch.wav</path>
+			<condition>
+				<not>
+					<property>/controls/gear/brake-parking</property>
+				</not>
+			</condition>
+			<volume>
+				<factor>0.75</factor>
+			</volume>
+		</brakes>
 		
 		<cvrtone>
 			<name>CVRtone</name>
@@ -1494,7 +1520,6 @@
 			<condition>
 				<property>sim/current-view/internal</property>
 				<or>
-					<property>gear/gear[0]/wow</property>
 					<property>gear/gear[1]/wow</property>
 					<property>gear/gear[2]/wow</property>
 				</or>
