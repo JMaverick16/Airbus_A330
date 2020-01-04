@@ -57,7 +57,7 @@
 		<type>translate</type>
 		<object-name>pistons_left</object-name>
 		<!--<property>sim/signals/fdm-initialized</property>-->
-		<property>sim/model/door-positions/cater_pos/position-norm</property>
+		<property>services/catering/position-norm</property>
 			<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
@@ -78,7 +78,7 @@
 		<type>translate</type>
 		<object-name>pistons_right</object-name>
 		<!--<property>sim/signals/fdm-initialized</property>-->
-		<property>sim/model/door-positions/cater_pos/position-norm</property>
+		<property>services/catering/position-norm</property>
 			<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
@@ -100,7 +100,7 @@
 		<object-name>piston_02_left</object-name>
 		<object-name>piston_02_right</object-name>
 		<!--<property>sim/signals/fdm-initialized</property>-->
-		<property>sim/model/door-positions/cater_pos/position-norm</property>
+		<property>services/catering/position-norm</property>
 			<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
@@ -123,11 +123,11 @@
 		<type>translate</type>
 		<object-name>cargo_box_all</object-name>
 		<!--<property>sim/signals/fdm-initialized</property>-->
-		<property>sim/model/door-positions/cater_pos/position-norm</property>
+		<property>services/catering/position-norm</property>
 			<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.0 </ind><dep>  0.00 </dep></entry>
-				<entry><ind> 1.00 </ind><dep> 3.11 </dep></entry>
+				<entry><ind> 1.00 </ind><dep> 3.25 </dep></entry>
 			</interpolation>
 		<axis>
 			<x1-m>  0.000 </x1-m>
@@ -144,7 +144,7 @@
 		<type>translate</type>
 		<object-name>platform</object-name>
 		<!--<property>sim/signals/fdm-initialized</property>-->
-		<property>sim/model/door-positions/cater_pos/position-norm</property>
+		<property>services/catering/position-norm</property>
 			<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.00 </ind><dep> 0.00 </dep></entry>
@@ -166,7 +166,7 @@
 		<type>rotate</type>
 		<object-name>arm_top</object-name>
 		<!--<property>sim/signals/fdm-initialized</property>-->
-		<property>sim/model/door-positions/cater_pos/position-norm</property>
+		<property>services/catering/position-norm</property>
 			<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.00 </ind><dep>  0.00 </dep></entry>
@@ -187,7 +187,7 @@
 		<type>rotate</type>
 		<object-name>arm_bottom</object-name>
 		<!--<property>sim/signals/fdm-initialized</property>-->
-		<property>sim/model/door-positions/cater_pos/position-norm</property>
+		<property>services/catering/position-norm</property>
 			<factor>1</factor>
 			<interpolation>
 				<entry><ind> 0.00 </ind><dep>   0.00 </dep></entry>
@@ -253,7 +253,7 @@
 	<path>warning-light.xml</path>
 		<condition>
 			<greater-than>
-				<property>sim/model/door-positions/cater_pos/position-norm</property>
+				<property>services/catering/position-norm</property>
 				<value>0.01</value>
 			</greater-than>
 		</condition>
@@ -270,7 +270,7 @@
 		<object-name>warning_light_glass</object-name>
 			<condition>
 			<greater-than>
-				<property>sim/model/door-positions/cater_pos/position-norm</property>
+				<property>services/catering/position-norm</property>
 				<value>0.01</value>
 			</greater-than>
 		</condition>

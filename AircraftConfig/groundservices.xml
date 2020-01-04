@@ -192,7 +192,7 @@
 					</less-than>
 				</condition><command>property-interpolate</command>
 				<property>/services/catering/position-norm</property>
-				<value>0.68</value>
+				<value>1.00</value>
 				<time>5</time>
 			</binding>
 			<binding>

@@ -24,7 +24,7 @@ var ground_services = {
 	# Catering Truck
 	
 	setprop("/services/catering/scissor-deg", 0);
-	setprop("/sim/model/door-positions/cater_pos/position-norm", 0);
+	setprop("/services/catering/position-norm", 0);
 
 	# Fuel Truck
 	
@@ -71,8 +71,7 @@ var ground_services = {
 			setprop("controls/electric/external-power", 0);
 	
 		# Catering Truck Controls
-		
-		var cater_pos = getprop("/sim/model/door-positions/cater_pos/position-norm");
+		var cater_pos = getprop("/services/catering/position-norm");
 		var scissor_deg = 3.325 * RAD2DEG * math.asin(cater_pos / (2 * 3.6612));
 		setprop("/services/catering/scissor-deg", scissor_deg);
 		
