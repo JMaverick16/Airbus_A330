@@ -9,7 +9,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>door_connect</object-name>
-		<property>sim/model/door-positions/cater_pos/position-norm</property>
+		<property>services/catering/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -33,7 +33,7 @@
 		<type>translate</type>
 		<object-name>gourmet_railing</object-name>
 		<object-name>gourmet_cargo</object-name>
-		<property>sim/model/door-positions/cater_pos/position-norm</property>
+		<property>services/catering/position-norm</property>
 		<factor>3.325</factor>
 		<axis>
 			<z>1</z>
@@ -44,7 +44,7 @@
 		<type>translate</type>
 		<object-name>gourmet_scissor_outer</object-name>
 		<object-name>gourmet_scissor_inner</object-name>
-		<property>sim/model/door-positions/cater_pos/position-norm</property>
+		<property>services/catering/position-norm</property>
 		<factor>1.6625</factor>
 		<axis>
 			<z>1</z>

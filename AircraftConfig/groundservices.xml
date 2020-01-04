@@ -193,7 +193,7 @@
 				</condition><command>property-interpolate</command>
 				<property>/services/catering/position-norm</property>
 				<value>1.00</value>
-				<time>5</time>
+				<time>10</time>
 			</binding>
 			<binding>
 				<condition>
@@ -204,7 +204,7 @@
 				</condition><command>property-interpolate</command>
 				<property>/services/catering/position-norm</property>
 				<value>0.0</value>
-				<time>5</time>
+				<time>10</time>
 			</binding>
 		</button>
 
