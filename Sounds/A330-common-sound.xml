@@ -1238,6 +1238,7 @@
 				<property>/controls/gear/brake-parking</property>
 			</condition>
 			<volume>
+				<property>sim/current-view/internal</property>
 				<factor>0.75</factor>
 			</volume>
 		</brakes>
@@ -1252,6 +1253,7 @@
 				</not>
 			</condition>
 			<volume>
+				<property>sim/current-view/internal</property>
 				<factor>0.75</factor>
 			</volume>
 		</brakes>
