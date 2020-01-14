@@ -135,6 +135,19 @@ setlistener("/controls/lighting/no-smoking-sign", func {
 	}, 1);
 }, 0, 0);
 
+setlistener("/controls/flight/flap-lever", func {
+	props.globals.getNode("/sim/sounde/flaps-click").setBoolValue(1);
+}, 0, 0);
+
+setlistener("/sim/sounde/flaps-click", func {
+	if (!getprop("/sim/sounde/flaps-click")) {
+		return;
+	}
+	settimer(func {
+		props.globals.getNode("/sim/sounde/flaps-click").setBoolValue(0);
+	}, 0.4);
+});
+
 #########
 # Doors #
 #########

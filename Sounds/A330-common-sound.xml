@@ -43,7 +43,7 @@
 		<announcement>
 			<name>PurserSnacks</name>
 			<mode>once</mode>
-			<path>purserSnacks.wav</path>
+			<path>Announce/purserSnacks.wav</path>
 			<condition>
 				<equals>
 					<property>/controls/switches/cabinCall</property>
@@ -1257,6 +1257,31 @@
 				<factor>0.75</factor>
 			</volume>
 		</brakes>
+
+		<switch>
+			<name>Flaps Lever</name>
+			<mode>once</mode>
+			<path>Aircraft/Airbus_A330/Sounds/Cockpit/A320_flaplever.wav</path>
+			<condition>
+				<and>
+					<property>/sim/sounde/flaps-click</property>
+					<property>/sim/current-view/internal</property>
+				</and>
+			</condition>
+			<volume>
+				<factor>0.75</factor>
+			</volume>
+		</switch>
+
+		<switch>
+			<name>Flaps Motor</name>
+			<mode>in-transit</mode>
+			<path>Aircraft/Airbus_A330/Sounds/Cockpit/A320_flapmotor.wav</path>
+			<property>/surface-positions/flap-pos-norm</property>
+			<volume>
+				<factor>0.75</factor>
+			</volume>
+		</switch>
 		
 		<cvrtone>
 			<name>CVRtone</name>
