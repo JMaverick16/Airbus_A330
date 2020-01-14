@@ -60,7 +60,7 @@
 		<announcement>
 			<name>MechCall</name>
 			<mode>once</mode>
-			<path>mechCall.wav</path>
+			<path>Announce/mechCall.wav</path>
 			<condition>
 				<equals>
 					<property>/controls/switches/mechCall</property>
@@ -77,7 +77,7 @@
 		<announcement>
 			<name>EmerCall</name>
 			<mode>once</mode>
-			<path>tripleBelt.wav</path>
+			<path>Announce/tripleBelt.wav</path>
 			<condition>
 				<equals>
 					<property>/controls/switches/emerCall</property>
@@ -781,7 +781,7 @@
 		
 		<apoff>
 			<name>apoff</name>
-			<path>/Aircraft/Airbus_A330/Sounds/apoff.wav</path>
+			<path>/Aircraft/Airbus_A330/Sounds/Cockpit/apoff.wav</path>
 			<condition>
 				<and>
 					<equals>
@@ -1279,7 +1279,7 @@
 			<path>Aircraft/Airbus_A330/Sounds/Cockpit/A320_flapmotor.wav</path>
 			<property>/surface-positions/flap-pos-norm</property>
 			<volume>
-				<factor>0.75</factor>
+				<factor>0.5</factor>
 			</volume>
 		</switch>
 		

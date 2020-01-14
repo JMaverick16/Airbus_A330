@@ -1318,6 +1318,15 @@
 					<script>libraries.fovZoom(1);</script>
 				</binding>
 			</key>
+			<key n="99">
+				<name>c</name>
+				<desc>Reset view to center</desc>
+				<repeatable type="bool">true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>libraries.resetView();</script>
+				</binding>
+			</key>
 			<key n="120">
 				<name>x</name>
 				<desc>Decrease field of view</desc>
