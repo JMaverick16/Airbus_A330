@@ -220,7 +220,7 @@ var ITAF = {
 		Internal.bankLimitAuto = 30;
 		Internal.alt.setValue(10000);
 		Internal.altCaptureActive = 0;
-		Input.ias.setValue(100);
+		Input.ias.setValue(200);
 		Input.mach.setValue(0.5);
 		Text.thr.setValue("THRUST");
 		Text.arm.setValue(" ");

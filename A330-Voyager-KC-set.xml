@@ -193,6 +193,14 @@
 		</systems>
 		
 	</sim>
+
+	<modes>
+		<altimeter>
+			<inhg>1</inhg>
+			<std>0</std>
+			<oldqnh>29.92</oldqnh>
+		</altimeter>
+	</modes>
 	
 	<payload>
 		<weight n="0">

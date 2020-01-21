@@ -1,5 +1,5 @@
 # Airbus A330
-A very advanced simulation of the Airbus A330 Family for FlightGear originally by former Immersive Design Group and now continued by J Maverick 16.
+A very advanced simulation of the Airbus A330 Series for FlightGear originally developed by former Immersive Design Group (IDG) and now continued by J Maverick 16.
 
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Logo_Airbus_A330.svg/640px-Logo_Airbus_A330.svg.png)
 
@@ -8,9 +8,9 @@ A very advanced simulation of the Airbus A330 Family for FlightGear originally b
 - Cockpit: Thorsten Herrmann (TH-555), Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
 - Instruments: Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
 - Textures, Effects, Sounds, Misc: J Maverick 16
-- Liveries: Enrico Castaldi (Spectre), J Maverick 16, others
+- Liveries: Enrico Castaldi (Spectre), J Maverick 16, Gary Brown, others
 
-Present pack includes the following Airbus A330 Family variants:
+Present pack includes the following Airbus A330 Series variants:
 - A330-203 (GE engines)
 - A330-223 (PW engines)
 - A330-243 (RR engines)

@@ -1279,7 +1279,7 @@
 			<path>Aircraft/Airbus_A330/Sounds/Cockpit/A320_flapmotor.wav</path>
 			<property>/surface-positions/flap-pos-norm</property>
 			<volume>
-				<factor>0.5</factor>
+				<factor>0.3</factor>
 			</volume>
 		</switch>
 		
@@ -1513,7 +1513,7 @@
 				<factor>1.00</factor>
 				<offset>0.00</offset>
 				<min>0.2</min>
-				<max>0.6</max>
+				<max>0.75</max>
 			</volume>
 		</pushback>
 
