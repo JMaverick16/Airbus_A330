@@ -31015,7 +31015,7 @@ kids 0
 OBJECT poly
 name "flap.outer0"
 loc 0 -3.76 0
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 6
 10.5193 3.83421 19.2642
@@ -31028,7 +31028,7 @@ kids 0
 OBJECT poly
 name "flap.outer0"
 loc 0 -3.76 0
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 3
 6.96087 3.01976 -9.10593
@@ -45395,7 +45395,7 @@ kids 0
 OBJECT poly
 name "slat.in.open0"
 loc 8.44448 0.686247 -6.46627
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 28
 -17.1309 -1.61783 4.01267
@@ -45540,7 +45540,7 @@ kids 0
 OBJECT poly
 name "flap.inner0"
 loc -1.23519 -0.613554 2.72143
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 16
 0.0230083 0.319433 -0.0996017
@@ -45600,7 +45600,7 @@ kids 0
 OBJECT poly
 name "box"
 loc 0.358181 -0.580854 5.43682
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 24
 -1.22425 0.411486 -4.01968
@@ -45747,7 +45747,7 @@ kids 0
 OBJECT poly
 name "spoiler0.6"
 loc 2.38588 0.931147 7.95112
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 10
 -3.29857 -1.16299 -7.13472
@@ -46565,7 +46565,7 @@ kids 0
 OBJECT poly
 name "slat.in.slide0"
 loc 8.44448 0.686146 -6.46627
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 31
 -17.4605 -1.02521 4.01267
@@ -46733,7 +46733,7 @@ kids 0
 OBJECT poly
 name "LeftGearRodDoor"
 loc -2.69132 -0.792923 -6.46628
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 70
 -0.371869 -0.120224 4.01267
@@ -47242,7 +47242,7 @@ kids 0
 OBJECT poly
 name "flap.inner0"
 loc -1.23519 -0.613554 2.72143
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 68
 0.0732555 0.278803 -0.0996017
@@ -47623,7 +47623,7 @@ kids 5
 OBJECT poly
 name "slat.out0"
 loc -1.45689 -0.175741 -0.91008
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 35
 5.32261 0.848455 9.24507
@@ -47797,7 +47797,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc -2.2594 -0.0516415 -3.65158
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 293
 4.87909 -0.0518799 2.97919
@@ -50811,7 +50811,7 @@ kids 0
 OBJECT poly
 name "aileron.outer0"
 loc 4.05089 0.379259 4.40282
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 40
 -0.426731 -0.0762177 -0.639603
@@ -51098,7 +51098,7 @@ kids 0
 OBJECT poly
 name "aileron.inner0"
 loc 1.92479 -0.100241 3.81042
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 39
 1.04982 -0.110176 -4.3505
@@ -51348,7 +51348,7 @@ kids 5
 OBJECT poly
 name "slat.out1"
 loc -1.45689 -0.175741 -0.91008
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 35
 0.481296 0.309282 -38.5609
@@ -51522,7 +51522,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc -2.2594 -0.0516415 -3.65158
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 293
 7.52419 0.538307 -44.4851
@@ -54536,7 +54536,7 @@ kids 0
 OBJECT poly
 name "aileron.outer1"
 loc 4.05089 0.379259 4.40282
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 40
 1.69391 0.147573 -52.5395
@@ -54823,7 +54823,7 @@ kids 0
 OBJECT poly
 name "aileron.inner1"
 loc 1.92479 -0.100241 3.81042
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 39
 1.67115 0.383198 -47.6759
@@ -55431,7 +55431,7 @@ kids 0
 OBJECT poly
 name "slat.in.open1"
 loc 8.44448 0.686247 -6.46627
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 28
 -17.285 -1.65451 -3.83546
@@ -55576,7 +55576,7 @@ kids 0
 OBJECT poly
 name "flap.inner1"
 loc -1.23519 -0.613554 2.72143
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 16
 -0.399549 -0.285698 -13.2003
@@ -55636,7 +55636,7 @@ kids 0
 OBJECT poly
 name "box"
 loc 0.358181 -0.580854 5.43682
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 24
 -1.6208 0.0194777 -15.5786
@@ -55783,7 +55783,7 @@ kids 0
 OBJECT poly
 name "spoiler1.6"
 loc 2.38588 0.931147 7.95112
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 10
 -3.78209 -0.954746 -22.3599
@@ -56601,7 +56601,7 @@ kids 0
 OBJECT poly
 name "slat.in.slide1"
 loc 8.44448 0.686146 -6.46627
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 31
 -17.9574 -1.41544 -3.83546
@@ -56769,7 +56769,7 @@ kids 0
 OBJECT poly
 name "flap.inner1"
 loc -1.23519 -0.613554 2.72143
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 66
 0.12886 0.0197601 -13.2003
@@ -111006,7 +111006,7 @@ kids 0
 OBJECT poly
 name "elevator0"
 loc 32.4108 2.1542 1.95686
-texture "wings_tail.png"
+texture "wings_tailkc2.png"
 crease 45.000000
 numvert 39
 1.41618 0.735048 6.8211
@@ -111282,7 +111282,7 @@ kids 0
 OBJECT poly
 name "elevator1"
 loc 32.4108 2.1542 1.95686
-texture "wings_tail.png"
+texture "wings_tailkc2.png"
 crease 45.000000
 numvert 39
 2.5509 0.731464 -10.7585
@@ -111558,7 +111558,7 @@ kids 0
 OBJECT poly
 name "hstab"
 loc 31.7029 2.32132 1.4782e-005
-texture "wings_tail.png"
+texture "wings_tailkc2.png"
 crease 45.000000
 numvert 230
 1.86037 0.653172 8.54696
@@ -146129,7 +146129,7 @@ kids 0
 OBJECT poly
 name "RightGearRodDoor"
 loc 5.394 -1.19167 -5.24521e-006
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 70
 -0.31854 -0.0174637 -4.1072
@@ -146638,7 +146638,7 @@ kids 0
 OBJECT poly
 name "wing.in0"
 loc 6.52981 0.287399 16.3959
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 298
 -4.24895 -1.125 -8.27747
@@ -148664,7 +148664,7 @@ kids 0
 OBJECT poly
 name "wing.in1"
 loc 6.52981 0.287399 16.3959
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 298
 -8.3923 -1.48889 -19.7554
@@ -150690,7 +150690,7 @@ kids 0
 OBJECT poly
 name "land-light-l"
 loc -1.82099 -1.30231 3.56506
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 38
 -0.0810729 0.0606098 -0.218843
@@ -150797,7 +150797,7 @@ kids 0
 OBJECT poly
 name "land-light-r"
 loc -1.82099 -1.30231 3.56506
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 38
 -0.0414921 0.100821 -6.92454
@@ -151270,7 +151270,7 @@ kids 0
 OBJECT poly
 name "flap.inner0"
 loc 1.33873 -0.412338 -0.95134
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 10
 0.119596 0.199533 -1.06928
@@ -151311,7 +151311,7 @@ kids 0
 OBJECT poly
 name "flap.outer0"
 loc -5.5114 -3.16003 -10.139
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 25
 10.9819 3.84006 19.2642
@@ -152309,7 +152309,7 @@ kids 0
 OBJECT poly
 name "spoiler0.2"
 loc -5.04021 1.13237 4.27835
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 13
 9.94386 -0.421495 2.66499
@@ -152391,7 +152391,7 @@ kids 0
 OBJECT poly
 name "spoiler0.1"
 loc 4.9598 1.13237 4.27835
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 12
 -0.42963 -0.0965366 4.79204
@@ -152471,7 +152471,7 @@ kids 0
 OBJECT poly
 name "spoiler0.3"
 loc 4.9598 1.13237 4.27835
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 8
 -1.41832 -0.700609 -1.16814
@@ -152529,7 +152529,7 @@ kids 0
 OBJECT poly
 name "spoiler0.5"
 loc 4.9598 1.13237 4.27835
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 8
 -3.22092 -0.845943 -4.88488
@@ -152587,7 +152587,7 @@ kids 0
 OBJECT poly
 name "box"
 loc 2.9321 -0.379639 1.76405
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 36
 -0.798122 0.524399 -2.60463
@@ -152784,7 +152784,7 @@ kids 0
 OBJECT poly
 name "spoiler0.4"
 loc -5.04021 1.13237 4.27835
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 8
 6.92514 -0.586544 -2.86867
@@ -152842,7 +152842,7 @@ kids 0
 OBJECT poly
 name "slat.out0"
 loc 1.82092 0.763262 8.99835
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 30
 -4.43943 -0.227757 -9.34847
@@ -152953,7 +152953,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 1.01841 0.887362 6.25685
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 140
 -0.833929 -0.481037 -8.27747
@@ -153731,7 +153731,7 @@ kids 0
 OBJECT poly
 name "flap.outer0"
 loc -5.5114 -3.16003 -10.139
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 49
 6.84822 3.13686 9.10593
@@ -154011,7 +154011,7 @@ kids 0
 OBJECT poly
 name "flap.inner0"
 loc 1.33873 -0.412338 -0.95134
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 25
 0.609419 0.427135 -1.06928
@@ -156876,7 +156876,7 @@ kids 0
 OBJECT poly
 name "flap.inner1"
 loc 1.33873 -0.412338 -0.95134
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 10
 0.0732555 0.278803 -18.2758
@@ -156917,7 +156917,7 @@ kids 0
 OBJECT poly
 name "flap.outer1"
 loc -5.5114 -3.16003 -10.139
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 25
 6.84822 3.13686 -9.10593
@@ -157915,7 +157915,7 @@ kids 0
 OBJECT poly
 name "spoiler1.2"
 loc -5.04021 1.13237 4.27835
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 13
 8.92019 -0.471798 -29.5934
@@ -157997,7 +157997,7 @@ kids 0
 OBJECT poly
 name "spoiler1.1"
 loc 4.9598 1.13237 4.27835
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 12
 -1.05584 -0.221451 -31.8518
@@ -158077,7 +158077,7 @@ kids 0
 OBJECT poly
 name "spoiler1.3"
 loc 4.9598 1.13237 4.27835
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 8
 -2.35971 -0.442818 -27.9879
@@ -158135,7 +158135,7 @@ kids 0
 OBJECT poly
 name "spoiler1.5"
 loc 4.9598 1.13237 4.27835
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 8
 -2.14103 -0.84799 -25.6381
@@ -158193,7 +158193,7 @@ kids 0
 OBJECT poly
 name "box"
 loc 2.9321 -0.379639 1.76405
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 36
 -0.760437 0.532084 -21.3073
@@ -158390,7 +158390,7 @@ kids 0
 OBJECT poly
 name "spoiler1.4"
 loc -5.04021 1.13237 4.27835
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 8
 7.58311 -0.492086 -27.9909
@@ -158448,7 +158448,7 @@ kids 0
 OBJECT poly
 name "slat.out1"
 loc 1.82092 0.763262 8.99835
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 30
 0.481294 0.309282 -38.5609
@@ -158559,7 +158559,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 1.01841 0.887362 6.25685
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 140
 1.44705 0.214321 -35.771
@@ -159337,7 +159337,7 @@ kids 0
 OBJECT poly
 name "flap.outer1"
 loc -5.5114 -3.16003 -10.139
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 49
 11.3691 3.98109 -19.2642
@@ -159617,7 +159617,7 @@ kids 0
 OBJECT poly
 name "flap.inner1"
 loc 1.33873 -0.412338 -0.95134
-texture "wings_mainkc.png"
+texture "wings_mainkc2.png"
 crease 45.000000
 numvert 25
 -0.00978661 0.498659 -18.2758

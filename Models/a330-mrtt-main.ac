@@ -111006,7 +111006,7 @@ kids 0
 OBJECT poly
 name "elevator0"
 loc 32.4108 2.1542 1.95686
-texture "wings_tail.png"
+texture "wings_tailkc.png"
 crease 45.000000
 numvert 39
 1.41618 0.735048 6.8211
@@ -111282,7 +111282,7 @@ kids 0
 OBJECT poly
 name "elevator1"
 loc 32.4108 2.1542 1.95686
-texture "wings_tail.png"
+texture "wings_tailkc.png"
 crease 45.000000
 numvert 39
 2.5509 0.731464 -10.7585
@@ -111558,7 +111558,7 @@ kids 0
 OBJECT poly
 name "hstab"
 loc 31.7029 2.32132 1.4782e-005
-texture "wings_tail.png"
+texture "wings_tailkc.png"
 crease 45.000000
 numvert 230
 1.86037 0.653172 8.54696

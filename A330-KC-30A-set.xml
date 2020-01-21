@@ -185,6 +185,11 @@
 			<autopilot n="10">
 				<path>Aircraft/Airbus_A330/Systems/cf6-sound.xml</path>
 			</autopilot>
+			<refuel>
+				<type type="string">boom</type>
+				<serviceable type="bool">true</serviceable>
+				<max-fuel-transfer-lbs-min>10000</max-fuel-transfer-lbs-min>
+			</refuel>
 		</systems>
 		
 	</sim>
