@@ -39,6 +39,24 @@
 				<offset>0</offset>
 			</pitch>
 		</apu>
+
+		<hyd-yellow>
+			<name>yellowHydPump</name>
+			<mode>looped</mode>
+			<path>Aircraft/Airbus_A330/Sounds/yellowHydPump.wav</path>
+			<condition>
+				<and>
+					<equals>
+						<property>/sim/current-view/internal</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>controls/hydraulic/elec-pump-yellow</property>
+						<value>1</value>
+					</equals>
+				</and>
+			</condition>
+		</hyd-yellow>
 	
 		<announcement>
 			<name>PurserSnacks</name>
