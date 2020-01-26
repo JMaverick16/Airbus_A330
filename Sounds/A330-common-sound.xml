@@ -40,7 +40,7 @@
 			</pitch>
 		</apu>
 
-		<hyd-yellow>
+		<!--hyd-yellow>
 			<name>yellowHydPump</name>
 			<mode>looped</mode>
 			<path>Aircraft/Airbus_A330/Sounds/yellowHydPump.wav</path>
@@ -56,7 +56,7 @@
 					</equals>
 				</and>
 			</condition>
-		</hyd-yellow>
+		</hyd-yellow-->
 	
 		<announcement>
 			<name>PurserSnacks</name>
