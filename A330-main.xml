@@ -396,7 +396,7 @@
 		<!--gui n="0" include="gui/it-gui.xml"/-->
 		
 		<current-view>
-			<z-offset-default type="float">110.0</z-offset-default>
+			<z-offset-default type="float">100.0</z-offset-default>
 			<z-offset-min-m type="float">30.0</z-offset-min-m>
 			<z-offset-max-m type="float">300.0</z-offset-max-m>
 		</current-view>
@@ -1113,8 +1113,8 @@
 					<value>0</value>
 				</binding>
 			</key>
-			<key n="64">
-				<name>Shift-2</name>
+			<key n="36">
+				<name>Shift-4</name>
 				<desc>First Officer View</desc>
 				<binding>
 					<condition>
@@ -1126,7 +1126,7 @@
 				</binding>
 			</key>
 			<key n="35">
-				<name>Shift-3</name>
+				<name>#</name>
 				<desc>Overhead View</desc>
 				<binding>
 					<condition>
@@ -1137,8 +1137,8 @@
 					<value>9</value>
 				</binding>
 			</key>
-			<key n="36">
-				<name>Shift-4</name>
+			<key n="64">
+				<name>@</name>
 				<desc>Forward Pedestal/Aileron Left</desc>
 				<binding>
 					<condition>
