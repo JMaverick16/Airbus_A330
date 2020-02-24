@@ -1101,9 +1101,9 @@
 					</script>
 				</binding>
 			</key>
-			<key n="49">
-				<name>1</name>
-				<desc>Captain View/Elevator Trim Up</desc>
+			<key n="33">
+				<name>Shift-1</name>
+				<desc>Captain View</desc>
 				<binding>
 					<condition>
 						<not><property>/options/system/keyboard-mode</property></not>
@@ -1112,18 +1112,10 @@
 					<property>/sim/current-view/view-number</property>
 					<value>0</value>
 				</binding>
-				<binding>
-					<condition>
-						<property>/options/system/keyboard-mode</property>
-					</condition>
-					<command>property-adjust</command>
-					<property>/controls/flight/elevator-trim</property>
-					<step>-0.001</step>
-				</binding>
 			</key>
-			<key n="50">
-				<name>2</name>
-				<desc>First Officer View/Elevator Up</desc>
+			<key n="64">
+				<name>Shift-2</name>
+				<desc>First Officer View</desc>
 				<binding>
 					<condition>
 						<not><property>/options/system/keyboard-mode</property></not>
@@ -1132,19 +1124,10 @@
 					<property>/sim/current-view/view-number</property>
 					<value>8</value>
 				</binding>
-				<binding>
-					<condition>
-						<property>/options/system/keyboard-mode</property>
-					</condition>
-					<command>nasal</command>
-					<script>
-						setprop("/controls/flight/elevator", getprop("/controls/flight/elevator") - 0.05);
-					</script>
-				</binding>
 			</key>
-			<key n="51">
-				<name>3</name>
-				<desc>Overhead View/Throttle Decrease</desc>
+			<key n="35">
+				<name>Shift-3</name>
+				<desc>Overhead View</desc>
 				<binding>
 					<condition>
 						<not><property>/options/system/keyboard-mode</property></not>
@@ -1152,16 +1135,6 @@
 					<command>property-assign</command>
 					<property>/sim/current-view/view-number</property>
 					<value>9</value>
-				</binding>
-				<binding>
-					<condition>
-						<property>/options/system/keyboard-mode</property>
-					</condition>
-					<command>nasal</command>
-					<script>
-						setprop("/controls/engines/engine[0]/throttle", getprop("/controls/engines/engine[0]/throttle") - 0.01);
-						setprop("/controls/engines/engine[1]/throttle", getprop("/controls/engines/engine[0]/throttle") - 0.01); # Not a typo, always use engine[0] as a reference
-					</script>
 				</binding>
 			</key>
 			<key n="52">
