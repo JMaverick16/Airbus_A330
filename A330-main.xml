@@ -1139,7 +1139,7 @@
 			</key>
 			<key n="64">
 				<name>@</name>
-				<desc>Forward Pedestal/Aileron Left</desc>
+				<desc>Forward Pedestal</desc>
 				<binding>
 					<condition>
 						<not><property>/options/system/keyboard-mode</property></not>
