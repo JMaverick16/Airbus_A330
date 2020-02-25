@@ -1139,7 +1139,7 @@
 			</key>
 			<key n="64">
 				<name>@</name>
-				<desc>Forward Pedestal/Aileron Left</desc>
+				<desc>Forward Pedestal</desc>
 				<binding>
 					<condition>
 						<not><property>/options/system/keyboard-mode</property></not>
@@ -1191,27 +1191,6 @@
 					<command>property-adjust</command>
 					<property>/controls/flight/elevator-trim</property>
 					<step>0.001</step>
-				</binding>
-			</key>
-			<key n="56">
-				<name>8</name>
-				<desc>Elevator Down</desc>
-				<!--binding>
-					<condition>
-						<not><property>/options/system/keyboard-mode</property></not>
-					</condition>
-					<command>property-assign</command>
-					<property>/sim/current-view/view-number</property>
-					<value></value>
-				</binding-->
-				<binding>
-					<condition>
-						<property>/options/system/keyboard-mode</property>
-					</condition>
-					<command>nasal</command>
-					<script>
-						setprop("/controls/flight/elevator", getprop("/controls/flight/elevator") + 0.05);
-					</script>
 				</binding>
 			</key>
 			<key n="68">
