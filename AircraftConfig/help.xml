@@ -57,27 +57,27 @@
 			</text>
 			<text>
 				<halign>left</halign>
-				<label>1 - Show Captains View</label>
+				<label>! - Show Captains View</label>
 			</text>
 			<text>
 				<halign>left</halign>
-				<label>2 - Show First Officers View</label>
+				<label>% - Show First Officers View</label>
 			</text>
 			<text>
 				<halign>left</halign>
-				<label>3 - Show Overhead View</label>
+				<label># - Show Overhead View</label>
 			</text>
 			<text>
 				<halign>left</halign>
-				<label>4 - Show Forward Pedestal View</label>
+				<label>@ - Show Forward Pedestal View</label>
 			</text>
 			<text>
 				<halign>left</halign>
-				<label>5 - Show Aft Pedestal View</label>
+				<label>% - Show Aft Pedestal View</label>
 			</text>
 			<text>
 				<halign>left</halign>
-				<label>6 - Show FCU Panel View</label>
+				<label>^ - Show FCU Panel View</label>
 			</text>
 			<text>
 				<halign>left</halign>
