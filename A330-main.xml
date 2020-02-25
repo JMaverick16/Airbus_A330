@@ -194,18 +194,6 @@
 						</binding>
 					</item>
 					<item>
-						<label>About This Aircraft</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							acconfig.about_dlg.open();
-							</script>
-						</binding>
-					</item>
-				</menu>
-				<menu n="102">
-					<label>FMGC</label>
-					<item>
 						<label>FCU Autoflight</label>
 						<binding>
 							<command>dialog-show</command>
@@ -217,6 +205,62 @@
 						<binding>
 							<command>dialog-show</command>
 							<dialog-name>route-manager</dialog-name>
+						</binding>
+					</item>
+					<item>
+						<label>About This Aircraft</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							acconfig.about_dlg.open();
+							</script>
+						</binding>
+					</item>
+				</menu>
+				<menu n="102">
+					<label>Utilities</label>
+					<item>
+						<label>Select Livery</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							aircraft.livery.dialog.toggle();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>Ground Services</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							acconfig.groundservices_dlg.open();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>Pushback</label>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>autopush</dialog-name>
+						</binding>
+					</item>
+					<item>
+						<label>Failures</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							if (getprop("/options/system/allow-damage") != 1) {
+								acconfig.fail_dlg.open();
+							}
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>Skip ADIRS</label>
+						<binding>
+							<command>property-assign</command>
+							<property>/controls/adirs/skip</property>
+							<value>1</value>
 						</binding>
 					</item>
 				</menu>
@@ -301,53 +345,6 @@
 							<script>
 							canvas_mcdu.showMCDU2();
 							</script>
-						</binding>
-					</item>
-				</menu>
-				<menu n="104">
-					<label>Utilities</label>
-					<item>
-						<label>Select Livery</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							aircraft.livery.dialog.toggle();
-							</script>
-						</binding>
-					</item>
-					<item>
-						<label>Ground Services</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							acconfig.groundservices_dlg.open();
-							</script>
-						</binding>
-					</item>
-					<item>
-						<label>Pushback</label>
-						<binding>
-							<command>dialog-show</command>
-							<dialog-name>autopush</dialog-name>
-						</binding>
-					</item>
-					<item>
-						<label>Failures</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							if (getprop("/options/system/allow-damage") != 1) {
-								acconfig.fail_dlg.open();
-							}
-							</script>
-						</binding>
-					</item>
-					<item>
-						<label>Skip ADIRS</label>
-						<binding>
-							<command>property-assign</command>
-							<property>/controls/adirs/skip</property>
-							<value>1</value>
 						</binding>
 					</item>
 				</menu>
