@@ -156,7 +156,7 @@
 		<menubar>
 			<default>
 				<menu n="101">
-					<item n="2">
+					<item n="4">
 						<label>Toggle Boom</label>
 						<binding>
 							<command>nasal</command>
@@ -165,7 +165,7 @@
 							</script>
 						</binding>
 					</item>
-					<item n="3">
+					<item n="5">
 						<label>Toggle Drogues</label>
 						<binding>
 							<command>nasal</command>
