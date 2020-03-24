@@ -156,7 +156,7 @@
 		<menubar>
 			<default>
 				<menu n="101">
-					<item n="2">
+					<item n="4">
 						<label>Toggle Boom</label>
 						<binding>
 							<command>nasal</command>
@@ -165,7 +165,7 @@
 							</script>
 						</binding>
 					</item>
-					<item n="3">
+					<item n="5">
 						<label>Toggle Drogues</label>
 						<binding>
 							<command>nasal</command>
@@ -193,6 +193,24 @@
 		</systems>
 		
 	</sim>
+
+	<instrumentation>
+		<tcas><!-- http://wiki.flightgear.org/index.php/TCAS -->
+			<serviceable type="bool">true</serviceable><!-- TCAS ENABLE -->
+			<inputs>
+				<mode type="int">1</mode><!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
+			</inputs>
+			<voice>
+				<file-prefix type="string">Sounds/tcas/female/</file-prefix>
+				<!-- sound file path and prefix -->
+			</voice>
+			<speaker><!-- Speaker Configuration -->
+				<max-dist> 2 </max-dist><!-- Max. distance where speaker is heard -->
+				<reference-dist> 1 </reference-dist> <!-- Distance to pilot -->
+				<volume> 0.0 </volume> <!-- Volume at reference distance -->
+			</speaker>
+		</tcas>
+	</instrumentation>
 
 	<modes>
 		<altimeter>
