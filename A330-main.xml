@@ -1098,9 +1098,9 @@
 					</script>
 				</binding>
 			</key>
-			<key n="33">
-				<name>Shift-1</name>
-				<desc>Captain View</desc>
+			<key n="49">
+				<name>1</name>
+				<desc>Captain View/Elevator Trim Up</desc>
 				<binding>
 					<condition>
 						<not><property>/options/system/keyboard-mode</property></not>
@@ -1109,7 +1109,16 @@
 					<property>/sim/current-view/view-number</property>
 					<value>0</value>
 				</binding>
+				<binding>
+					<condition>
+						<property>/options/system/keyboard-mode</property>
+					</condition>
+					<command>property-adjust</command>
+					<property>/controls/flight/elevator-trim</property>
+					<step>-0.001</step>
+				</binding>
 			</key>
+
 			<key n="36">
 				<name>Shift-4</name>
 				<desc>First Officer View</desc>
