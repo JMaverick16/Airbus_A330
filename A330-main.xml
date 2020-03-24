@@ -1205,6 +1205,27 @@
 					</script>
 				</binding>
 			</key>
+			<key n="54">
+				<name>6</name>
+				<desc>FCU Panel/Aileron Right</desc>
+				<binding>
+					<condition>
+						<not><property>/options/system/keyboard-mode</property></not>
+					</condition>
+					<command>property-assign</command>
+					<property>/sim/current-view/view-number</property>
+					<value>12</value>
+				</binding>
+				<binding>
+					<condition>
+						<property>/options/system/keyboard-mode</property>
+					</condition>
+					<command>nasal</command>
+					<script>
+						setprop("controls/flight/aileron", getprop("controls/flight/aileron") + 0.05);
+					</script>
+				</binding>
+			</key>
 			<key n="55">
 				<name>7</name>
 				<desc>Elevator Trim Down</desc>
@@ -1225,6 +1246,49 @@
 					<step>0.001</step>
 				</binding>
 			</key>
+			<key n="56">
+				<name>8</name>
+				<desc>Elevator Down</desc>
+				<!--binding>
+					<condition>
+						<not><property>/options/system/keyboard-mode</property></not>
+					</condition>
+					<command>property-assign</command>
+					<property>/sim/current-view/view-number</property>
+					<value></value>
+				</binding-->
+				<binding>
+					<condition>
+						<property>/options/system/keyboard-mode</property>
+					</condition>
+					<command>nasal</command>
+					<script>
+						setprop("controls/flight/elevator", getprop("controls/flight/elevator") + 0.05);
+					</script>
+				</binding>
+			</key>
+			<key n="57">
+				<name>9</name>
+				<desc>Throttle Increase</desc>
+				<!--binding>
+					<condition>
+						<not><property>/options/system/keyboard-mode</property></not>
+					</condition>
+					<command>property-assign</command>
+					<property>/sim/current-view/view-number</property>
+					<value></value>
+				</binding-->
+				<binding>
+					<condition>
+						<property>/options/system/keyboard-mode</property>
+					</condition>
+					<command>nasal</command>
+					<script>
+						controls.incThrottle(0.01, 1.0);
+					</script>
+				</binding>
+			</key>
+
 			<key n="68">
 				<name>D</name>
 				<desc>Autopilot Disconnect</desc>
