@@ -1119,9 +1119,9 @@
 				</binding>
 			</key>
 
-			<key n="36">
-				<name>Shift-4</name>
-				<desc>First Officer View</desc>
+			<key n="50">
+				<name>2</name>
+				<desc>First Officer View/Elevator Up</desc>
 				<binding>
 					<condition>
 						<not><property>/options/system/keyboard-mode</property></not>
@@ -1130,10 +1130,19 @@
 					<property>/sim/current-view/view-number</property>
 					<value>8</value>
 				</binding>
+				<binding>
+					<condition>
+						<property>/options/system/keyboard-mode</property>
+					</condition>
+					<command>nasal</command>
+					<script>
+						setprop("controls/flight/elevator", getprop("controls/flight/elevator") - 0.05);
+					</script>
+				</binding>
 			</key>
-			<key n="35">
-				<name>#</name>
-				<desc>Overhead View</desc>
+			<key n="51">
+				<name>3</name>
+				<desc>Overhead View/Throttle Decrease</desc>
 				<binding>
 					<condition>
 						<not><property>/options/system/keyboard-mode</property></not>
@@ -1142,10 +1151,19 @@
 					<property>/sim/current-view/view-number</property>
 					<value>9</value>
 				</binding>
+				<binding>
+					<condition>
+						<property>/options/system/keyboard-mode</property>
+					</condition>
+					<command>nasal</command>
+					<script>
+						controls.incThrottle(-0.01, -1.0);
+					</script>
+				</binding>
 			</key>
-			<key n="64">
-				<name>@</name>
-				<desc>Forward Pedestal</desc>
+					<key n="52">
+				<name>4</name>
+				<desc>Forward Pedestal/Aileron Left</desc>
 				<binding>
 					<condition>
 						<not><property>/options/system/keyboard-mode</property></not>
@@ -1154,10 +1172,19 @@
 					<property>/sim/current-view/view-number</property>
 					<value>10</value>
 				</binding>
+				<binding>
+					<condition>
+						<property>/options/system/keyboard-mode</property>
+					</condition>
+					<command>nasal</command>
+					<script>
+						setprop("controls/flight/aileron", getprop("controls/flight/aileron") - 0.05);
+					</script>
+				</binding>
 			</key>
-			<key n="37">
-				<name>Shift-5</name>
-				<desc>Aft Pedestal</desc>
+			<key n="53">
+				<name>5</name>
+				<desc>Aft Pedestal/Center Controls</desc>
 				<binding>
 					<condition>
 						<not><property>/options/system/keyboard-mode</property></not>
@@ -1166,17 +1193,16 @@
 					<property>/sim/current-view/view-number</property>
 					<value>11</value>
 				</binding>
-			</key>
-			<key n="94">
-				<name>Shift-6</name>
-				<desc>FCU Panel</desc>
 				<binding>
 					<condition>
-						<not><property>/options/system/keyboard-mode</property></not>
+						<property>/options/system/keyboard-mode</property>
 					</condition>
-					<command>property-assign</command>
-					<property>/sim/current-view/view-number</property>
-					<value>12</value>
+					<command>nasal</command>
+					<script>
+						setprop("controls/flight/aileron", 0);
+						setprop("controls/flight/elevator", 0);
+						setprop("controls/flight/rudder", 0);
+					</script>
 				</binding>
 			</key>
 			<key n="55">
