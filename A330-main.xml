@@ -1118,7 +1118,6 @@
 					<step>-0.001</step>
 				</binding>
 			</key>
-
 			<key n="50">
 				<name>2</name>
 				<desc>First Officer View/Elevator Up</desc>
@@ -1136,7 +1135,7 @@
 					</condition>
 					<command>nasal</command>
 					<script>
-						setprop("controls/flight/elevator", getprop("controls/flight/elevator") - 0.05);
+						setprop("/controls/flight/elevator", getprop("/controls/flight/elevator") - 0.05);
 					</script>
 				</binding>
 			</key>
@@ -1157,11 +1156,12 @@
 					</condition>
 					<command>nasal</command>
 					<script>
-						controls.incThrottle(-0.01, -1.0);
+						setprop("/controls/engines/engine[0]/throttle", getprop("/controls/engines/engine[0]/throttle") - 0.01);
+						setprop("/controls/engines/engine[1]/throttle", getprop("/controls/engines/engine[0]/throttle") - 0.01); # Not a typo, always use engine[0] as a reference
 					</script>
 				</binding>
 			</key>
-					<key n="52">
+			<key n="52">
 				<name>4</name>
 				<desc>Forward Pedestal/Aileron Left</desc>
 				<binding>
@@ -1178,7 +1178,7 @@
 					</condition>
 					<command>nasal</command>
 					<script>
-						setprop("controls/flight/aileron", getprop("controls/flight/aileron") - 0.05);
+						setprop("/controls/flight/aileron", getprop("/controls/flight/aileron") - 0.05);
 					</script>
 				</binding>
 			</key>
@@ -1199,9 +1199,9 @@
 					</condition>
 					<command>nasal</command>
 					<script>
-						setprop("controls/flight/aileron", 0);
-						setprop("controls/flight/elevator", 0);
-						setprop("controls/flight/rudder", 0);
+						setprop("/controls/flight/aileron", 0);
+						setprop("/controls/flight/elevator", 0);
+						setprop("/controls/flight/rudder", 0);
 					</script>
 				</binding>
 			</key>
@@ -1222,7 +1222,7 @@
 					</condition>
 					<command>nasal</command>
 					<script>
-						setprop("controls/flight/aileron", getprop("controls/flight/aileron") + 0.05);
+						setprop("/controls/flight/aileron", getprop("/controls/flight/aileron") + 0.05);
 					</script>
 				</binding>
 			</key>
@@ -1263,7 +1263,7 @@
 					</condition>
 					<command>nasal</command>
 					<script>
-						setprop("controls/flight/elevator", getprop("controls/flight/elevator") + 0.05);
+						setprop("/controls/flight/elevator", getprop("/controls/flight/elevator") + 0.05);
 					</script>
 				</binding>
 			</key>
@@ -1284,11 +1284,11 @@
 					</condition>
 					<command>nasal</command>
 					<script>
-						controls.incThrottle(0.01, 1.0);
+						setprop("/controls/engines/engine[0]/throttle", getprop("/controls/engines/engine[0]/throttle") + 0.01);
+						setprop("/controls/engines/engine[1]/throttle", getprop("/controls/engines/engine[0]/throttle") + 0.01); # Not a typo, always use engine[0] as a reference
 					</script>
 				</binding>
 			</key>
-
 			<key n="68">
 				<name>D</name>
 				<desc>Autopilot Disconnect</desc>
