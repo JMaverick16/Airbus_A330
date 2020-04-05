@@ -196,14 +196,6 @@
 
 	<instrumentation>
 		<tcas><!-- http://wiki.flightgear.org/index.php/TCAS -->
-			<serviceable type="bool">true</serviceable><!-- TCAS ENABLE -->
-			<inputs>
-				<mode type="int">1</mode><!-- 0=off, 1=standby, 2=TA-only, 3=auto(TA/RA) -->
-			</inputs>
-			<voice>
-				<file-prefix type="string">Sounds/tcas/female/</file-prefix>
-				<!-- sound file path and prefix -->
-			</voice>
 			<speaker><!-- Speaker Configuration -->
 				<max-dist> 2 </max-dist><!-- Max. distance where speaker is heard -->
 				<reference-dist> 1 </reference-dist> <!-- Distance to pilot -->
