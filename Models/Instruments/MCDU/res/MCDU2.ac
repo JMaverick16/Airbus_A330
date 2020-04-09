@@ -1,6 +1,6 @@
 AC3Db
 MATERIAL "mcdu" rgb 0.800 0.800 0.800  amb 1.000 1.000 1.000  emis 0.100 0.100 0.100  spec 0.400 0.400 0.400  shi 12 trans 0.000
-MATERIAL "mcdu2.screen" rgb 0.800 0.800 0.800  amb 1.000 1.000 1.000  emis 1.000 1.000 1.000  spec 0.000 0.000 0.000  shi 12 trans 0.000
+MATERIAL "mcdu2.screen" rgb 0 0 0  amb 0 0 0  emis 1 1 1  spec 0 0 0  shi 0  trans 0
 MATERIAL "mcdu_glare" rgb 0.800 0.800 0.800  amb 1.000 1.000 1.000  emis 0.100 0.100 0.100  spec 0.500 0.500 0.500  shi 12 trans 0.000
 OBJECT world
 name "Blender_exporter_v2.26__MCDU1.ac"

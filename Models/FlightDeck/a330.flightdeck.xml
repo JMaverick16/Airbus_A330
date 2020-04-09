@@ -5812,6 +5812,9 @@
 		<object-name>pfd_nd_xfr_sw</object-name>
 		<object-name>pfd_nd_xfr_sw2</object-name>
 		<object-name>ohpanel2_knob</object-name>
+		<object-name>hud</object-name>
+		<object-name>hud_box</object-name>
+		<object-name>hud_ceiling</object-name>
 		<emission>
 			<red>0.3</red>
 			<green>0.3</green>
