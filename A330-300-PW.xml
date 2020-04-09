@@ -90,7 +90,7 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 				<z> 0.25204 </z>
 			</location>
 			<capacity unit="LBS"> 60925 </capacity>
-			<contents unit="LBS"> 0 </contents>
+			<contents unit="LBS"> 10000 </contents>
 			<standpipe unit="LBS">43</standpipe><!-- minimun fuel on pipes -->
 			<priority>1</priority>
 			<type>JET-A1</type>

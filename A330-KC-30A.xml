@@ -77,7 +77,7 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 				<z> 0.25204 </z>
 			</location>
 			<capacity unit="LBS"> 67803 </capacity>
-			<contents unit="LBS"> 15000 </contents>
+			<contents unit="LBS"> 20000 </contents>
 			<standpipe unit="LBS">31</standpipe><!-- minimun fuel on pipes -->
 			<priority>1</priority>
 			<type>JET-A1</type>
@@ -90,7 +90,7 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 				<z> 0.25204 </z>
 			</location>
 			<capacity unit="LBS"> 60925 </capacity>
-			<contents unit="LBS"> 0 </contents>
+			<contents unit="LBS"> 7500 </contents>
 			<standpipe unit="LBS">43</standpipe><!-- minimun fuel on pipes -->
 			<priority>1</priority>
 			<type>JET-A1</type>
@@ -103,7 +103,7 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 				<z> 0.25204 </z>
 			</location>
 			<capacity unit="LBS"> 67803 </capacity>
-			<contents unit="LBS"> 15000 </contents>
+			<contents unit="LBS"> 20000 </contents>
 			<standpipe unit="LBS">31</standpipe><!-- minimun fuel on pipes -->
 			<priority>1</priority>
 			<type>JET-A1</type>
