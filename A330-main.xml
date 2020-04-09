@@ -779,6 +779,8 @@
 			<apu-fire type="bool">0</apu-fire>
 			<engine-left-fire type="bool">0</engine-left-fire>
 			<engine-right-fire type="bool">0</engine-right-fire>
+			<cargo-fwd-fire type="bool">0</cargo-fwd-fire>
+			<cargo-aft-fire type="bool">0</cargo-aft-fire>
 		</failures>
 		<fctl n="0">
 			<sec1 type="bool">0</sec1>
