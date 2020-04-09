@@ -283,6 +283,15 @@
 		<type>VOYAGER KC</type>
 		<eng>RR772C-60</eng>
 	</MCDUC>
+
+	<rotors>
+		<main>
+			<blade n="3">
+				<flap-deg type="double">0</flap-deg>        <!-- used for releasing flares -->
+				<position-deg type="double">0</position-deg><!-- used for releasing chaff  -->
+			</blade>
+		</main>
+	</rotors>
 	
 	<nasal>
 		<specific>
