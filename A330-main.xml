@@ -777,8 +777,8 @@
 			<spoiler-r5 type="bool">0</spoiler-r5>
 			<spoiler-r6 type="bool">0</spoiler-r6>
 			<apu-fire type="bool">0</apu-fire>
-			<engine-fire-left type="bool">0</engine-fire-left>
-			<engine-fire-right type="bool">0</engine-fire-right>
+			<engine-left-fire type="bool">0</engine-left-fire>
+			<engine-right-fire type="bool">0</engine-right-fire>
 		</failures>
 		<fctl n="0">
 			<sec1 type="bool">0</sec1>
