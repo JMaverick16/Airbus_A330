@@ -3,7 +3,6 @@
 <PropertyList>
 
 
-
 <!-- Countermeasures -->
 
   <submodel>
@@ -12,15 +11,20 @@
     <trigger>ai/submodels/submodel[0]/flare-release</trigger>
     <speed>100</speed>
     <repeat>true</repeat>
-    <delay>0.25</delay>
-    <count>100</count>
-    <x-offset>-3.50</x-offset>
-    <y-offset>-2.52</y-offset>
-    <z-offset>-2.52</z-offset>
-    <yaw-offset>180.0</yaw-offset>
+    <delay>0.5</delay>
+    <count>140</count>
+    <x-offset>-53.8</x-offset>
+    <y-offset>-4.6</y-offset>
+    <z-offset>-9.8</z-offset>
+    <pitch-offset>190.0</pitch-offset>
     <life>5</life>
     <buoyancy>8</buoyancy>
+    <cd>0.1</cd>
     <eda>1.0</eda>
+    <randomness>
+        <azimuth>5</azimuth>
+        <elevation>5</elevation>
+    </randomness>
   </submodel>
   
  <submodel>
@@ -29,15 +33,20 @@
     <trigger>ai/submodels/submodel[0]/flare-release</trigger>
     <speed>100</speed>
     <repeat>true</repeat>
-    <delay>0.25</delay>
-    <count>100</count>
-    <x-offset>-6.68</x-offset>
-    <y-offset>-1.54</y-offset>
-    <z-offset>-1.35</z-offset>
-    <yaw-offset>180.0</yaw-offset>
+    <delay>0.5</delay>
+    <count>140</count>
+    <x-offset>-53.8</x-offset>
+    <y-offset>4.6</y-offset>
+    <z-offset>-9.8</z-offset>
+    <pitch-offset>170.0</pitch-offset>
     <life>5</life>
     <buoyancy>8</buoyancy>
+    <cd>0.1</cd>
     <eda>1.0</eda>
+    <randomness>
+        <azimuth>5</azimuth>
+        <elevation>5</elevation>
+    </randomness>
   </submodel>
 
 </PropertyList>
