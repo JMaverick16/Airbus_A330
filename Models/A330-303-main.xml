@@ -276,4 +276,9 @@
 		</offsets>
 	</model>
 
+	<effect>
+		<inherits-from>Effects/glass</inherits-from>
+		<object-name>windshield</object-name>
+	</effect>
+
 </PropertyList>

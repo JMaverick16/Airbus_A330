@@ -5914,6 +5914,21 @@
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/clock-glare</inherits-from>
 		<object-name>clock_glare</object-name>
 	</effect>
+
+	<!--effect>
+		<inherits-from>Effects/glass</inherits-from>
+		<object-name>window.01</object-name>
+		<object-name>window.02</object-name>
+		<object-name>window.03</object-name>
+		<object-name>window.04</object-name>
+		<object-name>window.05</object-name>
+		<object-name>window.06</object-name>
+	</effect-->
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>hud_glass</object-name>
+	</effect>
 	
 	<!-- move any objects requiring lightmap to another effect file -->
 	<effect>

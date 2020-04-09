@@ -641,7 +641,7 @@
 		<output>/systems/pressurization/targetvs</output>   
 	</filter>
 	
-	<filter>
+	<!--filter>
 		<name>Icing Severity</name>
 		<type>gain</type>
 		<gain>1.0</gain>
@@ -660,7 +660,7 @@
 			</expression>
 		</input>
 		<output>/systems/icing/factor</output>
-	</filter>
+	</filter-->
 	
 	<filter>
 		<name>TAS</name>

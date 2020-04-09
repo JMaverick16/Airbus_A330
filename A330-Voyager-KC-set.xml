@@ -262,6 +262,7 @@
 		<hasboom type="bool">0</hasboom>
 		<boom-pos-cmd type="double">0</boom-pos-cmd>
 		<drogue-pos-cmd type="double">0</drogue-pos-cmd>
+		<enable-hud type="string">1</enable-hud>
 	</options>
 	
 	<MCDUC n="0">
