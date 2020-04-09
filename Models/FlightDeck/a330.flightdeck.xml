@@ -5915,7 +5915,7 @@
 		<object-name>clock_glare</object-name>
 	</effect>
 
-	<!--effect>
+	<effect>
 		<inherits-from>Effects/glass</inherits-from>
 		<object-name>window.01</object-name>
 		<object-name>window.02</object-name>
@@ -5923,7 +5923,7 @@
 		<object-name>window.04</object-name>
 		<object-name>window.05</object-name>
 		<object-name>window.06</object-name>
-	</effect-->
+	</effect>
 
 	<effect>
 		<inherits-from>Effects/model-transparent</inherits-from>
@@ -6166,11 +6166,9 @@
 		<object-name>wall_2</object-name>
 		<object-name>window_frame</object-name>
 		<object-name>HeadsetCpt</object-name>
-		<object-name>WindowGlassCpt</object-name>
 		<object-name>WindowOpenerCpt</object-name>
 		<object-name>WindowFo</object-name>
 		<object-name>HeadsetFo</object-name>
-		<object-name>WindowGlassFo</object-name>
 		<object-name>WindowOpenerFo</object-name>
 		<object-name>WX</object-name>
 	</effect>
