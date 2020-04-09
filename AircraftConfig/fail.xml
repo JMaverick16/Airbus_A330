@@ -497,6 +497,49 @@
 				</binding>
 				<live>true</live>
 			</checkbox>
+				<group>
+				<layout>hbox</layout>
+
+				<hrule>
+					<stretch type="bool">true</stretch>
+				</hrule>
+				<text>
+					<label>Engine Fire</label>
+				</text>
+				<hrule>
+					<stretch type="bool">true</stretch>
+				</hrule>
+			</group>
+			
+			<checkbox>
+				<label>Left Engine</label>
+				<halign>left</halign>
+				<property>/systems/failures/engine-left-fire</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live>true</live>
+			</checkbox>
+			
+			<checkbox>
+				<label>APU</label>
+				<halign>left</halign>
+				<property>/systems/failures/apu-fire</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live>true</live>
+			</checkbox>
+			
+			<checkbox>
+				<label>Right Engine</label>
+				<halign>left</halign>
+				<property>/systems/failures/engine-right-fire</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+				<live>true</live>
+			</checkbox>
 		
 			<hrule/>
 			

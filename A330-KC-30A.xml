@@ -139,6 +139,7 @@ xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 	<system file="a330-spoiler"/>
 	<system file="refuel"/>
 	<system file="a330-lights"/>
+	<system file="a330-engine-fire"/>
 	
 	<flight_control name="none"/>
 	

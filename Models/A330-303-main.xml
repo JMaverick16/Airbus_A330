@@ -275,6 +275,19 @@
 			<z-m>-5.49</z-m>
 		</offsets>
 	</model>
+	
+	<model>
+		<name>APU fire</name>
+		<path>Aircraft/Airbus_A330/Models/Effects/enginefire.xml</path>
+		<offsets>
+			<x-m>35.7702</x-m>
+			<y-m>0</y-m>
+			<z-m>2.49434</z-m>
+		</offsets>
+		<condition>
+			<property>systems/failures/apu-fire</property>
+		</condition>
+	</model>
 
 	<effect>
 		<inherits-from>Effects/glass</inherits-from>

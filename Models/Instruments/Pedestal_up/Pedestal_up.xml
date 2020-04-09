@@ -5,7 +5,7 @@
 <PropertyList>
 
 	<path>res/Pedestal_up.ac</path>
-	
+
 	<animation>
 		<name>Panel lighting</name>
 		<type>material</type>
@@ -53,18 +53,18 @@
 			<factor-prop>sim/model/lights/dome-light</factor-prop>
 		</emission>
 	</animation>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/pedestal-flood-upper</inherits-from>
 		<object-name>throttle_1</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/pedestal-flood-atc</inherits-from>
 		<object-name>atc_glare</object-name>
 		<object-name>atc_body</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/pedestal-flood-engine</inherits-from>
 		<object-name>engine_body</object-name>
@@ -73,7 +73,7 @@
 		<object-name>Lcutoff</object-name>
 		<object-name>Rcutoff</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/brightness-panel-ped</inherits-from>
 		<object-name>vu111_body</object-name>
@@ -81,12 +81,12 @@
 		<object-name>vu111_glare</object-name>
 		<object-name>vu112_glare</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/dummy-gap</inherits-from>
 		<object-name>dummy_1</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/pedestal-flood-radar</inherits-from>
 		<object-name>radar_mode</object-name>
@@ -94,8 +94,7 @@
 		<object-name>radar_body</object-name>
 		<object-name>radar_glare</object-name>
 	</effect>
-	
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/cockpit-irradiance</inherits-from>
 		<object-name>ecam_body</object-name>
@@ -122,7 +121,65 @@
 		<object-name>vu112_aids</object-name>
 		<object-name>vu112_dfdr</object-name>
 	</effect>
-	
+
+	<animation>
+		<type>select</type>
+		<object-name>engine_fault_1</object-name>
+		<condition>
+			<property>systems/unused/unused-ped</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>engine_fire_1</object-name>
+		<condition>
+			<or>
+				<property>/systems/fire/engine1/warning-active</property>
+				<property>/controls/switches/annun-test</property>
+			</or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>engine_fire_1</object-name>
+		<emission>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>1.0</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>engine_fault_2</object-name>
+		<condition>
+			<property>systems/unused/unused-ped</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>engine_fire_2</object-name>
+		<condition>
+			<or>
+				<property>/systems/fire/engine2/warning-active</property>
+				<property>/controls/switches/annun-test</property>
+			</or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>engine_fire_2</object-name>
+		<emission>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>1.0</blue>
+		</emission>
+	</animation>
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/cockpit-irradiance</inherits-from>
 		<object-name>atc_0</object-name>
@@ -144,7 +201,7 @@
 		<object-name>atc_thrt</object-name>
 	</effect>
 
- 	<text>
+	<text>
 		<name>atc-code</name>
 		<offsets>
 			<x-m>-0.01279</x-m>
@@ -169,7 +226,7 @@
 		</font-resolution>
 	</text>
 
- 	<text>
+	<text>
 		<name>atc-test</name>
 		<offsets>
 			<x-m>-0.01279</x-m>
@@ -191,7 +248,8 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-<animation>
+
+	<animation>
 		<type>pick</type>
 		<object-name>atc_0</object-name>
 		<action>
@@ -204,7 +262,7 @@
 		</action>
 	</animation>
 
- 	<animation>
+	<animation>
 		<type>pick</type>
 		<object-name>atc_1</object-name>
 		<action>
@@ -217,7 +275,7 @@
 		</action>
 	</animation>
 
- 	<animation>
+	<animation>
 		<type>pick</type>
 		<object-name>atc_2</object-name>
 		<action>
@@ -230,7 +288,7 @@
 		</action>
 	</animation>
 
- 	<animation>
+	<animation>
 		<type>pick</type>
 		<object-name>atc_3</object-name>
 		<action>
@@ -243,7 +301,7 @@
 		</action>
 	</animation>
 
- 	<animation>
+	<animation>
 		<type>pick</type>
 		<object-name>atc_4</object-name>
 		<action>
@@ -256,7 +314,7 @@
 		</action>
 	</animation>
 
- 	<animation>
+	<animation>
 		<type>pick</type>
 		<object-name>atc_5</object-name>
 		<action>
@@ -269,7 +327,7 @@
 		</action>
 	</animation>
 
- 	<animation>
+	<animation>
 		<type>pick</type>
 		<object-name>atc_6</object-name>
 		<action>
@@ -282,7 +340,7 @@
 		</action>
 	</animation>
 
- 	<animation>
+	<animation>
 		<type>pick</type>
 		<object-name>atc_7</object-name>
 		<action>
@@ -295,7 +353,7 @@
 		</action>
 	</animation>
 
- 	<animation>
+	<animation>
 		<type>pick</type>
 		<object-name>atc_clr</object-name>
 		<action>
@@ -308,7 +366,7 @@
 		</action>
 	</animation>
 
- 	<animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>atc_sys</object-name>
 		<factor>-30</factor>
@@ -326,7 +384,7 @@
 		<property>controls/atc/system-knob</property>
 	</animation>
 
- 	<animation>
+	<animation>
 		<type>pick</type>
 		<object-name>atc_sys</object-name>
 		<action>
@@ -344,7 +402,7 @@
         </action>
 	</animation>
 
- 	<animation>
+	<animation>
 		<type>rotate</type>
 		<object-name>atc_stby</object-name>
 		<factor>-35</factor>
@@ -362,7 +420,7 @@
 		<property>controls/atc/mode-knob</property>
 	</animation>
 
- 	<animation>
+	<animation>
 		<type>pick</type>
 		<object-name>atc_stby</object-name>
 		<action>
@@ -401,7 +459,7 @@
         </action>
 	</animation>
 
- 	<animation>
+	<animation>
 		<type>pick</type>
 		<object-name>atc_ident</object-name>
 		<action>
@@ -413,7 +471,7 @@
         </action>
 	</animation>
 
- 	<animation>
+	<animation>
 		<type>select</type>
 		<object-name>atc_fail</object-name>
 		<condition>

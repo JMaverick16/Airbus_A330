@@ -576,6 +576,11 @@
 			<speedbrake-arm>0</speedbrake-arm>
 			<slats>0</slats>
 		</flight>
+		<fire>
+			<apu-test-btn type="bool">0</apu-test-btn>
+			<test-btn-1 type="bool">0</test-btn-1>
+			<test-btn-2 type="bool">0</test-btn-2>
+		</fire>
 		<gear>
 			<brake-parking type="bool">0</brake-parking>
 			<tiller-cmd-norm type="double">0</tiller-cmd-norm>
@@ -789,6 +794,26 @@
 			</tank>
 			<x-feed type="bool">0</x-feed>
 		</fuel>
+		<fire n="0">
+			<apu>
+				<temperature type="double">0</temperature>
+			</apu>
+			<engine1>
+				<temperature type="double">0</temperature>
+			</engine1>
+			<engine2>
+				<temperature type="double">0</temperature>
+			</engine2>
+			<cargo>
+				<disch type="bool">0</disch>
+				<aft>
+					<temperature type="double">0</temperature>
+				</aft>
+				<fwd>
+					<temperature type="double">0</temperature>
+				</fwd>
+			</cargo>
+		</fire>
 		<hydraulic n="0">
 			<blue-psi>0</blue-psi>
 			<green-psi>0</green-psi>

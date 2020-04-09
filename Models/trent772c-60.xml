@@ -46,6 +46,32 @@
 		</center>
 	</animation>
 	
+	<model>
+		<name>Engine fire</name>
+		<path>Aircraft/Airbus_A330/Models/Effects/enginefire.xml</path>
+		<offsets>
+			<x-m>3.01294</x-m>
+			<y-m>-9.30922</y-m>
+			<z-m>-2.46368</z-m>
+		</offsets>
+		<condition>
+			<property>systems/failures/engine-left-fire</property>
+		</condition>
+	</model>
+	
+	<model>
+		<name>Engine fire</name>
+		<path>Aircraft/Airbus_A330/Models/Effects/enginefire.xml</path>
+		<offsets>
+			<x-m>3.01294</x-m>
+			<y-m>9.30922</y-m>
+			<z-m>-2.46368</z-m>
+		</offsets>
+		<condition>
+			<property>systems/failures/engine-right-fire</property>
+		</condition>
+	</model>
+	
 	<!-- Reverser Animations -->
 	
 	<!-- Left Reversers -->

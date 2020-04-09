@@ -222,21 +222,11 @@
 		<type>select</type>
 		<object-name>AftCargoIsoBtn1F</object-name>
 		<object-name>AftCargoIsoBtn2O</object-name>
-		<object-name>APUFireAgtBtn1S</object-name>
-		<object-name>APUFireAgtBtn2D</object-name>
 		<object-name>CargoHotAirBtn1F</object-name>
 		<object-name>CargoHotAirBtn2O</object-name>
 		<object-name>EmerCallBtn1C</object-name>
 		<object-name>EmerCallBtn2O</object-name>
 		<object-name>EmerGenInd1F</object-name>
-		<object-name>Eng1FireAgt1Btn1S</object-name>
-		<object-name>Eng1FireAgt1Btn2D</object-name>
-		<object-name>Eng1FireAgt2Btn1S</object-name>
-		<object-name>Eng1FireAgt2Btn2D</object-name>
-		<object-name>Eng2FireAgt1Btn1S</object-name>
-		<object-name>Eng2FireAgt1Btn2D</object-name>
-		<object-name>Eng2FireAgt2Btn1S</object-name>
-		<object-name>Eng2FireAgt2Btn2D</object-name>
 		<object-name>EvacCommandBtn1E</object-name>
 		<object-name>EvacCommandBtn2O</object-name>
 		<object-name>Gen1LineBtn1S</object-name>
@@ -277,13 +267,14 @@
 	</animation>
 	
 	<!-- Cargo Smoke -->
+	<!-- Cargo Smoke -->
 	<animation>
 		<type>select</type>
 		<object-name>FwdCargoSmkBtn1S</object-name>
 		<condition>
 			<or>
 				<equals>
-					<property>/controls/fire/cargo/fwdsmokeLight</property>
+					<property>systems/fire/cargo/fwd/warning-active</property>
 					<value>1</value>
 				</equals>
 				<equals>
@@ -293,14 +284,14 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>AftCargoSmkBtn1S</object-name>
 		<condition>
 			<or>
 				<equals>
-					<property>/controls/fire/cargo/aftsmokeLight</property>
+					<property>systems/fire/cargo/aft/warning-active</property>
 					<value>1</value>
 				</equals>
 				<equals>
@@ -310,14 +301,18 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>FwdCargoSmkBtn2D</object-name>
 		<condition>
 			<or>
 				<equals>
-					<property>/controls/fire/cargo/fwddischLight</property>
+					<property>systems/fire/cargo/disch</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>systems/fire/cargo/disch-test</property>
 					<value>1</value>
 				</equals>
 				<equals>
@@ -327,14 +322,18 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>AftCargoSmkBtn2D</object-name>
 		<condition>
 			<or>
 				<equals>
-					<property>/controls/fire/cargo/aftdischLight</property>
+					<property>systems/fire/cargo/disch</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>systems/fire/cargo/disch-test</property>
 					<value>1</value>
 				</equals>
 				<equals>
@@ -344,7 +343,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<name>Cargo Smoke Test</name>
 		<type>pick</type>
@@ -365,11 +364,24 @@
 			</binding>
 			<binding>
 				<command>nasal</command>
-				<script>setprop("/sim/sounde/oh-btn", 1);</script>
+				<script>setprop("sim/sounde/oh-btn", 1);</script>
 			</binding>
+			<mod-up>
+				<binding>
+					<condition>
+						<greater-than-equals>
+							<property>systems/electrical/bus/dc-ess</property>
+							<value>25</value>
+						</greater-than-equals>
+					</condition>
+					<command>property-assign</command>
+					<property>controls/fire/cargo/test</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>FwdCargoDischBtn</object-name>
@@ -394,17 +406,30 @@
 			</binding>
 			<binding>
 				<condition>
+					<and>
+						<equals>
+							<property>controls/OH/protectors/fwddisch</property>
+							<value>1</value>
+						</equals>
+					</and>
+				</condition>
+				<command>property-assign</command>
+				<property>controls/OH/protectors/fwddisch</property>
+				<value>0</value>
+			</binding>
+			<binding>
+				<condition>
 					<equals>
 						<property>controls/OH/protectors/aftdisch</property>
 						<value>1</value>
 					</equals>
 				</condition>
 				<command>nasal</command>
-				<script>setprop("/sim/sounde/oh-btn", 1);</script>
+				<script>setprop("sim/sounde/oh-btn", 1);</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>AftCargoDischBtn</object-name>
@@ -429,62 +454,71 @@
 			</binding>
 			<binding>
 				<condition>
+					<and>
+						<equals>
+							<property>controls/OH/protectors/aftdisch</property>
+							<value>1</value>
+						</equals>
+					</and>
+				</condition>
+				<command>property-assign</command>
+				<property>controls/OH/protectors/aftdisch</property>
+				<value>0</value>
+			</binding>
+			<binding>
+				<condition>
 					<equals>
 						<property>controls/OH/protectors/aftdisch</property>
 						<value>1</value>
 					</equals>
 				</condition>
 				<command>nasal</command>
-				<script>setprop("/sim/sounde/oh-btn", 1);</script>
+				<script>setprop("sim/sounde/oh-btn", 1);</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>FwdCargoDischGuard</object-name>
 		<action>
-			<button>1</button>
+			<button>0</button>
+			<repeatable>true</repeatable>
 			<binding>
-				<command>property-assign</command>
+				<command>property-toggle</command>
 				<property>controls/OH/protectors/fwddisch</property>
-				<value>1</value>
 			</binding>
-			<mod-up>
-				<binding>
-					<command>property-assign</command>
-					<property>controls/OH/protectors/fwddisch</property>
-					<value>0</value>
-				</binding>
-				<binding>
-					<command>nasal</command>
-					<script>setprop("/sim/sounde/oh-cover", 1);</script>
-				</binding>
-			</mod-up>
+			<binding>
+				<condition>
+					<not>
+						<property>controls/OH/protectors/fwddisch</property>
+					</not>
+				</condition>
+				<command>nasal</command>
+				<script>setprop("sim/sounde/oh-cover", 1);</script>
+			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>AftCargoDischGuard</object-name>
 		<action>
-			<button>1</button>
+			<button>0</button>
+			<repeatable>true</repeatable>
 			<binding>
-				<command>property-assign</command>
+				<command>property-toggle</command>
 				<property>controls/OH/protectors/aftdisch</property>
-				<value>1</value>
 			</binding>
-			<mod-up>
-				<binding>
-					<command>property-assign</command>
-					<property>controls/OH/protectors/aftdisch</property>
-					<value>0</value>
-				</binding>
-				<binding>
-					<command>nasal</command>
-					<script>setprop("/sim/sounde/oh-cover", 1);</script>
-				</binding>
-			</mod-up>
+			<binding>
+				<condition>
+					<not>
+						<property>controls/OH/protectors/aftdisch</property>
+					</not>
+				</condition>
+				<command>nasal</command>
+				<script>setprop("sim/sounde/oh-cover", 1);</script>
+			</binding>
 		</action>
 	</animation>
 	
@@ -7403,54 +7437,41 @@
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<condition>
-					<equals>
-						<property>controls/engines/engine[0]/fire-btn-cover</property>
-						<value>1</value>
-					</equals>
-				</condition>
-				<command>property-toggle</command>
-				<property>controls/engines/engine[0]/fire-btn</property>
-			</binding>
-			<binding>
-				<condition>
-					<equals>
-						<property>controls/engines/engine[0]/fire-btn</property>
-						<value>0</value>
-					</equals>
-				</condition>
-				<command>property-assign</command>
-				<property>controls/engines/engine[0]/fire-btn-cover</property>
-				<value>0</value>
+				<command>nasal</command>
+				<script>
+					if (getprop("controls/engines/engine[0]/fire-btn") == 1) {
+						setprop("controls/engines/engine[0]/fire-btn", 0);
+						setprop("controls/engines/engine[0]/fire-btn-cover", 0);
+					} else if (getprop("controls/engines/engine[0]/fire-btn-cover") == 1) {
+						setprop("controls/engines/engine[0]/fire-btn", 1);
+					} else {
+						setprop("controls/engines/engine[0]/fire-btn-cover", 1);
+					}
+				</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>Eng1FireCover</object-name>
 		<object-name>Eng1FireBtn</object-name>
 		<action>
-			<button>1</button>
+			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<command>property-assign</command>
-				<property>controls/engines/engine[0]/fire-btn-cover</property>
-				<value>1</value>
+				<command>nasal</command>
+				<script>
+					if (getprop("controls/engines/engine[0]/fire-btn") == 1) {
+						setprop("controls/engines/engine[0]/fire-btn", 0);
+						setprop("controls/engines/engine[0]/fire-btn-cover", 0);
+					} else if (getprop("controls/engines/engine[0]/fire-btn-cover") == 1) {
+						setprop("controls/engines/engine[0]/fire-btn-cover", 0);
+					} else {
+						setprop("controls/engines/engine[0]/fire-btn-cover", 1);
+					}
+				</script>
 			</binding>
-			<mod-up>
-				<binding>
-					<condition>
-						<equals>
-							<property>controls/engines/engine[0]/fire-btn</property>
-							<value>0</value>
-						</equals>
-					</condition>
-					<command>property-assign</command>
-					<property>controls/engines/engine[0]/fire-btn-cover</property>
-					<value>0</value>
-				</binding>
-			</mod-up>
 		</action>
 	</animation>
 	
@@ -7481,6 +7502,242 @@
         </axis>
     </animation>
 	
+	<animation>
+		<type>material</type>
+		<object-name>Eng1FireBtn</object-name>
+		<condition>
+			<or>
+				<property>systems/fire/engine1/warning-active</property>
+				<property>controls/switches/annun-test</property>
+			</or>
+		</condition>
+		<emission>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>1.0</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>Eng1FireAgt1Btn1S</object-name>
+		<object-name>Eng1FireAgt1Btn2D</object-name>
+		<object-name>Eng1FireAgt1Btn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/engines/engine[0]/agent1-btn</property>
+				<value>1</value>
+				<condition>
+					<or>
+						<greater-than-equals>
+							<property>systems/electrical/battery1-volts</property>
+							<value>25</value>
+						</greater-than-equals>
+						<greater-than-equals>
+							<property>systems/electrical/battery2-volts</property>
+							<value>25</value>
+						</greater-than-equals>
+					</or>
+				</condition>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>Eng1FireAgt2Btn1S</object-name>
+		<object-name>Eng1FireAgt2Btn2D</object-name>
+		<object-name>Eng1FireAgt2Btn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/engines/engine[0]/agent2-btn</property>
+				<value>1</value>
+				<condition>
+					<greater-than-equals>
+						<property>systems/electrical/bus/dc2</property>
+						<value>25</value>
+					</greater-than-equals>
+				</condition>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Eng1FireAgt1Btn1S</object-name>
+		<condition>
+			<and>
+				<or>
+					<equals>
+						<property>controls/engines/engine[0]/fire-btn</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>controls/fire/test-btn-1</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>controls/switches/annun-test</property>
+						<value>1</value>
+					</equals>
+				</or>
+				<or>
+					<greater-than-equals>
+						<property>systems/electrical/battery1-volts</property>
+						<value>25</value>
+					</greater-than-equals>
+					<greater-than-equals>
+						<property>systems/electrical/battery2-volts</property>
+						<value>25</value>
+					</greater-than-equals>
+				</or>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>Eng1FireAgt2Btn1S</object-name>
+		<condition>
+			<and>
+				<or>
+					<equals>
+						<property>controls/engines/engine[0]/fire-btn</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>controls/fire/test-btn-1</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>controls/switches/annun-test</property>
+						<value>1</value>
+					</equals>
+				</or>
+				<greater-than-equals>
+					<property>systems/electrical/bus/dc2</property>
+					<value>25</value>
+				</greater-than-equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Eng1FireAgt1Btn2D</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>systems/fire/engine1/disch1</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/fire/test-btn-1</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/switches/annun-test</property>
+					<value>1</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Eng1FireAgt2Btn2D</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>systems/fire/engine1/disch2</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/fire/test-btn-1</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/switches/annun-test</property>
+					<value>1</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
+	<!-- Test -->
+	<animation>
+		<type>pick</type>
+		<object-name>FireTst</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/fire/test-btn-1</property>
+				<value>1</value>
+				<condition>
+					<or>
+						<or>
+							<greater-than-equals>
+								<property>systems/electrical/battery1-volts</property>
+								<value>25</value>
+							</greater-than-equals>
+							<greater-than-equals>
+								<property>systems/electrical/battery2-volts</property>
+								<value>25</value>
+							</greater-than-equals>
+						</or>
+						<greater-than-equals>
+							<property>systems/electrical/bus/dc2</property>
+							<value>25</value>
+						</greater-than-equals>
+					</or>
+				</condition>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/fire/test-btn-2</property>
+				<value>1</value>
+				<condition>
+					<or>
+						<or>
+							<greater-than-equals>
+								<property>systems/electrical/battery1-volts</property>
+								<value>25</value>
+							</greater-than-equals>
+							<greater-than-equals>
+								<property>systems/electrical/battery2-volts</property>
+								<value>25</value>
+							</greater-than-equals>
+						</or>
+						<greater-than-equals>
+							<property>systems/electrical/bus/dc2</property>
+							<value>25</value>
+						</greater-than-equals>
+					</or>
+				</condition>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/fire/test-btn-1</property>
+					<value>0</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/fire/test-btn-2</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+	
 	<!-- Engine 2 -->
 	<animation>
 		<type>pick</type>
@@ -7489,54 +7746,41 @@
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<condition>
-					<equals>
-						<property>controls/engines/engine[1]/fire-btn-cover</property>
-						<value>1</value>
-					</equals>
-				</condition>
-				<command>property-toggle</command>
-				<property>controls/engines/engine[1]/fire-btn</property>
-			</binding>
-			<binding>
-				<condition>
-					<equals>
-						<property>controls/engines/engine[1]/fire-btn</property>
-						<value>0</value>
-					</equals>
-				</condition>
-				<command>property-assign</command>
-				<property>controls/engines/engine[1]/fire-btn-cover</property>
-				<value>0</value>
+				<command>nasal</command>
+				<script>
+					if (getprop("controls/engines/engine[1]/fire-btn") == 1) {
+						setprop("controls/engines/engine[1]/fire-btn", 0);
+						setprop("controls/engines/engine[1]/fire-btn-cover", 0);
+					} else if (getprop("controls/engines/engine[1]/fire-btn-cover") == 1) {
+						setprop("controls/engines/engine[1]/fire-btn", 1);
+					} else {
+						setprop("controls/engines/engine[1]/fire-btn-cover", 1);
+					}
+				</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>Eng2FireCover</object-name>
 		<object-name>Eng2FireBtn</object-name>
 		<action>
-			<button>1</button>
+			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<command>property-assign</command>
-				<property>controls/engines/engine[1]/fire-btn-cover</property>
-				<value>1</value>
+				<command>nasal</command>
+				<script>
+					if (getprop("controls/engines/engine[1]/fire-btn") == 1) {
+						setprop("controls/engines/engine[1]/fire-btn", 0);
+						setprop("controls/engines/engine[1]/fire-btn-cover", 0);
+					} else if (getprop("controls/engines/engine[1]/fire-btn-cover") == 1) {
+						setprop("controls/engines/engine[1]/fire-btn-cover", 0);
+					} else {
+						setprop("controls/engines/engine[1]/fire-btn-cover", 1);
+					}
+				</script>
 			</binding>
-			<mod-up>
-				<binding>
-					<condition>
-						<equals>
-							<property>controls/engines/engine[1]/fire-btn</property>
-							<value>0</value>
-						</equals>
-					</condition>
-					<command>property-assign</command>
-					<property>controls/engines/engine[1]/fire-btn-cover</property>
-					<value>0</value>
-				</binding>
-			</mod-up>
 		</action>
 	</animation>
 	
@@ -7567,7 +7811,208 @@
         </axis>
     </animation>
 	
+	<animation>
+		<type>material</type>
+		<object-name>Eng2FireBtn</object-name>
+		<condition>
+			<or>
+				<property>systems/fire/engine2/warning-active</property>
+				<property>controls/switches/annun-test</property>
+			</or>
+		</condition>
+		<emission>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>1.0</blue>
+		</emission>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>Eng2FireAgt1Btn1S</object-name>
+		<object-name>Eng2FireAgt1Btn2D</object-name>
+		<object-name>Eng2FireAgt1Btn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/engines/engine[1]/agent1-btn</property>
+				<value>1</value>
+				<condition>
+					<or>
+						<greater-than-equals>
+							<property>systems/electrical/battery1-volts</property>
+							<value>25</value>
+						</greater-than-equals>
+						<greater-than-equals>
+							<property>systems/electrical/battery2-volts</property>
+							<value>25</value>
+						</greater-than-equals>
+					</or>
+				</condition>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>Eng2FireAgt2Btn1S</object-name>
+		<object-name>Eng2FireAgt2Btn2D</object-name>
+		<object-name>Eng2FireAgt2Btn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/engines/engine[1]/agent2-btn</property>
+				<value>1</value>
+				<condition>
+					<greater-than-equals>
+						<property>systems/electrical/bus/dc2</property>
+						<value>25</value>
+					</greater-than-equals>
+				</condition>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Eng2FireAgt1Btn1S</object-name>
+		<condition>
+			<and>
+				<or>
+					<equals>
+						<property>controls/engines/engine[1]/fire-btn</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>controls/fire/test-btn-2</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>controls/switches/annun-test</property>
+						<value>1</value>
+					</equals>
+				</or>
+				<or>
+					<greater-than-equals>
+						<property>systems/electrical/battery1-volts</property>
+						<value>25</value>
+					</greater-than-equals>
+					<greater-than-equals>
+						<property>systems/electrical/battery2-volts</property>
+						<value>25</value>
+					</greater-than-equals>
+				</or>
+			</and>
+		</condition>
+	</animation>
+	
+	<animation>
+		<type>select</type>
+		<object-name>Eng2FireAgt2Btn1S</object-name>
+		<condition>
+			<and>
+				<or>
+					<equals>
+						<property>controls/engines/engine[1]/fire-btn</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>controls/fire/test-btn-2</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>controls/switches/annun-test</property>
+						<value>1</value>
+					</equals>
+				</or>
+				<greater-than-equals>
+					<property>systems/electrical/bus/dc2</property>
+					<value>25</value>
+				</greater-than-equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Eng2FireAgt1Btn2D</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>systems/fire/engine2/disch1</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/fire/test-btn-2</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/switches/annun-test</property>
+					<value>1</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Eng2FireAgt2Btn2D</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>systems/fire/engine2/disch2</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/fire/test-btn-2</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/switches/annun-test</property>
+					<value>1</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+	
 	<!-- APU -->
+	<animation>
+		<type>pick</type>
+		<object-name>APUFireTst</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/fire/apu-test-btn</property>
+				<value>1</value>
+				<condition>
+					<or>
+						<greater-than-equals>
+							<property>systems/electrical/battery1-volts</property>
+							<value>25</value>
+						</greater-than-equals>
+						<greater-than-equals>
+							<property>systems/electrical/battery2-volts</property>
+							<value>25</value>
+						</greater-than-equals>
+					</or>
+				</condition>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/fire/apu-test-btn</property>
+					<value>0</value>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+	
 	<animation>
 		<type>pick</type>
 		<object-name>APUFireBtn</object-name>
@@ -7575,54 +8020,41 @@
 			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<condition>
-					<equals>
-						<property>controls/APU/fire-btn-cover</property>
-						<value>1</value>
-					</equals>
-				</condition>
-				<command>property-toggle</command>
-				<property>controls/APU/fire-btn</property>
-			</binding>
-			<binding>
-				<condition>
-					<equals>
-						<property>controls/APU/fire-btn</property>
-						<value>0</value>
-					</equals>
-				</condition>
-				<command>property-assign</command>
-				<property>controls/APU/fire-btn-cover</property>
-				<value>0</value>
+				<command>nasal</command>
+				<script>
+					if (getprop("controls/APU/fire-btn") == 1) {
+						setprop("controls/APU/fire-btn", 0);
+						setprop("controls/APU/fire-btn-cover", 0);
+					} else if (getprop("controls/APU/fire-btn-cover") == 1) {
+						setprop("controls/APU/fire-btn", 1);
+					} else {
+						setprop("controls/APU/fire-btn-cover", 1);
+					}
+				</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>APUFireCover</object-name>
 		<object-name>APUFireBtn</object-name>
 		<action>
-			<button>1</button>
+			<button>0</button>
 			<repeatable>false</repeatable>
 			<binding>
-				<command>property-assign</command>
-				<property>controls/APU/fire-btn-cover</property>
-				<value>1</value>
+				<command>nasal</command>
+				<script>
+					if (getprop("controls/APU/fire-btn") == 1) {
+						setprop("controls/APU/fire-btn", 0);
+						setprop("controls/APU/fire-btn-cover", 0);
+					} else if (getprop("controls/APU/fire-btn-cover") == 1) {
+						setprop("controls/APU/fire-btn-cover", 0);
+					} else {
+						setprop("controls/APU/fire-btn-cover", 1);
+					}
+				</script>
 			</binding>
-			<mod-up>
-				<binding>
-					<condition>
-						<equals>
-							<property>controls/APU/fire-btn</property>
-							<value>0</value>
-						</equals>
-					</condition>
-					<command>property-assign</command>
-					<property>controls/APU/fire-btn-cover</property>
-					<value>0</value>
-				</binding>
-			</mod-up>
 		</action>
 	</animation>
 	
@@ -7655,6 +8087,96 @@
 			<z2-m>0.15017</z2-m>
         </axis>
     </animation>
+	
+	<animation>
+		<type>material</type>
+		<object-name>APUFireBtn</object-name>
+		<condition>
+			<or>
+				<property>systems/fire/apu/warning-active</property>
+				<property>controls/switches/annun-test</property>
+			</or>
+		</condition>
+		<emission>
+			<red>1.0</red>
+			<green>1.0</green>
+			<blue>1.0</blue>
+		</emission>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>APUFireAgtBtn1S</object-name>
+		<object-name>APUFireAgtBtn2D</object-name>
+		<object-name>APUFireAgtBtn</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/APU/agent-btn</property>
+				<value>1</value>
+				<condition>
+					<or>
+						<greater-than-equals>
+							<property>systems/electrical/battery1-volts</property>
+							<value>25</value>
+						</greater-than-equals>
+						<greater-than-equals>
+							<property>systems/electrical/battery2-volts</property>
+							<value>25</value>
+						</greater-than-equals>
+						<greater-than-equals>
+							<property>systems/electrical/bus/dc-ess</property>
+							<value>25</value>
+						</greater-than-equals>
+					</or>
+				</condition>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>APUFireAgtBtn1S</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>controls/APU/fire-btn</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/fire/apu-test-btn</property>
+					<value>true</value>
+				</equals>
+				<equals>
+					<property>controls/switches/annun-test</property>
+					<value>1</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>APUFireAgtBtn2D</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>systems/fire/apu/disch</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/fire/apu-test-btn</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>controls/switches/annun-test</property>
+					<value>1</value>
+				</equals>
+			</or>
+		</condition>
+	</animation>
 	
 	<!-- Sounds -->
 	<animation>

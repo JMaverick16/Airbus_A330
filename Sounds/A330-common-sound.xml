@@ -1188,6 +1188,32 @@
 			</volume>
 		</ns>
 		
+		<crc>
+			<name>CRC</name>
+			<path>Aircraft/Airbus_A330/Sounds/Cockpit/crc.wav</path>
+			<mode>looped</mode>
+			<type>avionics</type>
+			<!-- <condition>
+				<and>
+					<property>/ECAM/warnings/master-warning-light</property>
+					<property>/sim/sound/warnings/crc</property>
+				</and>
+			</condition>-->
+			<condition>
+				<or>
+					<property>/systems/fire/apu/warning-active</property>
+					<property>/systems/fire/engine1/warning-active</property>
+					<property>/systems/fire/engine2/warning-active</property>
+				</or>
+			</condition>
+			<volume>
+				<property>/sim/current-view/internal</property>
+				<factor>0.8</factor>
+			</volume>
+			<reference-dist>10</reference-dist>
+			<max-dist>100</max-dist>
+		</crc>
+		
 		<switch>
 			<name>Button</name>
 			<mode>once</mode>
