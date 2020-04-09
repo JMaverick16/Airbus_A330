@@ -1480,6 +1480,22 @@
 					<value>1</value>
 				</binding>
 			</key>
+			<key n="113">
+				<name>q</name>
+				<desc>Launch Flares (MRTT only)</desc>
+				<binding>
+				<command>property-assign</command>
+					<property>/ai/submodels/submodel[0]/flare-release-cmd</property>
+					<value type="bool">true</value>
+				</binding>
+				<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>/ai/submodels/submodel[0]/flare-release-cmd</property>
+					<value type="bool">false</value>
+				</binding>
+				</mod-up>
+			</key>
 		</keyboard>
 	</input>
 

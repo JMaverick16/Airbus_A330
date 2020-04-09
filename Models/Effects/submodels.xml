@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+
+
+<!-- Countermeasures -->
+
+  <submodel>
+    <name>flares</name>
+    <model>Aircraft/Airbus_A330/Models/Effects/Countermeasures/flare.xml</model>
+    <trigger>ai/submodels/submodel[0]/flare-release</trigger>
+    <speed>100</speed>
+    <repeat>true</repeat>
+    <delay>0.25</delay>
+    <count>100</count>
+    <x-offset>-3.50</x-offset>
+    <y-offset>-2.52</y-offset>
+    <z-offset>-2.52</z-offset>
+    <yaw-offset>180.0</yaw-offset>
+    <life>5</life>
+    <buoyancy>8</buoyancy>
+    <eda>1.0</eda>
+  </submodel>
+  
+ <submodel>
+    <name>flares</name>
+    <model>Aircraft/Airbus_A330/Models/Effects/Countermeasures/flare.xml</model>
+    <trigger>ai/submodels/submodel[0]/flare-release</trigger>
+    <speed>100</speed>
+    <repeat>true</repeat>
+    <delay>0.25</delay>
+    <count>100</count>
+    <x-offset>-6.68</x-offset>
+    <y-offset>-1.54</y-offset>
+    <z-offset>-1.35</z-offset>
+    <yaw-offset>180.0</yaw-offset>
+    <life>5</life>
+    <buoyancy>8</buoyancy>
+    <eda>1.0</eda>
+  </submodel>
+
+</PropertyList>

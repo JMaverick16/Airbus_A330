@@ -191,6 +191,11 @@
 				<max-fuel-transfer-lbs-min>10000</max-fuel-transfer-lbs-min>
 			</refuel>
 		</systems>
+
+		<submodels>
+			<serviceable type="bool">1</serviceable>
+			<path>Aircraft/Airbus_A330/Models/Effects/submodels.xml</path>
+		</submodels>
 		
 	</sim>
 
@@ -254,6 +259,15 @@
 	</limits>
 
 	<tanker type="bool">true</tanker>
+
+	<ai>
+		<submodels>
+			<submodel n="0">
+				<flare-release-cmd type="bool">false</flare-release-cmd>
+				<flare-release type="bool">false</flare-release>
+			</submodel>
+		</submodels>
+	</ai>
 	
 	<options n="0">
 		<!--EIS2 type="bool">0</EIS2-->
@@ -283,6 +297,9 @@
 		<refuel_control>
 			<file>Aircraft/Airbus_A330/Nasal/refuel-control.nas</file>
 		</refuel_control>
+		<flares>
+			<file>Aircraft/Airbus_A330/Nasal/flares.nas</file>
+		</flares>
 	</nasal>
 
 </PropertyList>
