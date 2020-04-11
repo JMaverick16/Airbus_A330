@@ -200,6 +200,16 @@
 	</sim>
 
 	<instrumentation>
+		<!--efis>
+			<mfd>
+				<pnl_mode-num type="double"> 3 </pnl_mode-num>
+			</mfd>
+		</efis>
+		<efis n="1">
+			<mfd>
+				<pnl_mode-num type="double"> 4 </pnl_mode-num>
+			</mfd>
+		</efis-->
 		<tcas><!-- http://wiki.flightgear.org/index.php/TCAS -->
 			<speaker><!-- Speaker Configuration -->
 				<max-dist> 2 </max-dist><!-- Max. distance where speaker is heard -->
