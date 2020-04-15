@@ -7,7 +7,7 @@ A very advanced simulation of the Airbus A330 Series for FlightGear originally d
 - Systems: Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp), J Maverick 16
 - Cockpit: Thorsten Herrmann (TH-555), Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
 - Instruments: Joshua Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
-- Textures, Effects, Sounds, Misc: J Maverick 16, Necolatis
+- Textures, Effects, Sounds, Misc: J Maverick 16, Andrea Vezza, merspieler, Matt Maring (hayden2000)
 - Liveries: Enrico Castaldi (Spectre), J Maverick 16, Gary Brown, others
 
 Present pack includes the following Airbus A330 Series variants:
