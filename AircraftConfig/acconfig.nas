@@ -459,6 +459,7 @@ var taxi_b = func {
 	setprop("/systems/fadec/powered-time", -310);
 	setprop("/controls/lighting/turnoff-light-switch", 1);
 	setprop("/controls/lighting/taxi-light-switch", 0.5);
+	setprop("/instrumentation/altimeter[0]/setting-inhg", getprop("/environment/pressure-sea-level-inhg"));
 	settimer(taxi_c, 2);
 }
 var taxi_c = func {
