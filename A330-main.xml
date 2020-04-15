@@ -16,6 +16,7 @@
 		</hud>
 
 		<model>
+			<fallback-model-index>255</fallback-model-index>
 			<autopush>
 				<connected type="bool">0</connected>
 				<position-norm type="double">0</position-norm>
