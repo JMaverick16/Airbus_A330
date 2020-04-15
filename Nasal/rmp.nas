@@ -11,9 +11,9 @@ var chan_rmp1_v = "vhr1";
 var chan_rmp2_v = "vhr2";
 var chan_rmp3_v = "vhr3";
 
-var act_vhf1 = props.globals.getNode("/instrumentation/comm[0]/frequencies/selected-mhz");
-var act_vhf2 = props.globals.getNode("/instrumentation/comm[1]/frequencies/selected-mhz");
-var act_vhf3 = props.globals.getNode("/instrumentation/comm[2]/frequencies/selected-mhz");
+var act_vhf1 = props.globals.getNode("instrumentation/comm[0]/frequencies/selected-mhz");
+var act_vhf2 = props.globals.getNode("instrumentation/comm[1]/frequencies/selected-mhz");
+var act_vhf3 = props.globals.getNode("instrumentation/comm[2]/frequencies/selected-mhz");
 
 var act_display_rmp1 = props.globals.initNode("/controls/radio/rmp[0]/active-display", "118.700", "STRING");
 var stby_display_rmp1 = props.globals.initNode("/controls/radio/rmp[0]/standby-display", "121.400", "STRING");
@@ -51,8 +51,8 @@ var am_mode_rmp3 = props.globals.initNode("/systems/radio/rmp[2]/am-active", 0, 
 
 var init = func() {
 	for(var i = 0; i < 3; i += 1) {
-		setprop("/systems/radio/rmp[" ~ i ~ "]/hf1-standby", 510);
-		setprop("/systems/radio/rmp[" ~ i ~ "]/hf2-standby", 891);
+		setprop("systems/radio/rmp[" ~ i ~ "]/hf1-standby", 510);
+		setprop("systems/radio/rmp[" ~ i ~ "]/hf2-standby", 891);
 	}
 	
 	chan_rmp1.setValue("vhf1");
@@ -108,8 +108,7 @@ var rmpUpdate = func() {
 var update_active_vhf = func(vhf) {
 	var sel1 = chan_rmp1.getValue();
 	var sel2 = chan_rmp2.getValue();
-# In case that a 3rd RMP is added, uncomment the following line and expand the if statements with the sel3 comparison
-#	var sel3 = chan_rmp3.getValue();
+	var sel3 = chan_rmp3.getValue();
 
 	if (vhf == 1) {
 		if (sel1 == "vhf1" or sel2 == "vhf1") {
@@ -121,6 +120,9 @@ var update_active_vhf = func(vhf) {
 			if (sel2 == "vhf1") {
 				act_display_rmp2.setValue(act);
 			}
+			if (sel3 == "vhf1") {
+				act_display_rmp3.setValue(act);
+			}
 		}
 	} else if (vhf == 2) {
 		if (sel1 == "vhf2" or sel2 == "vhf2") {
@@ -131,6 +133,9 @@ var update_active_vhf = func(vhf) {
 			}
 			if (sel2 == "vhf2") {
 				act_display_rmp2.setValue(act);
+			}
+			if (sel3 == "vhf2") {
+				act_display_rmp3.setValue(act);
 			}
 		}
 	} else if (vhf == 3) {
@@ -149,6 +154,13 @@ var update_active_vhf = func(vhf) {
 					act_display_rmp2.setValue("data");
 				} else {
 					act_display_rmp2.setValue(act);
+				}
+			}
+			if (sel3 == "vhf3") {
+				if (act == 0) {
+					act_display_rmp3.setValue("data");
+				} else {
+					act_display_rmp3.setValue(act);
 				}
 			}
 		}
@@ -170,7 +182,7 @@ var update_stby_vhf = func(rmp_no, vhf) {
 		} else {
 			stby_display_rmp1.setValue(stby);
 		}
-	} else {
+	} else if (rmp_no == 1) {
 		if (vhf == 1) {
 			var stby = sprintf("%3.3f", stby_rmp2_vhf1.getValue());
 		} else if (vhf == 2) {
@@ -183,6 +195,20 @@ var update_stby_vhf = func(rmp_no, vhf) {
 			stby_display_rmp2.setValue("data");
 		} else {
 			stby_display_rmp2.setValue(stby);
+		}
+	} else {
+		if (vhf == 1) {
+			var stby = sprintf("%3.3f", stby_rmp3_vhf1.getValue());
+		} else if (vhf == 2) {
+			var stby = sprintf("%3.3f", stby_rmp3_vhf2.getValue());
+		} else if (vhf == 3) {
+			var stby = sprintf("%3.3f", stby_rmp3_vhf3.getValue());
+		}
+
+		if (stby == 0) {
+			stby_display_rmp3.setValue("data");
+		} else {
+			stby_display_rmp3.setValue(stby);
 		}
 	}
 }
@@ -211,29 +237,28 @@ var update_chan_sel = func(rmp_no) {
 			update_stby_vhf(rmp_no, 3);
 		}
 	} else {
-# In case that a 3rd RMP is added, uncomment this
-#		var chan = chan_rmp3.getValue();
-#		if (chan == "vhf1") {
-#			update_stby_vhf(rmp_no, 1);
-#		} else if (chan == "vhf2") {
-#			update_stby_vhf(rmp_no, 2);
-#		} else {
-#			update_stby_vhf(rmp_no, 3);
-#		}
+		var chan = chan_rmp3.getValue();
+		if (chan == "vhf1") {
+			update_stby_vhf(rmp_no, 1);
+		} else if (chan == "vhf2") {
+			update_stby_vhf(rmp_no, 2);
+		} else {
+			update_stby_vhf(rmp_no, 3);
+		}
 	}
 }
 
 var transfer = func(rmp_no) {
 	rmp_no = rmp_no - 1;
-	var sel_chan = getprop("/systems/radio/rmp[" ~ rmp_no ~ "]/sel_chan");
+	var sel_chan = getprop("systems/radio/rmp[" ~ rmp_no ~ "]/sel_chan");
 
 	if (string.match(sel_chan, "vhf[1-3]")) {
 		var mod1 = int(string.replace(sel_chan, "vhf", ""));
 		var mod = mod1 - 1;
 
-		var mem = getprop("/instrumentation/comm[" ~ mod ~ "]/frequencies/selected-mhz");
-		setprop("/instrumentation/comm[" ~ mod ~ "]/frequencies/selected-mhz", getprop("/systems/radio/rmp[" ~ rmp_no ~ "]/vhf" ~ mod1 ~ "-standby"));
-		setprop("/systems/radio/rmp[" ~ rmp_no ~ "]/vhf" ~ mod1 ~ "-standby", mem);
+		var mem = getprop("instrumentation/comm[" ~ mod ~ "]/frequencies/selected-mhz");
+		setprop("instrumentation/comm[" ~ mod ~ "]/frequencies/selected-mhz", getprop("systems/radio/rmp[" ~ rmp_no ~ "]/vhf" ~ mod1 ~ "-standby"));
+		setprop("systems/radio/rmp[" ~ rmp_no ~ "]/vhf" ~ mod1 ~ "-standby", mem);
 	}
 }
 

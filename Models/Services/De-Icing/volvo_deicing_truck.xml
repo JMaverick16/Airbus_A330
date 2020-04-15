@@ -71,7 +71,6 @@
 		<object-name>lift_arm_04</object-name>
 		<object-name>lift_arm_05</object-name>
 		<object-name>lift_05_siren</object-name>
-		<object-name>warning</object-name>
 		<object-name>Lights_deicing</object-name>
 		<object-name>deicing_water</object-name>
 	</animation>
@@ -90,7 +89,6 @@
 		<object-name>lift_arm_04</object-name>
 		<object-name>lift_arm_05</object-name>
 		<object-name>lift_05_siren</object-name>
-		<object-name>warning</object-name>
 		<object-name>Lights_deicing</object-name>
 		<object-name>deicing_water</object-name>
 	</animation>
@@ -107,7 +105,6 @@
 		<object-name>lift_arm_04</object-name>
 		<object-name>lift_arm_05</object-name>
 		<object-name>lift_05_siren</object-name>
-		<object-name>warning</object-name>
 		<object-name>Lights_deicing</object-name>
 		<object-name>deicing_water</object-name>
 	</animation>
@@ -472,24 +469,6 @@
 		<green>0.7</green>	
 		<blue>0.7</blue>
 	</emission>
-</animation>
-
-<!-- activate siren flash if truck active -->
-<animation>
-	<type>select</type> 
-	<object-name>warning</object-name>
-		<condition>
-			<or>
-			<greater-than>		
-				<property>services/deicing_truck/crane/position-norm</property>
-				<value>0.1</value>
-			</greater-than>
-			<greater-than>		
-				<property>services/deicing_truck/truck/position-norm</property>
-				<value>0.1</value>
-			</greater-than>
-			</or>
-		</condition>
 </animation>
 
 <!-- dont show the light model during day-->
