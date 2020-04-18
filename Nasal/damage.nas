@@ -2,7 +2,7 @@
 # Author: Nikolai V. Chr. (with some improvement by Onox and Pinto)
 # Modified for IDG by Joshua Davidson (Octal450)
 
-# Copyright (c) 2019 Joshua Davidson (Octal450)
+# Copyright (c) 2020 Josh Davidson (Octal450)
 
 # Enable the damage checkbox in Aircraft Configuration
 setprop("/systems/acconfig/damage-loaded", 1);

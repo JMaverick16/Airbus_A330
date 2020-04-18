@@ -1,7 +1,7 @@
 # A3XX PW4000/RR Trent 700 Engine
 # Joshua Davidson (Octal450)
 
-# Copyright (c) 2019 Joshua Davidson (Octal450)
+# Copyright (c) 2020 Josh Davidson (Octal450)
 
 #####################
 # Initializing Vars #

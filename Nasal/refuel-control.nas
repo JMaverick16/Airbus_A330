@@ -1,7 +1,7 @@
 # A33X Refuel Control Code
 # For Boom, and Drogues
 
-# Copyright (c) 2019 Joshua Davidson (Octal450)
+# Copyright (c) 2020 Josh Davidson (Octal450)
 
 var toggleBoom = func {
 	var drogueCmd = getprop("/options/boom-pos-cmd");

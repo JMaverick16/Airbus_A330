@@ -1,7 +1,7 @@
 # A3XX ADIRS System
 # Joshua Davidson (Octal450)
 
-# Copyright (c) 2019 Joshua Davidson (Octal450)
+# Copyright (c) 2020 Josh Davidson (Octal450)
 
 var knob = 0;
 var roll = 0;

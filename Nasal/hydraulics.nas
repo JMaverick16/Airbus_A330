@@ -1,7 +1,7 @@
 # A3XX Hydraulic System
 # Joshua Davidson (Octal450)
 
-# Copyright (c) 2019 Joshua Davidson (Octal450)
+# Copyright (c) 2020 Josh Davidson (Octal450)
 
 var eng1_pump_blue_sw = 0;
 var eng1_pump_green_sw = 0;

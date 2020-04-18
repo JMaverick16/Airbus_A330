@@ -1,7 +1,7 @@
 # A3XX Fuel System
 # Joshua Davidson (Octal450)
 
-# Copyright (c) 2019 Joshua Davidson (Octal450)
+# Copyright (c) 2020 Josh Davidson (Octal450)
 
 var xfeed_sw = 0;
 var tank0pump1_sw = 0;

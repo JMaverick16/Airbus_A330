@@ -1,7 +1,7 @@
 # A3XX ECAM Messages
 # Joshua Davidson (Octal450)
 
-# Copyright (c) 2019 Joshua Davidson (Octal450)
+# Copyright (c) 2020 Josh Davidson (Octal450)
 
 var stateL = 0;
 var stateR = 0;
