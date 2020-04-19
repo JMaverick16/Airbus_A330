@@ -4,7 +4,7 @@
 # Copyright (c) 2020 Josh Davidson (Octal450)
 
 print("-----------------------------------------------------------------------------");
-print("Copyright (c) 2017-2019 Joshua Davidson (Octal450)");
+print("Copyright (c) 2017-2020 Josh Davidson (Octal450)");
 print("Copyright (c) 2017-2020 J Maverick 16");
 print("-----------------------------------------------------------------------------");
 
