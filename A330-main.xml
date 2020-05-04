@@ -1526,6 +1526,15 @@
 		<wingflex-enable type="bool">1</wingflex-enable>
 		<wingflex type="double">0</wingflex>
 	</aircraft>
+
+	<a330>
+		<sound>
+			<thunder1 type="bool">false</thunder1>
+			<thunder2 type="bool">false</thunder2>
+			<thunder3 type="bool">false</thunder3>
+			<thunder4 type="bool">false</thunder4>
+		</sound>
+	</a330>
 	
 	<nasal>
 		<libraries>

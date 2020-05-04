@@ -1540,16 +1540,16 @@
 			<mode>once</mode>
 			<path>Aircraft/Airbus_A330/Sounds/Effects/thunder1.wav</path>
 			<type>avionics</type>
-			<property>a320/sound/thunder1</property>
+			<property>a330/sound/thunder1</property>
 			<pitch>
-				<property>a320/sound/dist-thunder1</property>
+				<property>a330/sound/dist-thunder1</property>
 				<factor>2</factor>
 				<offset>0.50</offset>
 				<min>1.00</min>
 				<max>2.00</max>
 			</pitch>
 			<volume>
-				<property>a320/sound/dist-thunder1</property>
+				<property>a330/sound/dist-thunder1</property>
 			</volume>
 		</thunder1>
 
@@ -1558,16 +1558,16 @@
 			<mode>once</mode>
 			<path>Aircraft/Airbus_A330/Sounds/Effects/thunder2.wav</path>
 			<type>avionics</type>
-			<property>a320/sound/thunder2</property>
+			<property>a330/sound/thunder2</property>
 			<pitch>
-				<property>a320/sound/dist-thunder2</property>
+				<property>a330/sound/dist-thunder2</property>
 				<factor>2</factor>
 				<offset>0.50</offset>
 				<min>1.00</min>
 				<max>2.00</max>
 			</pitch>
 			<volume>
-				<property>a320/sound/dist-thunder2</property>
+				<property>a330/sound/dist-thunder2</property>
 			</volume>
 		</thunder2>
 		<thunder3>
@@ -1575,16 +1575,16 @@
 			<mode>once</mode>
 			<path>Aircraft/Airbus_A330/Sounds/Effects/thunder3.wav</path>
 			<type>avionics</type>
-			<property>a320/sound/thunder3</property>
+			<property>a330/sound/thunder3</property>
 			<pitch>
-				<property>a320/sound/dist-thunder3</property>
+				<property>a330/sound/dist-thunder3</property>
 				<factor>1</factor>
 				<offset>0.50</offset>
 				<min>1.00</min>
 				<max>2.00</max>
 			</pitch>
 			<volume>
-				<property>a320/sound/dist-thunder3</property>
+				<property>a330/sound/dist-thunder3</property>
 			</volume>
 		</thunder3>
 		<thunder4>
@@ -1592,16 +1592,16 @@
 			<mode>once</mode>
 			<path>Aircraft/Airbus_A330/Sounds/Effects/thunder4.wav</path>
 			<type>avionics</type>
-			<property>a320/sound/thunder4</property>
+			<property>a330/sound/thunder4</property>
 			<pitch>
-				<property>a320/sound/dist-thunder4</property>
+				<property>a330/sound/dist-thunder4</property>
 				<factor>1</factor>
 				<offset>0.50</offset>
 				<min>1.00</min>
 				<max>2.00</max>
 			</pitch>
 			<volume>
-				<property>a320/sound/dist-thunder4</property>
+				<property>a330/sound/dist-thunder4</property>
 			</volume>
 		</thunder4>
 

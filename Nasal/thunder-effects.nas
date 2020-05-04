@@ -38,10 +38,10 @@ var thunder_listener = func {
     var lightning_distance_norm = std.min(1.0, 1 / math.pow(lightning_distance / 5000.0, 2));
 
     settimer(func {
-        var thunder1 = getprop("a320/sound/thunder1");
-        var thunder2 = getprop("a320/sound/thunder2");
-        var thunder3 = getprop("a320/sound/thunder3");
-        var thunder4 = getprop("a320/sound/thunder4");
+        var thunder1 = getprop("a330/sound/thunder1");
+        var thunder2 = getprop("a330/sound/thunder2");
+        var thunder3 = getprop("a330/sound/thunder3");
+        var thunder4 = getprop("a330/sound/thunder4");
         var vol = 0;
         if(getprop("sim/current-view/internal") != nil and getprop("canopy/position-norm") != nil) {
           vol = clamp(1-(getprop("sim/current-view/internal")*0.5)+(getprop("canopy/position-norm")*0.5), 0, 1);
@@ -50,19 +50,19 @@ var thunder_listener = func {
         }
         if (!thunder1) {
             thunderCalls = 1;
-            setprop("a320/sound/dist-thunder1", lightning_distance_norm * vol * 2.25);
+            setprop("a330/sound/dist-thunder1", lightning_distance_norm * vol * 2.25);
         }
         else if (!thunder2) {
             thunderCalls = 2;
-            setprop("a320/sound/dist-thunder2", lightning_distance_norm * vol * 2.25);
+            setprop("a330/sound/dist-thunder2", lightning_distance_norm * vol * 2.25);
         }
         else if (!thunder3) {
             thunderCalls = 3;
-            setprop("a320/sound/dist-thunder3", lightning_distance_norm * vol * 2.25);
+            setprop("a330/sound/dist-thunder3", lightning_distance_norm * vol * 2.25);
         }
         else if (!thunder4) {
             thunderCalls = 4;
-            setprop("a320/sound/dist-thunder4", lightning_distance_norm * vol * 2.25);
+            setprop("a330/sound/dist-thunder4", lightning_distance_norm * vol * 2.25);
         }
         else
             return;
@@ -73,16 +73,16 @@ var thunder_listener = func {
 };
 
 var play_thunder = func (name, timeout=0.1, delay=0) {
-    var sound_prop = "/a320/sound/" ~ name;
+    var sound_prop = "/a330/sound/" ~ name;
 
     settimer(func {
         # Play the sound
-        setprop(sound_prop, TRUE);
+        setprop(sound_prop, 1);
 
         # Reset the property after timeout so that the sound can be
         # played again.
         settimer(func {
-            setprop(sound_prop, FALSE);
+            setprop(sound_prop, 0);
         }, timeout);
     }, delay);
 };
