@@ -43,8 +43,8 @@ var thunder_listener = func {
         var thunder3 = getprop("a330/sound/thunder3");
         var thunder4 = getprop("a330/sound/thunder4");
         var vol = 0;
-        if(getprop("sim/current-view/internal") != nil and getprop("canopy/position-norm") != nil) {
-          vol = clamp(1-(getprop("sim/current-view/internal")*0.5)+(getprop("canopy/position-norm")*0.5), 0, 1);
+        if(getprop("sim/current-view/internal") != nil) {
+          vol = clamp(1-(getprop("sim/current-view/internal")*0.5), 0, 1);
         } else {
           vol = 0;
         }
