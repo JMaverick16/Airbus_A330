@@ -1458,6 +1458,28 @@
 		</relay>
 
 		<!-- Effects -->
+
+		<ambience>
+			<name>AmbienceOutside</name>
+			<mode>looped</mode>
+			<path>Aircraft/Airbus_A330/Sounds/Effects/ambience_outside.wav</path>
+			<condition>
+				<not>
+					<property>sim/current-view/internal</property>
+				</not>
+				<property>gear/gear[0]/wow</property>
+				<property>gear/gear[1]/wow</property>
+				<property>gear/gear[2]/wow</property>
+				<less-than>
+					<property>engines/engine[0]/state</property>
+					<value>3</value>
+				</less-than>
+			</condition>
+			<volume>
+				<factor>0.265</factor>
+			</volume>
+		</ambience>
+
 		<rain>
 			<name>RainOutside</name>
 			<mode>looped</mode>
@@ -1513,26 +1535,75 @@
 			</volume>
 		</rain-windshield>
 
-		<ambience>
-			<name>AmbienceOutside</name>
-			<mode>looped</mode>
-			<path>Aircraft/Airbus_A330/Sounds/Effects/ambience_outside.wav</path>
-			<condition>
-				<not>
-					<property>sim/current-view/internal</property>
-				</not>
-				<property>gear/gear[0]/wow</property>
-				<property>gear/gear[1]/wow</property>
-				<property>gear/gear[2]/wow</property>
-				<less-than>
-					<property>engines/engine[0]/state</property>
-					<value>3</value>
-				</less-than>
-			</condition>
+		<thunder1>
+			<name>thunder1</name>
+			<mode>once</mode>
+			<path>Aircraft/Airbus_A330/Sounds/Effects/thunder1.wav</path>
+			<type>avionics</type>
+			<property>a320/sound/thunder1</property>
+			<pitch>
+				<property>a320/sound/dist-thunder1</property>
+				<factor>2</factor>
+				<offset>0.50</offset>
+				<min>1.00</min>
+				<max>2.00</max>
+			</pitch>
 			<volume>
-				<factor>0.265</factor>
+				<property>a320/sound/dist-thunder1</property>
 			</volume>
-		</ambience>
+		</thunder1>
+
+		<thunder2>
+			<name>thunder2</name>
+			<mode>once</mode>
+			<path>Aircraft/Airbus_A330/Sounds/Effects/thunder2.wav</path>
+			<type>avionics</type>
+			<property>a320/sound/thunder2</property>
+			<pitch>
+				<property>a320/sound/dist-thunder2</property>
+				<factor>2</factor>
+				<offset>0.50</offset>
+				<min>1.00</min>
+				<max>2.00</max>
+			</pitch>
+			<volume>
+				<property>a320/sound/dist-thunder2</property>
+			</volume>
+		</thunder2>
+		<thunder3>
+			<name>thunder3</name>
+			<mode>once</mode>
+			<path>Aircraft/Airbus_A330/Sounds/Effects/thunder3.wav</path>
+			<type>avionics</type>
+			<property>a320/sound/thunder3</property>
+			<pitch>
+				<property>a320/sound/dist-thunder3</property>
+				<factor>1</factor>
+				<offset>0.50</offset>
+				<min>1.00</min>
+				<max>2.00</max>
+			</pitch>
+			<volume>
+				<property>a320/sound/dist-thunder3</property>
+			</volume>
+		</thunder3>
+		<thunder4>
+			<name>thunder4</name>
+			<mode>once</mode>
+			<path>Aircraft/Airbus_A330/Sounds/Effects/thunder4.wav</path>
+			<type>avionics</type>
+			<property>a320/sound/thunder4</property>
+			<pitch>
+				<property>a320/sound/dist-thunder4</property>
+				<factor>1</factor>
+				<offset>0.50</offset>
+				<min>1.00</min>
+				<max>2.00</max>
+			</pitch>
+			<volume>
+				<property>a320/sound/dist-thunder4</property>
+			</volume>
+		</thunder4>
 
 		<pushback>
 			<name>Pushback_outside</name>

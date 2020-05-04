@@ -412,7 +412,7 @@
 			</checkbox>
 			
 			<checkbox>
-				<label>Allow Damage (MRTT Only)</label>
+				<label>Allow MP Damage (MRTT Only)</label>
 				<halign>left</halign>
 				<enable>
 					<and>

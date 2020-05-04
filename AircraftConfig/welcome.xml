@@ -53,7 +53,7 @@
 		</text>
 		<text>
 			<halign>center</halign>
-			<label>This is a complex simulation of these amazing Airbus aircraft.</label>
+			<label>This is a complex and advanced simulation of these amazing Airbus aircraft.</label>
 		</text>
 		<text>
 			<halign>center</halign>
@@ -61,7 +61,7 @@
 		</text>
 		<text>
 			<halign>center</halign>
-			<label>Development was stopped by Octal450. J Maverick 16 has restarted it.</label>
+			<label>Development is carried out by J Maverick 16, Josh Davidson and Jonathan Redpath.</label>
 		</text>
 		
 	</group>
@@ -72,7 +72,7 @@
 		<layout>hbox</layout>
 	
 		<checkbox>
-			<label>Do not show this screen at FlightGear startup</label>
+			<label>Do not show this dialog at FlightGear startup</label>
 			<halign>center</halign>
 			<property>/systems/acconfig/options/welcome-skip</property>
 			<binding>

@@ -34,7 +34,7 @@
 		
 		<text>
 			<halign>left</halign>
-			<label>Airbus A330 by J Maverick 16 based on the former Immersive Design Group A33X version</label>
+			<label>Airbus A330 Series for FlightGear</label>
 		</text>
 		
 		<hrule/>
@@ -53,11 +53,11 @@
 		</text>
 		<text>
 			<halign>left</halign>
-			<label>Instruments: Josh Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)</label>
+			<label>Instruments: Josh Davidson (Octal450), Jonanthan Redpath (legoboyvdlp), merspieler</label>
 		</text>
 		<text>
 			<halign>left</halign>
-			<label>Effects, Sounds, Textures, Misc: J Maverick 16, Andrea Vezzali (vezza), merspieler, Matt Maring (hayden2000)</label>
+			<label>Effects, Sounds, Textures, Misc: J Maverick 16, Andrea Vezzali (vezza), Matt Maring (hayden2000)</label>
 		</text>
 		<text>
 			<halign>left</halign>
@@ -65,7 +65,11 @@
 		</text>
 		<text>
 			<halign>left</halign>
-			<label>Development is being carried on by J Maverick 16 and Octal450.</label>
+			<label>Developed originally by former Immersive Design Group (IDG) under the name of IDG-A33X,</label>
+		</text>
+		<text>
+			<halign>left</halign>
+			<label>now rembranded and continued by J Maverick 16, Josh Davidson and Jonathan Redpath.</label>
 		</text>
 	
 	</group>

@@ -13,7 +13,7 @@
 		<layout>hbox</layout>
 		<text>
 			<halign>left</halign>
-			<label>Ground Services</label>
+			<label>A330 Ground Services</label>
 		</text>
 		<button>
 			<halign>right</halign>
