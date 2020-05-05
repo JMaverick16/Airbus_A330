@@ -42,6 +42,7 @@ var thunder_listener = func {
         var thunder2 = getprop("a330/sound/thunder2");
         var thunder3 = getprop("a330/sound/thunder3");
         var thunder4 = getprop("a330/sound/thunder4");
+        var thunder5 = getprop("a330/sound/thunder5");
         var vol = 0;
         if(getprop("sim/current-view/internal") != nil) {
           vol = clamp(1-(getprop("sim/current-view/internal")*0.5), 0, 1);
@@ -63,6 +64,10 @@ var thunder_listener = func {
         else if (!thunder4) {
             thunderCalls = 4;
             setprop("a330/sound/dist-thunder4", lightning_distance_norm * vol * 2.25);
+        }
+        else if (!thunder5) {
+            thunderCalls = 5;
+            setprop("a330/sound/dist-thunder5", lightning_distance_norm * vol * 2.25);
         }
         else
             return;

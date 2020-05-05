@@ -1624,6 +1624,7 @@
 				<property>a330/sound/dist-thunder2</property>
 			</volume>
 		</thunder2>
+
 		<thunder3>
 			<name>thunder3</name>
 			<mode>once</mode>
@@ -1641,6 +1642,7 @@
 				<property>a330/sound/dist-thunder3</property>
 			</volume>
 		</thunder3>
+
 		<thunder4>
 			<name>thunder4</name>
 			<mode>once</mode>
@@ -1658,6 +1660,24 @@
 				<property>a330/sound/dist-thunder4</property>
 			</volume>
 		</thunder4>
+
+		<thunder5>
+			<name>thunder5</name>
+			<mode>once</mode>
+			<path>Aircraft/Airbus_A330/Sounds/Effects/thunder5.wav</path>
+			<type>avionics</type>
+			<property>a330/sound/thunder5</property>
+			<pitch>
+				<property>a330/sound/dist-thunder5</property>
+				<factor>1</factor>
+				<offset>0.50</offset>
+				<min>1.00</min>
+				<max>2.00</max>
+			</pitch>
+			<volume>
+				<property>a330/sound/dist-thunder5</property>
+			</volume>
+		</thunder5>
 
 		<pushback>
 			<name>Pushback_outside</name>
