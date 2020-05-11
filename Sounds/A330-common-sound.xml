@@ -1318,59 +1318,20 @@
 		</switch>
 
 		<switch>
-			<name>Speedbrake Lever Off</name>
+			<name>Speedbrake Lever</name>
 			<mode>once</mode>
 			<path>Aircraft/Airbus_A330/Sounds/Cockpit/A320_flaplever.wav</path>
 			<condition>
 				<and>
-					<equals>
-						<property>/controls/flight/speedbrake</property>
-						<value>0</value>
-					</equals>
+					<property>/sim/sounde/spdbrk-click</property>
 					<property>/sim/current-view/internal</property>
 				</and>
 			</condition>
 			<volume>
-				<factor>0.40</factor>
+				<factor>0.75</factor>
 			</volume>
 		</switch>
-
-		<switch>
-			<name>Speedbrake Lever Half</name>
-			<mode>once</mode>
-			<path>Aircraft/Airbus_A330/Sounds/Cockpit/A320_flaplever.wav</path>
-			<condition>
-				<and>
-					<equals>
-						<property>/controls/flight/speedbrake</property>
-						<value>0.5</value>
-					</equals>
-					<property>/sim/current-view/internal</property>
-				</and>
-			</condition>
-			<volume>
-				<factor>0.40</factor>
-			</volume>
-		</switch>
-
-		<switch>
-			<name>Speedbrake Lever Full</name>
-			<mode>once</mode>
-			<path>Aircraft/Airbus_A330/Sounds/Cockpit/A320_flaplever.wav</path>
-			<condition>
-				<and>
-					<equals>
-						<property>/controls/flight/speedbrake</property>
-						<value>1</value>
-					</equals>
-					<property>/sim/current-view/internal</property>
-				</and>
-			</condition>
-			<volume>
-				<factor>0.40</factor>
-			</volume>
-		</switch>
-
+		
 		<switch>
 			<name>Flaps Motor</name>
 			<mode>in-transit</mode>
