@@ -1328,7 +1328,7 @@
 				</and>
 			</condition>
 			<volume>
-				<factor>0.75</factor>
+				<factor>0.40</factor>
 			</volume>
 		</switch>
 		
