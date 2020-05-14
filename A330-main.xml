@@ -17,6 +17,7 @@
 
 		<model>
 			<fallback-model-index>255</fallback-model-index>
+			
 			<autopush>
 				<connected type="bool">0</connected>
 				<position-norm type="double">0</position-norm>
@@ -48,6 +49,7 @@
 				</route>
 				<debug type="bool">false</debug>
 			</autopush>
+			
 			<icing>
 				<iceable>
 					<name>Wing</name>
@@ -610,6 +612,11 @@
 				<throttle-fdm type="double">0</throttle-fdm>
 			</engine>
 		</engines>
+		<fire>
+			<apu-test-btn type="bool">0</apu-test-btn>
+			<test-btn-1 type="bool">0</test-btn-1>
+			<test-btn-2 type="bool">0</test-btn-2>
+		</fire>
 		<flight>
 			<aileron-drives-tiller type="bool">0</aileron-drives-tiller>
 			<aileron-input>0</aileron-input>
@@ -618,11 +625,6 @@
 			<speedbrake-arm>0</speedbrake-arm>
 			<slats>0</slats>
 		</flight>
-		<fire>
-			<apu-test-btn type="bool">0</apu-test-btn>
-			<test-btn-1 type="bool">0</test-btn-1>
-			<test-btn-2 type="bool">0</test-btn-2>
-		</fire>
 		<gear>
 			<brake-parking type="bool">0</brake-parking>
 			<tiller-cmd-norm type="double">0</tiller-cmd-norm>
@@ -828,19 +830,6 @@
 			<sec1 type="bool">0</sec1>
 			<sec2 type="bool">0</sec2>
 		</fctl>
-		<fuel n="0">
-			<only-use-ctr-tank type="bool">0</only-use-ctr-tank>
-			<tank n="0">
-				<feed type="bool">0</feed>
-			</tank>
-			<tank n="1">
-				<feed type="bool">0</feed>
-			</tank>
-			<tank n="2">
-				<feed type="bool">0</feed>
-			</tank>
-			<x-feed type="bool">0</x-feed>
-		</fuel>
 		<fire n="0">
 			<apu>
 				<temperature type="double">0</temperature>
@@ -861,6 +850,19 @@
 				</fwd>
 			</cargo>
 		</fire>
+		<fuel n="0">
+			<only-use-ctr-tank type="bool">0</only-use-ctr-tank>
+			<tank n="0">
+				<feed type="bool">0</feed>
+			</tank>
+			<tank n="1">
+				<feed type="bool">0</feed>
+			</tank>
+			<tank n="2">
+				<feed type="bool">0</feed>
+			</tank>
+			<x-feed type="bool">0</x-feed>
+		</fuel>
 		<hydraulic n="0">
 			<blue-psi>0</blue-psi>
 			<green-psi>0</green-psi>
@@ -1122,6 +1124,62 @@
 			</mouse>
 		</mice>
 		<keyboard>
+			<key n="2">
+				<name>Ctrl-b</name>
+				<desc>Cycle speedbrake setting</desc>
+				<binding>
+					<condition>
+						<and>
+							<not-equals>
+								<property>/controls/flight/speedbrake-arm</property>
+								<value>1</value>
+							</not-equals>
+							<or>
+								<equals>
+									<property>/gear/gear[1]/wow</property>
+									<value>1</value>
+								</equals>
+								<equals>
+									<property>/gear/gear[2]/wow</property>
+									<value>1</value>
+								</equals>
+							</or>
+						</and>
+					</condition>
+					<command>property-cycle</command>
+					<property>/controls/flight/speedbrake</property>
+					<value>0.0</value>
+					<value>1.0</value>
+				</binding>
+				<binding>
+					<condition>
+						<and>
+							<not-equals>
+								<property>/controls/flight/speedbrake-arm</property>
+								<value>1</value>
+							</not-equals>
+							<equals>
+								<property>/gear/gear[1]/wow</property>
+								<value>0</value>
+							</equals>
+							<equals>
+								<property>/gear/gear[2]/wow</property>
+								<value>0</value>
+							</equals>
+						</and>
+					</condition>
+					<command>property-cycle</command>
+					<property>/controls/flight/speedbrake</property>
+					<value>0.0</value>
+					<value>0.5</value>
+					<value>1.0</value>
+				</binding>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/flight/speedbrake-arm</property>
+					<value>0</value>
+				</binding>
+			</key>
 			<key n="4">
 				<name>CTRL-d</name>
 				<desc>Autothrottle Disconnect</desc>
@@ -1373,6 +1431,52 @@
 					<script>libraries.resetView();</script>
 				</binding>
 			</key-->
+			<key n="101">
+				<name>e</name>
+				<desc>Thrust Levers Idle</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+					systems.doIdleThrust();
+					</script>
+				</binding>
+			</key>
+			<key n="102">
+				<name>f</name>
+				<desc>TOGA power</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+					systems.doTOGAThrust();
+					</script>
+				</binding>
+			</key>
+			<key n="108">
+				<name>l</name>
+				<desc>Flashlight</desc>
+				<binding>
+					<command>property-cycle</command>
+					<property>sim/rendering/als-secondary-lights/use-flashlight</property>
+					<value>0</value>
+					<value>1</value>
+				</binding>
+			</key>
+			<key n="113">
+				<name>q</name>
+				<desc>Launch Flares (MRTT only)</desc>
+				<binding>
+				<command>property-assign</command>
+					<property>/ai/submodels/submodel[0]/flare-release-cmd</property>
+					<value type="bool">true</value>
+				</binding>
+				<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>/ai/submodels/submodel[0]/flare-release-cmd</property>
+					<value type="bool">false</value>
+				</binding>
+				</mod-up>
+			</key>
 			<key n="120">
 				<name>x</name>
 				<desc>Decrease field of view</desc>
@@ -1411,108 +1515,6 @@
 					systems.doRevThrust();
 					</script>
 				</binding>
-			</key>
-			<key n="101">
-				<name>e</name>
-				<desc>Thrust Levers Idle</desc>
-				<binding>
-					<command>nasal</command>
-					<script>
-					systems.doIdleThrust();
-					</script>
-				</binding>
-			</key>
-			<key n="102">
-				<name>f</name>
-				<desc>TOGA power</desc>
-				<binding>
-					<command>nasal</command>
-					<script>
-					systems.doTOGAThrust();
-					</script>
-				</binding>
-			</key>
-			<key n="2">
-				<name>Ctrl-b</name>
-				<desc>Cycle speedbrake setting</desc>
-				<binding>
-					<condition>
-						<and>
-							<not-equals>
-								<property>/controls/flight/speedbrake-arm</property>
-								<value>1</value>
-							</not-equals>
-							<or>
-								<equals>
-									<property>/gear/gear[1]/wow</property>
-									<value>1</value>
-								</equals>
-								<equals>
-									<property>/gear/gear[2]/wow</property>
-									<value>1</value>
-								</equals>
-							</or>
-						</and>
-					</condition>
-					<command>property-cycle</command>
-					<property>/controls/flight/speedbrake</property>
-					<value>0.0</value>
-					<value>1.0</value>
-				</binding>
-				<binding>
-					<condition>
-						<and>
-							<not-equals>
-								<property>/controls/flight/speedbrake-arm</property>
-								<value>1</value>
-							</not-equals>
-							<equals>
-								<property>/gear/gear[1]/wow</property>
-								<value>0</value>
-							</equals>
-							<equals>
-								<property>/gear/gear[2]/wow</property>
-								<value>0</value>
-							</equals>
-						</and>
-					</condition>
-					<command>property-cycle</command>
-					<property>/controls/flight/speedbrake</property>
-					<value>0.0</value>
-					<value>0.5</value>
-					<value>1.0</value>
-				</binding>
-				<binding>
-					<command>property-assign</command>
-					<property>/controls/flight/speedbrake-arm</property>
-					<value>0</value>
-				</binding>
-			</key>
-			<key n="108">
-				<name>l</name>
-				<desc>Flashlight</desc>
-				<binding>
-					<command>property-cycle</command>
-					<property>sim/rendering/als-secondary-lights/use-flashlight</property>
-					<value>0</value>
-					<value>1</value>
-				</binding>
-			</key>
-			<key n="113">
-				<name>q</name>
-				<desc>Launch Flares (MRTT only)</desc>
-				<binding>
-				<command>property-assign</command>
-					<property>/ai/submodels/submodel[0]/flare-release-cmd</property>
-					<value type="bool">true</value>
-				</binding>
-				<mod-up>
-				<binding>
-					<command>property-assign</command>
-					<property>/ai/submodels/submodel[0]/flare-release-cmd</property>
-					<value type="bool">false</value>
-				</binding>
-				</mod-up>
 			</key>
 		</keyboard>
 	</input>
@@ -1606,13 +1608,13 @@
 			<file>Aircraft/Airbus_A330/Nasal/Autopush/autopush.nas</file>
 		</autopush>
 		<autopush_driver>
-			<file>Aircraft/Airbus_A330/Nasal/Autopush/driver.nas</file>
+			<file>Aircraft/Airbus_A330/Nasal/Autopush/autopush_driver.nas</file>
 		</autopush_driver>
 		<dynarr>
 			<file>Aircraft/Airbus_A330/Nasal/Autopush/dynarr.nas</file>
 		</dynarr>
 		<autopush_route>
-			<file>Aircraft/Airbus_A330/Nasal/Autopush/route.nas</file>
+			<file>Aircraft/Airbus_A330/Nasal/Autopush/autopush_route.nas</file>
 		</autopush_route>
 		<rmp>
 			<file>Aircraft/Airbus_A330/Nasal/rmp.nas</file>
