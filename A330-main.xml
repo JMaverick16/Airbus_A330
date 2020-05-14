@@ -18,7 +18,37 @@
 		<model>
 			<fallback-model-index>255</fallback-model-index>
 			
-			<autopush include="AircraftConfig/autopush-config.xml"/>
+			<autopush>
+				<connected type="bool">0</connected>
+				<position-norm type="double">0</position-norm>
+				<enabled type="int"/>
+				<available type="int">1</available>
+				<chocks alias="/services/chocks/nose"/>
+				<steer-cmd-norm alias="/fdm/jsbsim/hydraulics/tiller/autopush-cmd"/>
+				<yaw alias="/fdm/jsbsim/fcs/steer-deg"/>
+				<yaw-mult type="float">1.0</yaw-mult>
+				<target-speed-km_h type="float">0.0</target-speed-km_h>
+				<K_p type="float">1.5</K_p>
+				<F_p type="float">0.05</F_p>
+				<K_i type="float">0.05</K_i>
+				<F_i type="float">0.1</F_i>
+				<K_d type="float">0.0</K_d>
+				<F_d type="float">0.0</F_d>
+				<pitch-deg type="float">0.0</pitch-deg>
+				<min-turn-radius-m type="float">15</min-turn-radius-m>
+				<stopping-distance-m type="float">5.0</stopping-distance-m>
+				<driver>
+					<F_V type="float">5.5</F_V>
+					<K_psi type="float">0.03</K_psi>
+					<F_psi type="float">1.0</F_psi>
+					<K_psidot type="float">0.03</K_psidot>
+					<F_psidot type="float">1.0</F_psidot>
+				</driver>
+				<route>
+					<show type="bool"/>
+				</route>
+				<debug type="bool">false</debug>
+			</autopush>
 			
 			<icing>
 				<iceable>
@@ -153,6 +183,10 @@
 		<menubar>
 			<default>
 				<menu n="100">
+					<label>|</label>
+					<enabled type="bool">false</enabled>
+				</menu>
+				<menu n="101">
 					<label>Airbus A330</label>
 					<item>
 						<label>Aircraft Config</label>
@@ -164,15 +198,6 @@
 						</binding>
 					</item>
 					<item>
-						<label>About This Aircraft</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							acconfig.about_dlg.open();
-							</script>
-						</binding>
-					</item>
-					<item n="101">
 						<label>FCU Autoflight</label>
 						<binding>
 							<command>dialog-show</command>
@@ -186,8 +211,65 @@
 							<dialog-name>route-manager</dialog-name>
 						</binding>
 					</item>
+					<item>
+						<label>About This Aircraft</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							acconfig.about_dlg.open();
+							</script>
+						</binding>
+					</item>
 				</menu>
 				<menu n="102">
+					<label>Instruments</label>
+					<item>
+						<label>Left MCDU</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							canvas_mcdu.showMCDU1();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>Right MCDU</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							canvas_mcdu.showMCDU2();
+							</script>
+						</binding>
+					</item>
+					<item>
+						<label>RMP 1</label>
+						<binding>
+							<command>nasal</command>
+							<script><![CDATA[
+								Dialogs.rmp1Dialog.openDialog();
+							]]></script>
+						</binding>
+					</item>
+					<item>
+						<label>RMP 2</label>
+						<binding>
+							<command>nasal</command>
+							<script><![CDATA[
+								Dialogs.rmp2Dialog.openDialog();
+							]]></script>
+						</binding>
+					</item>
+					<item>
+						<label>RMP 3</label>
+						<binding>
+							<command>nasal</command>
+							<script><![CDATA[
+								Dialogs.rmp3Dialog.openDialog();
+							]]></script>
+						</binding>
+					</item>
+				</menu>
+				<menu n="103">
 					<label>DU</label>
 					<item>
 						<label>Captain's PFD</label>
@@ -250,54 +332,6 @@
 							<script>
 							canvas_iesi.showIESI();
 							</script>
-						</binding>
-					</item>
-				</menu>
-				<menu n="103">
-					<label>Instruments</label>
-					<item>
-						<label>Left MCDU</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							canvas_mcdu.showMCDU1();
-							</script>
-						</binding>
-					</item>
-					<item>
-						<label>Right MCDU</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							canvas_mcdu.showMCDU2();
-							</script>
-						</binding>
-					</item>
-					<item>
-						<label>RMP 1</label>
-						<binding>
-							<command>nasal</command>
-							<script><![CDATA[
-								Dialogs.rmp1Dialog.openDialog();
-							]]></script>
-						</binding>
-					</item>
-					<item>
-						<label>RMP 2</label>
-						<binding>
-							<command>nasal</command>
-							<script><![CDATA[
-								Dialogs.rmp2Dialog.openDialog();
-							]]></script>
-						</binding>
-					</item>
-					<item>
-						<label>RMP 3</label>
-						<binding>
-							<command>nasal</command>
-							<script><![CDATA[
-								Dialogs.rmp3Dialog.openDialog();
-							]]></script>
 						</binding>
 					</item>
 				</menu>
