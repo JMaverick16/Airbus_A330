@@ -182,6 +182,11 @@ setlistener("/sim/signals/fdm-initialized", func {
 	}
 	setprop("/systems/acconfig/options/revision", current_revision);
 	writeSettings();
+	
+	if (getprop("/options/system/fo-view") == 1) {
+		view.setViewByIndex(100);
+	}
+	
 	spinning.stop();
 });
 
@@ -220,6 +225,7 @@ var readSettings = func {
 	setprop("/controls/adirs/skip", getprop("/systems/acconfig/options/adirs-skip"));
 	setprop("/sim/model/autopush/route/show", getprop("/systems/acconfig/options/autopush/show-route"));
 	setprop("/sim/model/autopush/route/show-wingtip", getprop("/systems/acconfig/options/autopush/show-wingtip"));
+	setprop("/options/system/fo-view", getprop("/systems/acconfig/options/fo-view"));
 }
 
 var writeSettings = func {
@@ -227,6 +233,7 @@ var writeSettings = func {
 	setprop("/systems/acconfig/options/adirs-skip", getprop("/controls/adirs/skip"));
 	setprop("/systems/acconfig/options/autopush/show-route", getprop("/sim/model/autopush/route/show"));
 	setprop("/systems/acconfig/options/autopush/show-wingtip", getprop("/sim/model/autopush/route/show-wingtip"));
+	setprop("/systems/acconfig/options/fo-view", getprop("/options/system/fo-view"));
 	io.write_properties(getprop("/sim/fg-home") ~ "/Export/Airbus_A330-config.xml", "/systems/acconfig/options");
 }
 
