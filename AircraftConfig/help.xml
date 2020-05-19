@@ -9,25 +9,25 @@
 	<name>aircraft-config-help</name>
 	<layout>vbox</layout>
 
-    <group>
-        <layout>hbox</layout>
-        <text>
-            <halign>left</halign>
-            <label>Help</label>
-        </text>
-        <button>
-            <halign>right</halign>
-            <pref-width>20</pref-width>
-            <pref-height>20</pref-height>
-            <legend>X</legend>
-            <key>Esc</key>
-            <binding>
-                <command>dialog-close</command>
-            </binding>
-        </button>
-    </group>
+	<group>
+		<layout>hbox</layout>
+		<text>
+			<halign>left</halign>
+			<label>Help</label>
+		</text>
+		<button>
+			<halign>right</halign>
+			<pref-width>20</pref-width>
+			<pref-height>20</pref-height>
+			<legend>X</legend>
+			<key>Esc</key>
+			<binding>
+				<command>dialog-close</command>
+			</binding>
+		</button>
+	</group>
 	
-    <hrule/>
+	<hrule/>
 	
 		<group>
 			<layout>vbox</layout>
@@ -122,6 +122,10 @@
 			<text>
 				<halign>left</halign>
 				<label>SHIFT + F - Set CL Thrust</label>
+			</text>
+			<text>
+				<halign>left</halign>
+				<label>CTRL + V - Select Pilot Flying view (See Aircraft Configuration dialog)</label>
 			</text>
 			
 		</group>
