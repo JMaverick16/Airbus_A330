@@ -54,7 +54,7 @@
 			<pitch-deg>69.547</pitch-deg>
 		</offsets>
 	</model>
-	
+
 	<model>
 		<path>Aircraft/Airbus_A330/Models/Instruments/OHpanel/OHpanelEPR.xml</path>
 		<condition>
@@ -131,6 +131,7 @@
 			<pitch-deg>9.4</pitch-deg>
 		</offsets>
 	</model>
+	
 	<model>
 		<path>Aircraft/Airbus_A330/Models/Instruments/Radio/Radio2.xml</path>
 		<offsets>
@@ -151,6 +152,7 @@
 			<pitch-deg>9.4</pitch-deg>
 		</offsets>
 	</model>
+	
 	<model>
 		<path>Aircraft/Airbus_A330/Models/Instruments/Audio/Audio2.xml</path>
 		<offsets>
@@ -183,7 +185,7 @@
 			<pitch-deg>-16.534</pitch-deg>
 		</offsets>
 	</model>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>PFD1</object-name>
@@ -195,7 +197,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<model>
 		<name>PFD2</name>
 		<path>Aircraft/Airbus_A330/Models/Instruments/PFD/PFD2.xml</path>
@@ -206,7 +208,7 @@
 			<pitch-deg>-16.534</pitch-deg>
 		</offsets>
 	</model>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>PFD2</object-name>
@@ -230,7 +232,7 @@
 			<pitch-deg>-16.534</pitch-deg>
 		</offsets>
 	</model>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ND1</object-name>
@@ -242,7 +244,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<model>
 		<name>ND2</name>
 		<path>Aircraft/Airbus_A330/Models/Instruments/ND/ND_R.xml</path>
@@ -253,7 +255,7 @@
 			<pitch-deg>-16.534</pitch-deg>
 		</offsets>
 	</model>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>ND2</object-name>
@@ -267,7 +269,7 @@
 	</animation>
 
 	<!-- Upper ECAM -->
-	
+
 	<model>
 		<name>UECAM</name>
 		<path>Aircraft/Airbus_A330/Models/Instruments/Upper-ECAM/Upper-ECAM.xml</path>
@@ -391,7 +393,6 @@
 		<object-name>radio_vor_led</object-name>
 		<object-name>rgear_down</object-name>
 		<object-name>rgear_unlk</object-name>
-		<object-name>rudder-trim</object-name>
 		<object-name>spd-text</object-name>
 		<object-name>spd-text-test</object-name>
 		<object-name>terr_on_nd_label</object-name>
@@ -475,7 +476,6 @@
 		<object-name>master_caution_on</object-name>
 		<object-name>master_warning_on</object-name>
 		<object-name>qnh-test</object-name>
-		<object-name>rudder-trim-test</object-name>
 		<object-name>spd-text-test</object-name>
 		<object-name>ver.fmgc</object-name>
 		<condition>
@@ -485,10 +485,13 @@
 
 	<animation>
 		<type>select</type>
+		<object-name>alt-text-test</object-name>
+		<object-name>hdg-text-test</object-name>
+		<object-name>spd-text-test</object-name>
 		<object-name>vs-text-test</object-name>
 		<condition>
 			<or>
-				<not><property>FMGC/FCU-working</property></not>
+				<!-- <not><property>FMGC/FCU-working</property></not> -->
 				<property>controls/switches/annun-test</property>
 			</or>
 		</condition>
@@ -606,7 +609,7 @@
 		<offsets>
 			<x-m>0.108</x-m>
 			<y-m>-0.032</y-m>
-			<z-m>-0.130</z-m>
+			<z-m>-0.133</z-m>
 			<heading-deg>90</heading-deg>
 			<roll-deg>0</roll-deg>
 		</offsets>
@@ -931,7 +934,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>abs_max_on</object-name>
@@ -948,7 +951,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>abs_low</object-name>
@@ -975,7 +978,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>abs_med</object-name>
@@ -1002,7 +1005,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>abs_max</object-name>
@@ -1029,6 +1032,7 @@
 			</binding>
 		</action>
 	</animation>
+
 	<animation>
 		<type>rotate</type>
 		<object-name>land_sw</object-name>
@@ -1109,7 +1113,7 @@
 			<object-name>pfd_brt_cpt.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>pfd_nd_xfr_sw</object-name>
@@ -1127,7 +1131,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>brightness_nd_2_cpt</object-name>
@@ -1168,8 +1172,8 @@
 			<object-name>brightness_nd_cpt.axis</object-name>
 		</axis>
 	</animation>
-	
-	<!-- Dimmer Panel Right -->	
+
+	<!-- Dimmer Panel Right -->
 	<animation>
 		<type>pick</type>
 		<object-name>brightness_nd_2_fo</object-name>
@@ -1210,7 +1214,7 @@
 			<object-name>brightness_nd_fo.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>pfd_nd_xfr_sw2</object-name>
@@ -1228,7 +1232,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>pfd_brt_fo</object-name>
@@ -1269,7 +1273,7 @@
 			<object-name>pfd_brt_fo.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<!-- ECAM Controls -->
 	<animation>
 		<type>pick</type>
@@ -1311,7 +1315,7 @@
 			<object-name>ecam_brt_upper.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ecam_brt_lower</object-name>
@@ -1352,7 +1356,7 @@
 			<object-name>ecam_brt_lower.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ecam_sts</object-name>
@@ -1372,7 +1376,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ecam_apu</object-name>
@@ -1392,7 +1396,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ecam_bleed</object-name>
@@ -1412,7 +1416,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ecam_press</object-name>
@@ -1432,7 +1436,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ecam_elec</object-name>
@@ -1452,7 +1456,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ecam_hyd</object-name>
@@ -1472,7 +1476,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ecam_fuel</object-name>
@@ -1492,7 +1496,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ecam_eng</object-name>
@@ -1512,7 +1516,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ecam_cond</object-name>
@@ -1532,7 +1536,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ecam_door</object-name>
@@ -1552,7 +1556,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ecam_wheel</object-name>
@@ -1572,7 +1576,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ecam_fctl</object-name>
@@ -1592,7 +1596,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ecam_to_config</object-name>
@@ -1625,7 +1629,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>Lcutoff</object-name>
@@ -1638,7 +1642,7 @@
 			<object-name>Lcutoff.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>Rcutoff</object-name>
@@ -1651,7 +1655,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>Rcutoff</object-name>
@@ -1664,7 +1668,7 @@
 			<object-name>Rcutoff.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>eng_mode</object-name>
@@ -1694,7 +1698,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>eng_mode</object-name>
@@ -1715,6 +1719,7 @@
 		<type>pick</type>
 		<object-name>qnh_cpt_knb</object-name>
 		<object-name>qnh_fo_knb</object-name>
+		<object-name>iesi_baro_knb</object-name>
 		<action>
 			<button>0</button>
 			<button>1</button>
@@ -1845,7 +1850,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>qnh_cpt_sw</object-name>
@@ -1864,7 +1869,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>qnh_cpt_knb</object-name>
@@ -1874,7 +1879,7 @@
 			<object-name>qnh_cpt_knb.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>qnh_fo_knb</object-name>
@@ -1884,7 +1889,7 @@
 			<object-name>qnh_fo_knb.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>qnh_cpt_sw</object-name>
@@ -1897,7 +1902,7 @@
 			<object-name>qnh_cpt_sw.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>qnh_fo_sw</object-name>
@@ -1910,7 +1915,7 @@
 			<object-name>qnh_fo_sw.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<text>
 		<name>qnh-inhg</name>
 		<offsets>
@@ -2028,7 +2033,7 @@
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">STD</format>
-		<property>autopilot/servicable</property>
+		<property>autopilot/serviceable</property>
 		<truncate>false</truncate>
 		<font type="string">led.txf</font>
 		<draw-text>true</draw-text>
@@ -2054,7 +2059,7 @@
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">STD</format>
-		<property>autopilot/servicable</property>
+		<property>autopilot/serviceable</property>
 		<truncate>false</truncate>
 		<font type="string">led.txf</font>
 		<draw-text>true</draw-text>
@@ -2066,7 +2071,7 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-	
+
 	<text>
 		<name>qnh-test</name>
 		<offsets>
@@ -2080,7 +2085,7 @@
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">88.88</format>
-		<property>autopilot/servicable</property>
+		<property>autopilot/serviceable</property>
 		<truncate>false</truncate>
 		<font type="string">led.txf</font>
 		<draw-text>true</draw-text>
@@ -2092,7 +2097,7 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-	
+
 	<text>
 		<name>qnh-test</name>
 		<offsets>
@@ -2106,7 +2111,7 @@
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">88.88</format>
-		<property>autopilot/servicable</property>
+		<property>autopilot/serviceable</property>
 		<truncate>false</truncate>
 		<font type="string">led.txf</font>
 		<draw-text>true</draw-text>
@@ -2118,7 +2123,7 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>qnh-inhg</object-name>
@@ -2177,7 +2182,7 @@
 			</and>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>fd1</object-name>
@@ -2212,7 +2217,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ils</object-name>
@@ -2247,7 +2252,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ils2</object-name>
@@ -2282,7 +2287,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>fd2</object-name>
@@ -2317,7 +2322,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<!-- FCU ND Controls -->
 	<animation>
 		<type>pick</type>
@@ -2360,7 +2365,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>cstr.001</object-name>
@@ -2402,7 +2407,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>wpt</object-name>
@@ -2444,7 +2449,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>wpt.001</object-name>
@@ -2486,7 +2491,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>vord</object-name>
@@ -2528,7 +2533,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>vord.001</object-name>
@@ -2570,7 +2575,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ndb</object-name>
@@ -2612,7 +2617,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ndb.001</object-name>
@@ -2654,7 +2659,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>arpt</object-name>
@@ -3140,7 +3145,7 @@
 			</equals>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>spd.dash</object-name>
@@ -3157,7 +3162,7 @@
 			</and>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>hdg.ind</object-name>
@@ -3175,7 +3180,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>trk.ind</object-name>
@@ -3193,7 +3198,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>hdg-text</object-name>
@@ -3210,7 +3215,7 @@
 			</and>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>lat.fmgc</object-name>
@@ -3227,7 +3232,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>lat.dash</object-name>
@@ -3248,7 +3253,7 @@
 			</and>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>lvlch.ind</object-name>
@@ -3265,7 +3270,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>alt-text</object-name>
@@ -3311,7 +3316,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>fpa.ind</object-name>
@@ -3329,7 +3334,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>vs-text</object-name>
@@ -3346,7 +3351,7 @@
 			</and>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>fpa-text</object-name>
@@ -3363,7 +3368,7 @@
 			</and>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>vs.dash</object-name>
@@ -3384,7 +3389,7 @@
 			</and>
 		</condition>
 	</animation>
-	
+
 	<text>
 		<name>spd-text</name>
 		<offsets>
@@ -3436,7 +3441,7 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-	
+
 	<text>
 		<name>spd-text-test</name>
 		<offsets>
@@ -3450,7 +3455,7 @@
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">.888</format>
-		<property>autopilot/servicable</property>
+		<property>autopilot/serviceable</property>
 		<truncate>false</truncate>
 		<font type="string">led.txf</font>
 		<draw-text>true</draw-text>
@@ -3488,7 +3493,7 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-	
+
 	<text>
 		<name>hdg-text-test</name>
 		<offsets>
@@ -3502,7 +3507,7 @@
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">888</format>
-		<property>autopilot/servicable</property>
+		<property>autopilot/serviceable</property>
 		<truncate>false</truncate>
 		<font type="string">led.txf</font>
 		<draw-text>true</draw-text>
@@ -3519,7 +3524,7 @@
 		<name>alt-text</name>
 		<offsets>
 			<x-m>-0.377</x-m>
-			<y-m>0.0432</y-m> 
+			<y-m>0.0432</y-m>
 			<z-m>0.50254</z-m>
 			<heading-deg>90</heading-deg>
 			<roll-deg>72.81</roll-deg>
@@ -3540,12 +3545,12 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-	
+
 	<text>
 		<name>alt-text-test</name>
 		<offsets>
 			<x-m>-0.377</x-m>
-			<y-m>0.0432</y-m> 
+			<y-m>0.0432</y-m>
 			<z-m>0.50254</z-m>
 			<heading-deg>90</heading-deg>
 			<roll-deg>72.81</roll-deg>
@@ -3554,7 +3559,7 @@
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">88888</format>
-		<property>autopilot/servicable</property>
+		<property>autopilot/serviceable</property>
 		<truncate>false</truncate>
 		<font type="string">led.txf</font>
 		<draw-text>true</draw-text>
@@ -3618,7 +3623,7 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-	
+
 	<text>
 		<name>vs-text-test</name>
 		<offsets>
@@ -3632,7 +3637,7 @@
 		<axis-alignment>xy-plane</axis-alignment>
 		<type type="string">text-value</type>
 		<format type="string">-8888</format>
-		<property>autopilot/servicable</property>
+		<property>autopilot/serviceable</property>
 		<truncate>false</truncate>
 		<font type="string">led.txf</font>
 		<draw-text>true</draw-text>
@@ -3644,7 +3649,7 @@
 			<height type="int">32</height>
 		</font-resolution>
 	</text>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>hdg-sel</object-name>
@@ -3664,7 +3669,7 @@
 			<object-name>spd-sel.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>alt-sel</object-name>
@@ -3674,7 +3679,7 @@
 			<object-name>alt-sel.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>vs-sel</object-name>
@@ -3684,7 +3689,7 @@
 			<object-name>vs-sel.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>alt-sel-mode</object-name>
@@ -3697,7 +3702,7 @@
 			<object-name>alt-sel.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>spd-mach</object-name>
@@ -3710,11 +3715,11 @@
 			</binding>
 			<binding>
 				<command>nasal</command>
-				<script>setprop("/sim/sounde/btn1", 1);</script>
+				<script>setprop("sim/sounde/btn1", 1);</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>spd-sel</object-name>
@@ -3737,7 +3742,7 @@
 			</binding>
 			<binding>
 				<command>nasal</command>
-				<script>setprop("/sim/sounde/btn1", 1);</script>
+				<script>setprop("sim/sounde/btn1", 1);</script>
 			</binding>
 		</action>
 		<action>
@@ -3805,7 +3810,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>hdg-sel</object-name>
@@ -3828,7 +3833,7 @@
 			</binding>
 			<binding>
 				<command>nasal</command>
-				<script>setprop("/sim/sounde/btn1", 1);</script>
+				<script>setprop("sim/sounde/btn1", 1);</script>
 			</binding>
 		</action>
 		<action>
@@ -3840,7 +3845,7 @@
 			</binding>
 			<binding>
 				<command>nasal</command>
-				<script>setprop("/sim/sounde/btn1", 1);</script>
+				<script>setprop("sim/sounde/btn1", 1);</script>
 			</binding>
 		</action>
 		<action>
@@ -3896,7 +3901,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>loc</object-name>
@@ -3909,7 +3914,7 @@
 			</binding>
 			<binding>
 				<command>nasal</command>
-				<script>setprop("/sim/sounde/btn1", 1);</script>
+				<script>setprop("sim/sounde/btn1", 1);</script>
 			</binding>
 		</action>
 	</animation>
@@ -3949,7 +3954,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>hdg-vs</object-name>
@@ -3962,11 +3967,11 @@
 			</binding>
 			<binding>
 				<command>nasal</command>
-				<script>setprop("/sim/sounde/btn1", 1);</script>
+				<script>setprop("sim/sounde/btn1", 1);</script>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ap1</object-name>
@@ -3977,7 +3982,7 @@
 				<command>nasal</command>
 				<script>
 					libraries.APPanel.AP1();
-					setprop("/sim/sounde/btn1", 1);
+					setprop("sim/sounde/btn1", 1);
 				</script>
 			</binding>
 		</action>
@@ -3998,7 +4003,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>ap2</object-name>
@@ -4009,7 +4014,7 @@
 				<command>nasal</command>
 				<script>
 					libraries.APPanel.AP2();
-					setprop("/sim/sounde/btn1", 1);
+					setprop("sim/sounde/btn1", 1);
 				</script>
 			</binding>
 		</action>
@@ -4030,7 +4035,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>a-thr</object-name>
@@ -4041,7 +4046,7 @@
 				<command>nasal</command>
 				<script>
 					libraries.APPanel.ATHR();
-					setprop("/sim/sounde/btn1", 1);
+					setprop("sim/sounde/btn1", 1);
 				</script>
 			</binding>
 		</action>
@@ -4062,7 +4067,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>alt-sel</object-name>
@@ -4085,7 +4090,7 @@
 			</binding>
 			<binding>
 				<command>nasal</command>
-				<script>setprop("/sim/sounde/btn1", 1);</script>
+				<script>setprop("sim/sounde/btn1", 1);</script>
 			</binding>
 		</action>
 		<action>
@@ -4097,7 +4102,7 @@
 			</binding>
 			<binding>
 				<command>nasal</command>
-				<script>setprop("/sim/sounde/btn1", 1);</script>
+				<script>setprop("sim/sounde/btn1", 1);</script>
 			</binding>
 		</action>
 		<action>
@@ -4153,7 +4158,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>alt-sel-mode</object-name>
@@ -4170,7 +4175,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>vs-sel</object-name>
@@ -4193,7 +4198,7 @@
 			</binding>
 			<binding>
 				<command>nasal</command>
-				<script>setprop("/sim/sounde/btn1", 1);</script>
+				<script>setprop("sim/sounde/btn1", 1);</script>
 			</binding>
 		</action>
 		<action>
@@ -4205,7 +4210,7 @@
 			</binding>
 			<binding>
 				<command>nasal</command>
-				<script>setprop("/sim/sounde/btn1", 1);</script>
+				<script>setprop("sim/sounde/btn1", 1);</script>
 			</binding>
 		</action>
 		<action>
@@ -4261,7 +4266,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>appr</object-name>
@@ -4274,7 +4279,7 @@
 			</binding>
 			<binding>
 				<command>nasal</command>
-				<script>setprop("/sim/sounde/btn1", 1);</script>
+				<script>setprop("sim/sounde/btn1", 1);</script>
 			</binding>
 		</action>
 	</animation>
@@ -4302,7 +4307,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<!-- Flap Lever -->
 	<animation>
 		<type>pick</type>
@@ -4331,7 +4336,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>FlapsLever</object-name>
@@ -4342,7 +4347,7 @@
 			<entry><ind>2</ind><dep>28</dep></entry>
 			<entry><ind>3</ind><dep>42</dep></entry>
 			<entry><ind>4</ind><dep>56</dep></entry>
-		</interpolation> 
+		</interpolation>
 		<center>
 			<x-m>-0.0020</x-m>
 			<y-m>0</y-m>
@@ -4352,7 +4357,7 @@
 			<object-name>FlapsLever.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<!-- Foot Rest -->
 	<animation>
 		<name>Footrest captain pick</name>
@@ -4381,7 +4386,7 @@
          <object-name>footrest_cpt.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<name>Footrest captain pick 2</name>
 		<type>pick</type>
@@ -4465,7 +4470,7 @@
          <object-name>footrest_fo.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<!-- Landing Gear Lever -->
 	<animation>
 		<type>rotate</type>
@@ -4496,7 +4501,7 @@
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>gear_lever_down_arrow</object-name>
@@ -4513,7 +4518,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<!-- Landing Gear Lights -->
 	<animation>
 		<type>select</type>
@@ -4537,7 +4542,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>lgear_down</object-name>
@@ -4577,7 +4582,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>ngear_down</object-name>
@@ -4617,7 +4622,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<animation>
 		<type>select</type>
 		<object-name>rgear_down</object-name>
@@ -4634,7 +4639,7 @@
 			</or>
 		</condition>
 	</animation>
-	
+
 	<!-- Lighting -->
 	<animation>
 		<type>pick</type>
@@ -4675,7 +4680,7 @@
 			<object-name>flood_lt_main.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>flood_lt_ped</object-name>
@@ -4715,7 +4720,7 @@
 			<object-name>flood_lt_ped.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>integ_lt</object-name>
@@ -4755,7 +4760,7 @@
 			<object-name>integ_lt.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>pick</type>
 		<object-name>fcu_integ_knb</object-name>
@@ -4877,7 +4882,7 @@
 			<factor-prop>controls/lighting/main-panel-norm</factor-prop>
 		</emission>
 	</animation>
-	
+
 	<animation>
 		<name>Panel lighting (dome)</name>
 		<type>material</type>
@@ -4984,7 +4989,7 @@
 			<factor-prop>sim/model/lights/dome-light</factor-prop>
 		</emission>
 	</animation>
-	
+
 	<animation>
 		<name>FCU Panel lighting</name>
 		<type>material</type>
@@ -5017,7 +5022,7 @@
 			<factor-prop>controls/lighting/fcu-panel-norm</factor-prop>
 		</emission>
 	</animation>
-	
+
 	<animation>
 		<name>FCU Panel lighting (dome)</name>
 		<type>material</type>
@@ -5078,7 +5083,7 @@
 			<factor-prop>controls/lighting/overhead-panel-norm</factor-prop>
 		</emission>
 	</animation>
-	
+
 	<animation>
 		<name>Overhead Panel-2 lighting (dome)</name>
 		<type>material</type>
@@ -5116,7 +5121,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/controls/flight/elevator-trim</property>
+				<property>controls/flight/elevator-trim</property>
 				<step>0.01</step>
 			</binding>
 		</action>
@@ -5126,12 +5131,12 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/controls/flight/elevator-trim</property>
+				<property>controls/flight/elevator-trim</property>
 				<step>-0.01</step>
 			</binding>
 		</action>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>trim_2_lts</object-name>
@@ -5142,7 +5147,7 @@
 			<object-name>trim.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>trim_1</object-name>
@@ -5152,7 +5157,7 @@
 			<object-name>trim.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<!-- Rudder Pedals -->
 	<animation>
 		<type>translate</type>
@@ -5215,7 +5220,7 @@
 			<z-m>-0.42417</z-m>
 		</center>
 	</animation>
-	
+
 	<!-- Spoiler Lever -->
 	<animation>
 		<type>pick</type>
@@ -5302,7 +5307,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>SpdBrk</object-name>
@@ -5314,7 +5319,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-	
+
 	<!-- Sidestick Left -->
 	<animation>
 		<type>rotate</type>
@@ -5501,7 +5506,7 @@
 			<object-name>sidestick_2.x.axis</object-name>
 		</axis>
 	</animation-->
-	
+
 	<!-- Tiller -->
 	<animation>
 		<type>pick</type>
@@ -5513,10 +5518,10 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					var a = getprop("/controls/flight/rudder");
+					var a = getprop("controls/flight/rudder");
 					a += 0.1;
 					if (a > 1) a = 1;
-					setprop("/controls/flight/rudder", a);
+					setprop("controls/flight/rudder", a);
 				</script>
 			</binding>
 		</action>
@@ -5526,10 +5531,10 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					var a = getprop("/controls/flight/rudder");
+					var a = getprop("controls/flight/rudder");
 					a -= 0.1;
 					if (abs(a) > 1) a = -1;
-					setprop("/controls/flight/rudder", a);
+					setprop("controls/flight/rudder", a);
 				</script>
 			</binding>
 		</action>
@@ -5539,7 +5544,7 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					setprop("/controls/flight/rudder", 0);
+					setprop("controls/flight/rudder", 0);
 				</script>
 			</binding>
 		</action>
@@ -5562,7 +5567,7 @@
 			<object-name>tillerFo.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<!-- Throttles -->
 	<animation>
 		<name>Engine 1 throttle lever pick</name>
@@ -5611,7 +5616,7 @@
 			<entry><ind>0.94999</ind><dep>43</dep></entry>
 			<entry><ind>0.95000</ind><dep>45</dep></entry>
 			<entry><ind>1.00000</ind><dep>45</dep></entry>
-		</interpolation> 
+		</interpolation>
 		<axis>
 			<object-name>trim.axis</object-name>
 		</axis>
@@ -5621,7 +5626,7 @@
 		<type>rotate</type>
 		<object-name>thr_l</object-name>
 		<property>fdm/jsbsim/fcs/reverse-lever[0]</property>
-		<factor>-3.5</factor> 
+		<factor>-3.5</factor>
 		<axis>
 			<object-name>trim.axis</object-name>
 		</axis>
@@ -5686,7 +5691,7 @@
 			<entry><ind>0.94999</ind><dep>43</dep></entry>
 			<entry><ind>0.95000</ind><dep>45</dep></entry>
 			<entry><ind>1.00000</ind><dep>45</dep></entry>
-		</interpolation> 
+		</interpolation>
 		<axis>
 			<object-name>trim.axis</object-name>
 		</axis>
@@ -5696,7 +5701,7 @@
 		<type>rotate</type>
 		<object-name>thr_r</object-name>
 		<property>fdm/jsbsim/fcs/reverse-lever[1]</property>
-		<factor>-3.5</factor> 
+		<factor>-3.5</factor>
 		<axis>
 			<object-name>trim.axis</object-name>
 		</axis>
@@ -5709,12 +5714,12 @@
 		<interpolation>
 			<entry><ind>0.00</ind><dep> 0</dep></entry>
 			<entry><ind>0.50</ind><dep>-20</dep></entry>
-		</interpolation> 
+		</interpolation>
 		<axis>
 			<object-name>trim.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<name>Reverse Thrust left lever</name>
 		<type>rotate</type>
@@ -5750,7 +5755,7 @@
 			<z-m>0.02132</z-m>
 		</center>
 	</animation>
-	
+
 	<!-- Tray Tables -->
 	<animation>
 		<type>translate</type>
@@ -5785,7 +5790,7 @@
 			<object-name>tray1-cpt.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>tray2-cpt</object-name>
@@ -5798,7 +5803,7 @@
 			<object-name>tray2-cpt.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>translate</type>
 		<object-name>tray0-fo</object-name>
@@ -5818,7 +5823,7 @@
 			<z2-m>-0.04488</z2-m>
 		</axis>
 	</animation>
-	
+
 	<animation>
 		<type>rotate</type>
 		<object-name>tray1-fo</object-name>
@@ -5845,7 +5850,7 @@
 			<object-name>tray2-fo.axis</object-name>
 		</axis>
 	</animation>
-	
+
 	 <animation>
         <type>pick</type>
 		<object-name>tray0-cpt</object-name>
@@ -5859,7 +5864,7 @@
 			</binding>
 		</action>
     </animation>
-	
+
 	<animation>
         <type>pick</type>
 		<object-name>tray0-fo</object-name>
@@ -5873,7 +5878,7 @@
 			</binding>
 		</action>
     </animation>
-	
+
 	<!-- Z Colors/Effects -->
 	<animation>
 		<type>material</type>
@@ -5882,12 +5887,12 @@
 		<object-name>hdg-text</object-name>
 		<object-name>alt-text</object-name>
 		<object-name>vs-text</object-name>
-		<object-name>atc-code</object-name>
-		<object-name>atc-test</object-name>
 		<object-name>spd-text-test</object-name>
 		<object-name>hdg-text-test</object-name>
 		<object-name>alt-text-test</object-name>
 		<object-name>vs-text-test</object-name>
+		<object-name>atc-code</object-name>
+		<object-name>atc-test</object-name>
 		<object-name>fpa-text</object-name>
 		<object-name>qnh-inhg</object-name>
 		<object-name>qnh-hpa</object-name>
@@ -5951,10 +5956,10 @@
 	<animation>
 		<name>Panel lighting</name>
 		<type>material</type>
-		<object-name>ceiling</object-name>
 		<object-name>beam</object-name>
 		<object-name>beam_a</object-name>
 		<object-name>beam_f</object-name>
+		<object-name>ceiling</object-name>
 		<object-name>sfl.001</object-name>
 		<object-name>sfl.011</object-name>
 		<object-name>sfl.012</object-name>
@@ -6046,74 +6051,74 @@
 			<factor-prop>sim/model/lights/dome-light</factor-prop>
 		</emission>
 	</animation>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/panel-flood</inherits-from>
 		<object-name>main_panel</object-name>
 		<object-name>gear_lever_body</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/gear-lever</inherits-from>
 		<object-name>gear_lever</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/panel-flood-brightness</inherits-from>
 		<object-name>brightness_panel_left_glare</object-name>
 		<object-name>brightness_panel_right_glare</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/pedestal-flood</inherits-from>
 		<object-name>pedestal_low</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/pedestal-flood-glare</inherits-from>
 		<object-name>pedestal_low_glare</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/thr-quad-flood</inherits-from>
 		<object-name>thr_quad</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/rudder-trim</inherits-from>
 		<object-name>RudderTrim</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/park-brk</inherits-from>
 		<object-name>ParkBrk</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/gravity-gear</inherits-from>
 		<object-name>gravity_gear</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/panel-flood-glare</inherits-from>
 		<object-name>main_panel_signboard</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/panel-flood-glare-right</inherits-from>
 		<object-name>gear_labels</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/pedestal-footrest</inherits-from>
 		<object-name>ped_footrest</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/pedestal-flood-flap</inherits-from>
 		<object-name>FlapsLever</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/pedestal-flood-spdbrk</inherits-from>
 		<object-name>SpdBrk</object-name>
@@ -6129,7 +6134,7 @@
 		<object-name>iesi_btn_plus</object-name>
 		<object-name>iesi_btn_rst</object-name>
 	</effect>
-	
+
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/clock</inherits-from>
 		<object-name>clock</object-name>
@@ -6363,6 +6368,7 @@
 		<object-name>sts.007</object-name>
 		<object-name>thr_l</object-name>
 		<object-name>rev_l</object-name>
+		<object-name>terr_on_nd_label</object-name>
 		<object-name>thr_l_body</object-name>
 		<object-name>thr_l_button</object-name>
 		<object-name>thr_l_screw</object-name>
