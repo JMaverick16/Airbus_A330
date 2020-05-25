@@ -1,7 +1,7 @@
 # INSTALL
 ## Prerequisites
 Have at least following versions installed:
-* FlightGear 2018.3.0 or newer
+* FlightGear 2020.1.1 or newer
 
 ## Install using ZIP Snapshot
 [Download](https://github.com/JMaverick16/Airbus_A330/archive/master.zip) the zip file.  

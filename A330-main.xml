@@ -442,7 +442,7 @@
 			<z-offset-max-m type="float">300.0</z-offset-max-m>
 		</current-view>
 		
-		<minimum-fg-version>2018.3.5</minimum-fg-version>
+		<minimum-fg-version>2020.1.1</minimum-fg-version>
 	</sim>
 
 	<consumables>
