@@ -1572,6 +1572,7 @@
 			<file>Aircraft/Airbus_A330/Nasal/shake.nas</file>
 			<file>Aircraft/Airbus_A330/Nasal/light-manager.nas</file>
 			<file>Aircraft/Airbus_A330/Nasal/zoom-views.nas</file>
+			<file>Aircraft/Airbus_A330/Nasal/clock.nas</file>
 		</libraries>
 		<acconfig>
 			<file>Aircraft/Airbus_A330/AircraftConfig/acconfig.nas</file>
@@ -1585,6 +1586,7 @@
 			<file>Aircraft/Airbus_A330/Nasal/ADIRS.nas</file>
 			<file>Aircraft/Airbus_A330/Nasal/fire.nas</file>
 			<file>Aircraft/Airbus_A330/Nasal/brakes.nas</file>
+			<file>Aircraft/Airbus_A330/Nasal/brakesystem.nas</file>
 		</systems>
 		<fadec>
 			<file>Aircraft/Airbus_A330/Nasal/fadec-common.nas</file>
