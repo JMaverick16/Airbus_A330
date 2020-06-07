@@ -17,6 +17,7 @@ setprop("/sim/menubar/default/menu[3]/enabled", 0);
 setprop("/sim/menubar/default/menu[5]/item[9]/enabled", 0);
 setprop("/sim/menubar/default/menu[5]/item[10]/enabled", 0);
 setprop("/sim/menubar/default/menu[5]/item[11]/enabled", 0);
+setprop("/sim/multiplay/visibility-range-nm", 125);
 
 # Dimmers
 setprop("/controls/lighting/ndl-norm", 1);
@@ -726,5 +727,4 @@ var resetView = func() {
 	} 
 }
 
-setprop("sim/multiplay/visibility-range-nm", 125);
 setprop("/systems/acconfig/libraries-loaded", 1);
