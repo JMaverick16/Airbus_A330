@@ -10,7 +10,7 @@ Suitable for: 2020.1.1+
 - Cockpit: Thorsten Herrmann (TH-555), Josh Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
 - Instruments: Josh Davidson (Octal450), Jonanthan Redpath (legoboyvdlp), merspieler, Matthew Maring (mattmaring)
 - Textures, Effects, Sounds, Misc: J Maverick 16, Andrea Vezzali (vezza), Matthew Maring (mattmaring)
-- Liveries: Enrico Castaldi (Spectre), J Maverick 16, Gary Brown (thebroons), others
+- Liveries: Chris M., Enrico Castaldi (Spectre), J Maverick 16, Gary Brown (thebroons), others
 
 Present pack includes the following Airbus A330 Series variants:
 - A330-203 (GE engines)
