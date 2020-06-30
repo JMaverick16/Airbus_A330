@@ -7,10 +7,11 @@ Suitable for: 2020.1.1+
 
 - FDM: Josh Davidson (Octal450)
 - Systems: Josh Davidson (Octal450), Jonanthan Redpath (legoboyvdlp), J Maverick 16, merspieler, Matthew Maring (mattmaring)
-- Cockpit: Thorsten Herrmann (TH-555), Josh Davidson (Octal450), Jonanthan Redpath (legoboyvdlp)
+- Cockpit: Thorsten Herrmann (TH-555), Josh Davidson (Octal450), Jonanthan Redpath (legoboyvdlp), Andrea Vezzali (vezza)
 - Instruments: Josh Davidson (Octal450), Jonanthan Redpath (legoboyvdlp), merspieler, Matthew Maring (mattmaring)
 - Textures, Effects, Sounds, Misc: J Maverick 16, Andrea Vezzali (vezza), Matthew Maring (mattmaring)
-- Liveries: Chris M., Enrico Castaldi (Spectre), J Maverick 16, Gary Brown (thebroons), others
+- Liveries: Chris M., Narendran Muraleedharan, Ahmet Erfkemper, Enrico Castaldi (Spectre), J Maverick 16, Gary Brown (thebroons), others
+- Guide: First Officer Delta
 
 Present pack includes the following Airbus A330 Series variants:
 - A330-203 (GE engines)
