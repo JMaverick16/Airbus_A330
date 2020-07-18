@@ -37,6 +37,19 @@
 	<nasal>
 		<load>
 			var livery_update = aircraft.livery_update.new("Aircraft/Airbus_A330/Models/Liveries/A332GE/");
+			var model = cmdarg();
+			model.getNode("door[0]/position-x-m", 1).setValue(-17.657);
+			model.getNode("door[0]/position-y-m", 1).setValue(-2.5321);
+			model.getNode("door[0]/position-z-m", 1).setValue(-0.057995);
+			model.getNode("door[0]/jetway-hood-deg", 1).setValue(5);
+			model.getNode("door[1]/position-x-m", 1).setValue(-8.7731);
+			model.getNode("door[1]/position-y-m", 1).setValue(-2.9231);
+			model.getNode("door[1]/position-z-m", 1).setValue(0.037775);
+			model.getNode("door[1]/jetway-hood-deg", 1).setValue(5);
+			
+			<!-- XDG -->
+			model.getNode("jetways/connected", 1).alias(model.getNode("sim/multiplay/generic/int[18]",1));
+			model.getNode("jetways/connected[1]", 1).alias(model.getNode("sim/multiplay/generic/int[19]",1));
 		</load>
 		<unload>
 			livery_update.stop();

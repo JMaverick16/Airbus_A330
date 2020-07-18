@@ -19,6 +19,18 @@
 			<livery>
 				<file>Airbus_1K</file>
 			</livery>
+			<door n="0">
+				<position-x-m type="float">-17.657</position-x-m>
+				<position-y-m type="float">-2.5321</position-y-m>
+				<position-z-m type="float">-0.057995</position-z-m>
+				<jetway-hood-deg type="float">5</jetway-hood-deg>
+			</door>
+			<door n="1">
+				<position-x-m type="float">-8.7731</position-x-m>
+				<position-y-m type="float">-2.9231</position-y-m>
+				<position-z-m type="float">0.037775</position-z-m>
+				<jetway-hood-deg type="float">5</jetway-hood-deg>
+			</door>
 		</model>
 		
 		<rating>

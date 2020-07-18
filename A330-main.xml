@@ -428,6 +428,9 @@
 				<int n="11" alias="/engines/engine[1]/contrail"/>
 				<int n="12" alias="/sharklet"/>
 				<int n="13" alias="/options/hasboom"/>
+				<!-- Jetways MP Support -->
+				<int n="18" alias="/jetways/connected"/>
+				<int n="19" alias="/jetways/connected[1]"/>
 			</generic>
 			<visibility-range-nm type="int">125</visibility-range-nm>
 		</multiplay>
