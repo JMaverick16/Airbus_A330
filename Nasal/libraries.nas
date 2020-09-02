@@ -187,8 +187,10 @@ var cargobulk = aircraft.door.new("/sim/model/door-positions/cargobulk", 2.5);
 var cargoaft = aircraft.door.new("/sim/model/door-positions/cargoaft", 2.5);
 var cargofwd = aircraft.door.new("/sim/model/door-positions/cargofwd", 2.5);
 
-# Seat armrests in the flight deck (unused)
+# Seat armrests in the flight deck (unused), windows
 var armrests = aircraft.door.new("/sim/model/door-positions/armrests", 2);
+var windowLeft = aircraft.door.new("/sim/model/door-positions/windowLeft", 1);
+var windowRight = aircraft.door.new("/sim/model/door-positions/windowRight", 1);
 
 # door opener/closer
 var triggerDoor = func(door, doorName, doorDesc) {
