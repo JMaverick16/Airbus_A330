@@ -1529,7 +1529,7 @@ canvas.NDStyles["Airbus"] = {
 							nd.symbols.vorLId.setText(navID);
 						else
 							nd.symbols.vorLId.setText(frq);
-						if(getprop(dme~ "in-range"))
+						if(getprop(dme~ "in-range") and !getprop("systems/radio/rmp[0]/nav") and !getprop("systems/radio/rmp[1]/nav"))
 							nd.symbols.dmeLDist.setText(sprintf("%3.1f",
 											dst));
 						else nd.symbols.dmeLDist.setText(" ---");
@@ -1584,7 +1584,7 @@ canvas.NDStyles["Airbus"] = {
 							nd.symbols.vorRId.setText(navID);
 						else
 							nd.symbols.vorRId.setText(frq);
-						if(getprop(dme~ "in-range"))
+						if(getprop(dme~ "in-range") and !getprop("systems/radio/rmp[0]/nav") and !getprop("systems/radio/rmp[1]/nav"))
 							nd.symbols.dmeRDist.setText(sprintf("%3.1f",
 											dst));
 						else nd.symbols.dmeRDist.setText(" ---");
