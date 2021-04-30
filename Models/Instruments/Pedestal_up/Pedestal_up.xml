@@ -34,6 +34,8 @@
 		<object-name>vu112_body</object-name>
 		<object-name>throttle_1</object-name>
 		<object-name>throttle_1_label</object-name>
+		<object-name>throttle_1.1</object-name>
+		<object-name>throttle_1.2</object-name>
 		<object-name>dummy_1</object-name>
 		<object-name>dummy_2</object-name>
 		<object-name>Lcutoff</object-name>
@@ -57,6 +59,8 @@
 	<effect>
 		<inherits-from>Aircraft/Airbus_A330/Models/Effects/pedestal-flood-upper</inherits-from>
 		<object-name>throttle_1</object-name>
+		<object-name>throttle_1.1</object-name>
+		<object-name>throttle_1.2</object-name>
 	</effect>
 
 	<effect>
@@ -485,3 +489,4 @@
 		</condition>
 	</animation>
 </PropertyList>
+
