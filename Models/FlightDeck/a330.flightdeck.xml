@@ -167,10 +167,10 @@
 	<model>
 		<path>Aircraft/Airbus_A330/Models/Instruments/Pedestal_up/Pedestal_up.xml</path>
 		<offsets>
-			<x-m>0.022</x-m>
+			<x-m>0.0</x-m>
 			<y-m>0.0</y-m>
-			<z-m>-0.00515</z-m>
-			<pitch-deg>9.4</pitch-deg>
+			<z-m>0.0</z-m>
+			<pitch-deg>0.0</pitch-deg>
 		</offsets>
 	</model>
 
@@ -4383,7 +4383,7 @@
 			<entry><ind>1</ind><dep>50</dep></entry>
 		</interpolation>
 		<axis>
-         <object-name>footrest_cpt.axis</object-name>
+			<object-name>footrest_cpt.axis</object-name>
 		</axis>
 	</animation>
 
@@ -4411,7 +4411,7 @@
 			<entry><ind>1</ind><dep>50</dep></entry>
 		</interpolation>
 		<axis>
-         <object-name>footrest_cpt.axis</object-name>
+			<object-name>footrest_cpt.axis</object-name>
 		</axis>
 	</animation>
 
@@ -4439,7 +4439,7 @@
 			<entry><ind>1</ind><dep>-50</dep></entry>
 		</interpolation>
 		<axis>
-         <object-name>footrest_fo.axis</object-name>
+			<object-name>footrest_fo.axis</object-name>
 		</axis>
 	</animation>
 	
@@ -4467,7 +4467,7 @@
 			<entry><ind>1</ind><dep>-50</dep></entry>
 		</interpolation>
 		<axis>
-         <object-name>footrest_fo.axis</object-name>
+			<object-name>footrest_fo.axis</object-name>
 		</axis>
 	</animation>
 
@@ -4805,6 +4805,7 @@
 		<object-name>gear_labels</object-name>
 		<object-name>thr_quad_lts</object-name>
 		<object-name>trim_2_lts</object-name>
+		<object-name>trim_3_lts</object-name>
 		<object-name>brightness_panel_left_glare</object-name>
 		<object-name>brightness_panel_right_glare</object-name>
 		<object-name>ped_labels_1</object-name>
@@ -4891,6 +4892,7 @@
 		<object-name>gear_labels</object-name>
 		<object-name>thr_quad_lts</object-name>
 		<object-name>trim_2_lts</object-name>
+		<object-name>trim_3_lts</object-name>
 		<object-name>brightness_panel_left_glare</object-name>
 		<object-name>brightness_panel_right_glare</object-name>
 		<object-name>ped_labels_1</object-name>
@@ -5114,7 +5116,7 @@
 	<!-- Pitch Trim -->
 	<animation>
 		<type>pick</type>
-		<object-name>trim_wheel</object-name>
+		<object-name>trim_1</object-name>
 		<action>
 			<button>0</button>
 			<button>3</button>
@@ -5139,10 +5141,11 @@
 
 	<animation>
 		<type>rotate</type>
+		<object-name>trim_2</object-name>
 		<object-name>trim_2_lts</object-name>
 		<property>fdm/jsbsim/hydraulics/elevator-trim/cmd-deg</property>
-		<factor>15.55</factor>
-		<offset-deg>1.4</offset-deg>
+		<factor>33.9</factor>
+		<!-- <offset-deg>1.4</offset-deg> -->
 		<axis>
 			<object-name>trim.axis</object-name>
 		</axis>
@@ -5602,6 +5605,7 @@
 		<object-name>thr_l</object-name>
 		<property>fdm/jsbsim/fcs/throttle-lever[0]</property>
 		<interpolation>
+			<!--
 			<entry><ind>0.00000</ind><dep> 0</dep></entry>
 			<entry><ind>0.00999</ind><dep> 0</dep></entry>
 			<entry><ind>0.01000</ind><dep> 2</dep></entry>
@@ -5616,11 +5620,21 @@
 			<entry><ind>0.94999</ind><dep>43</dep></entry>
 			<entry><ind>0.95000</ind><dep>45</dep></entry>
 			<entry><ind>1.00000</ind><dep>45</dep></entry>
+			-->
+			<entry><ind>0.00000</ind><dep> 0</dep></entry> <!-- Idle -->
+			<entry><ind>0.62500</ind><dep>35</dep></entry>
+			<entry><ind>0.63000</ind><dep>35</dep></entry> <!-- CL -->
+			<entry><ind>0.63500</ind><dep>35</dep></entry>
+			<entry><ind>0.79500</ind><dep>50</dep></entry> 
+			<entry><ind>0.80000</ind><dep>50</dep></entry> <!-- MCT -->
+			<entry><ind>0.80500</ind><dep>50</dep></entry>
+			<entry><ind>1.00000</ind><dep>65</dep></entry> <!-- TOGA -->
 		</interpolation>
 		<axis>
 			<object-name>trim.axis</object-name>
 		</axis>
 	</animation>
+	<!-- A330 doesn't need that, right?
 	<animation>
 		<name>Engine 1 throttle lever rev</name>
 		<type>rotate</type>
@@ -5644,6 +5658,7 @@
 			<object-name>trim.axis</object-name>
 		</axis>
 	</animation>
+	-->
 	<animation>
 		<name>Engine 2 throttle lever pick</name>
 		<type>pick</type>
@@ -5677,6 +5692,7 @@
 		<object-name>thr_r</object-name>
 		<property>fdm/jsbsim/fcs/throttle-lever[1]</property>
 		<interpolation>
+			<!--
 			<entry><ind>0.00000</ind><dep> 0</dep></entry>
 			<entry><ind>0.00999</ind><dep> 0</dep></entry>
 			<entry><ind>0.01000</ind><dep> 2</dep></entry>
@@ -5691,11 +5707,21 @@
 			<entry><ind>0.94999</ind><dep>43</dep></entry>
 			<entry><ind>0.95000</ind><dep>45</dep></entry>
 			<entry><ind>1.00000</ind><dep>45</dep></entry>
+			-->
+			<entry><ind>0.00000</ind><dep> 0</dep></entry> <!-- Idle -->
+			<entry><ind>0.62500</ind><dep>35</dep></entry>
+			<entry><ind>0.63000</ind><dep>35</dep></entry> <!-- CL -->
+			<entry><ind>0.63500</ind><dep>35</dep></entry>
+			<entry><ind>0.79500</ind><dep>50</dep></entry> 
+			<entry><ind>0.80000</ind><dep>50</dep></entry> <!-- MCT -->
+			<entry><ind>0.80500</ind><dep>50</dep></entry>
+			<entry><ind>1.00000</ind><dep>65</dep></entry> <!-- TOGA -->
 		</interpolation>
 		<axis>
 			<object-name>trim.axis</object-name>
 		</axis>
 	</animation>
+	<!-- A330 doesn't need that, right?
 	<animation>
 		<name>Engine 2 throttle lever rev</name>
 		<type>rotate</type>
@@ -5719,41 +5745,27 @@
 			<object-name>trim.axis</object-name>
 		</axis>
 	</animation>
+	-->
 
 	<animation>
 		<name>Reverse Thrust left lever</name>
 		<type>rotate</type>
 		<object-name>rev_l</object-name>
 		<property>controls/engines/engine[0]/reverser</property>
-		<factor>60</factor>
+		<factor>40</factor>
 		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
+			<object-name>rev_l.axis</object-name>
 		</axis>
-		<center>
-			<x-m>-0.10437</x-m>
-			<y-m>0</y-m>
-			<z-m>0.02132</z-m>
-		</center>
 	</animation>
-
 	<animation>
 		<name>Reverse Thrust right lever</name>
 		<type>rotate</type>
 		<object-name>rev_r</object-name>
 		<property>controls/engines/engine[1]/reverser</property>
-		<factor>60</factor>
+		<factor>-40</factor>
 		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
+			<object-name>rev_r.axis</object-name>
 		</axis>
-		<center>
-			<x-m>-0.10437</x-m>
-			<y-m>0</y-m>
-			<z-m>0.02132</z-m>
-		</center>
 	</animation>
 
 	<!-- Tray Tables -->
@@ -5851,33 +5863,33 @@
 		</axis>
 	</animation>
 
-	 <animation>
-        <type>pick</type>
+	<animation>
+		<type>pick</type>
 		<object-name>tray0-cpt</object-name>
 		<object-name>tray1-cpt</object-name>
 		<object-name>tray2-cpt</object-name>
-        <action>
+		<action>
 			<button>0</button>
 			<binding>
 				<command>nasal</command>
 				<script>libraries.lTray();</script>
 			</binding>
 		</action>
-    </animation>
+	</animation>
 
 	<animation>
-        <type>pick</type>
+		<type>pick</type>
 		<object-name>tray0-fo</object-name>
 		<object-name>tray1-fo</object-name>
 		<object-name>tray2-fo</object-name>
-        <action>
+		<action>
 			<button>0</button>
 			<binding>
 				<command>nasal</command>
 				<script>libraries.rTray();</script>
 			</binding>
 		</action>
-    </animation>
+	</animation>
 
 	<!-- Z Colors/Effects -->
 	<animation>
@@ -5994,6 +6006,10 @@
 		<object-name>thr_quad</object-name>
 		<object-name>trim_1</object-name>
 		<object-name>trim_2</object-name>
+		<object-name>trim_3</object-name>
+		<object-name>throttle_2</object-name>
+		<object-name>throttle_2.1</object-name>
+		<object-name>throttle_2.2</object-name>
 		<object-name>fcu_panel</object-name>
 		<object-name>seat1</object-name>
 		<object-name>seat4</object-name>
@@ -6369,15 +6385,13 @@
 		<object-name>thr_l</object-name>
 		<object-name>rev_l</object-name>
 		<object-name>terr_on_nd_label</object-name>
-		<object-name>thr_l_body</object-name>
 		<object-name>thr_l_button</object-name>
 		<object-name>thr_l_screw</object-name>
 		<object-name>thr_quad</object-name>
 		<object-name>thr_quad_lts</object-name>
 		<object-name>thr_r</object-name>
 		<object-name>rev_r</object-name>
-		<object-name>thr_button</object-name>
-		<object-name>thr_r_body</object-name>
+		<object-name>thr_r_button</object-name>
 		<object-name>thr_r_screw</object-name>
 		<object-name>tiller</object-name>
 		<object-name>tillerFo</object-name>
@@ -6387,10 +6401,14 @@
 		<object-name>tray1-fo</object-name>
 		<object-name>tray2-cpt</object-name>
 		<object-name>tray2-fo</object-name>
-		<object-name>trim_wheel</object-name>
 		<object-name>trim_1</object-name>
 		<object-name>trim_2</object-name>
+		<object-name>trim_3</object-name>
+		<object-name>throttle_2</object-name>
+		<object-name>throttle_2.1</object-name>
+		<object-name>throttle_2.2</object-name>
 		<object-name>trim_2_lts</object-name>
+		<object-name>trim_3_lts</object-name>
 		<object-name>trray_slide</object-name>
 		<object-name>visor_cpt</object-name>
 		<object-name>visor_fo</object-name>
@@ -6406,7 +6424,7 @@
 		<object-name>WindowOpenerFo</object-name>
 		<object-name>WX</object-name>
 	</effect>
-   
+
 	<animation>
 		<name>Panel lighting</name>
 		<type>material</type>
@@ -6979,18 +6997,18 @@
 				<min>0</min>
 				<max>2</max>
 			</binding>
-       </action>
+		</action>
 
-        <!-- Release action, limit to 0 and 1. 2 is spring loaded reset position -->
+		<!-- Release action, limit to 0 and 1. 2 is spring loaded reset position -->
 		<release>
-            <binding>
-                <command>property-adjust</command>
-                <property>instrumentation/clock/et-selector</property>
-                <step>0</step>
-                <min>0</min>
-                <max>1</max>
-            </binding>
-        </release>
+			<binding>
+				<command>property-adjust</command>
+				<property>instrumentation/clock/et-selector</property>
+				<step>0</step>
+				<min>0</min>
+				<max>1</max>
+			</binding>
+		</release>
 	</animation>
 
 	<animation>
