@@ -3,14 +3,14 @@
 <!-- Copyright (c) 2020 Josh Davidson (Octal450) -->
 
 <mass_balance>
-	<ixx unit="SLUG*FT2"> 2375399 </ixx>
-	<iyy unit="SLUG*FT2"> 5004014 </iyy>
-	<izz unit="SLUG*FT2"> 4408984 </izz>
+	<ixx unit="SLUG*FT2"> 374786 </ixx>
+	<iyy unit="SLUG*FT2"> 533519 </iyy>
+	<izz unit="SLUG*FT2"> 401241 </izz>
 	
 	<ixy unit="SLUG*FT2">       0 </ixy>
 	<ixz unit="SLUG*FT2">       0 </ixz>
 	<iyz unit="SLUG*FT2">       0 </iyz>
-	<emptywt unit="LBS" >  214000 </emptywt>
+	<emptywt unit="LBS" >  265900 </emptywt>
 	
 	<location name="CG" unit="M">
 		<x> 0.48086 </x>
