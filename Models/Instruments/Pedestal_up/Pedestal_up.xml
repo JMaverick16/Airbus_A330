@@ -29,6 +29,8 @@
 		<object-name>ecam_body</object-name>
 		<object-name>ecam_switch_body</object-name>
 		<object-name>engine_body</object-name>
+		<object-name>engine_plate</object-name>
+		<object-name>engine_guard</object-name>
 		<object-name>radar_body</object-name>
 		<object-name>vu111_body</object-name>
 		<object-name>vu112_body</object-name>
