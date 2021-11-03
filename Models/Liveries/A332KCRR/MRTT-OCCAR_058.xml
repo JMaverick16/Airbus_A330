@@ -4,14 +4,14 @@
 	<sim>
 		<model>
 			<livery>
-				<name>Voyager KC (Default)</name>
-				<texture>243KCGrey.png</texture>
+				<name>OCCAR MMF, RNAF - 058</name>
+				<texture>Liveries/A332KCRR/MRTT-OCCAR_058.png</texture>
 			</livery>
 		</model>
 	</sim>
 
 	<options n="0">
-		<hasboom type="bool">0</hasboom>
+		<hasboom type="bool">1</hasboom>
 		<boom-pos-cmd type="double">0</boom-pos-cmd>
 	</options>
 </PropertyList>
