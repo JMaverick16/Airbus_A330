@@ -10,7 +10,7 @@ var decStep = -5;
 var incStep = 5;
 
 var fovZoom = func(d) {
-	canChangeZOffset = viewName == "Helicopter View";
+	canChangeZOffset = getprop("/sim/current-view/name") == "Helicopter View";
 	
 	if (getprop("/sim/current-view/z-offset-m") <= -50) {
 		decStep = -10;
