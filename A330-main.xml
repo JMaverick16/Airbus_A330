@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- Copyright (c) 2020 Josh Davidson (Octal450) -->
+<!-- Copyright (c) 2022 Josh Davidson (Octal450) -->
 
 <PropertyList include="Aircraft/Generic/Human/Include/walker-include.xml">
 
@@ -614,6 +614,7 @@
 				<throttle-output type="double">0</throttle-output>
 				<throttle-fdm type="double">0</throttle-fdm>
 			</engine>
+			<throttle-scale type="double">0</throttle-scale>
 		</engines>
 		<fire>
 			<apu-test-btn type="bool">0</apu-test-btn>
