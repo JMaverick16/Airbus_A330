@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PropertyList>
+	<sim>
+		<model>
+			<livery>
+				<name>RSAF Republic of Singapore Air Force (reg: 761)</name>
+				<texture>Liveries/A332KCRR/RSAF761.png</texture>
+			</livery>
+		</model>
+	</sim>
+
+	<options n="1">
+		<hasboom type="bool">1</hasboom>
+		<boom-pos-cmd type="double">1</boom-pos-cmd>
+	</options>
+</PropertyList>
