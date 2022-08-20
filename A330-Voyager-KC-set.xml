@@ -186,6 +186,13 @@
 							</script>
 						</binding>
 					</item>
+					<item n="6">
+						<label>Combat Log</label>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>flightlog</dialog-name>
+						</binding>
+					</item>
 				</menu>
 			</default>
 		</menubar>
@@ -270,6 +277,31 @@
 			<min-lb type="double">0</min-lb>
 			<max-lb type="double">7716</max-lb>
 		</weight>
+		<armament>
+		    <models>Aircraft/Airbus_A330/Models/MParmaments/</models>
+            <enable-craters type="bool">true</enable-craters>
+            <MLW-bearing type="double">0</MLW-bearing>
+            <MLW-count type="int">0</MLW-count>
+            <MLW-launcher type="string"></MLW-launcher>
+            <MAW-bearing type="double">0</MAW-bearing>
+            <MAW-active type="bool">false</MAW-active>
+            <msg type="bool">false</msg>
+            <spike type="bool">false</spike>
+         </armament>
+         <d-config>
+            <full_damage_dist_m type="double">0</full_damage_dist_m>
+            <use_hitpoints_instead_of_failure_modes_bool type="bool">false</use_hitpoints_instead_of_failure_modes_bool>
+            <hp_max type="double">80</hp_max>
+            <hitable_by_air_munitions type="bool">true</hitable_by_air_munitions>
+            <hitable_by_cannon type="bool">true</hitable_by_cannon>
+            <is_fleet type="bool">false</is_fleet>
+            <rwr_to_screen type="bool">true</rwr_to_screen>
+            <rwr_audio_extended type="bool">false</rwr_audio_extended>
+            <tacview_supported type="bool">false</tacview_supported>
+            <m28_auto type="bool">false</m28_auto>
+            <mlw_max type="double">2.25</mlw_max>
+            <auto_flare_caller type="bool">true</auto_flare_caller>
+         </d-config>
 	</payload>
 	
 	<limits>
@@ -316,6 +348,13 @@
 	</rotors>
 	
 	<nasal>
+		<notifications>
+		    <file>Aircraft/Airbus_A330/Nasal/ArmamentNotification.nas</file>
+		    <file>Aircraft/Airbus_A330/Nasal/GeoBridgedTransmitter.nas</file>
+		</notifications>
+        <vector>
+        	<file>Aircraft/Airbus_A330/Nasal/vector.nas</file>
+        </vector>
 		<specific>
 			<file>Aircraft/Airbus_A330/Nasal/a332livery-kcrr.nas</file>
 		</specific>
