@@ -415,18 +415,15 @@
 				<label>Allow MP Damage (MRTT Only)</label>
 				<halign>left</halign>
 				<enable>
-					<and>
-						<property>/systems/acconfig/damage-loaded</property>
-						<equals>
-							<property>/gear/gear[0]/wow</property>
-							<value>1</value>
-						</equals>
-					</and>
+					<equals>
+						<property>/gear/gear[0]/wow</property>
+						<value>1</value>
+					</equals>
 				</enable>
-				<property>/options/system/allow-damage</property>
+				<property>/payload/armament/msg</property>
 				<binding>
 					<command>property-toggle</command>
-					<property>/options/system/allow-damage</property>
+					<property>/payload/armament/msg</property>
 				</binding>
 				<binding>
 					<command>dialog-apply</command>
