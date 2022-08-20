@@ -685,20 +685,24 @@ var ELEC = {
 		
 		if (dc2 < 25) {
 			if (getprop("/it-autoflight/output/ap2") == 1) {
-				libraries.apOff("hard", 2);
+				#libraries.apOff("hard", 2);
+				setprop("it-autoflight/input/ap2", 0);
 			}
 		}
 		
 		if (dc_ess < 25 and dc2 < 25) {
 			if (getprop("/it-autoflight/output/athr") == 1) {
-				libraries.athrOff("hard");
+				#libraries.athrOff("hard");
+				setprop("it-autoflight/input/athr", 0);
 			}
 		}
 		
 		if (dc_ess < 25) {
 			if (getprop("/it-autoflight/output/ap1") == 1) {
-				libraries.apOff("hard", 1);
+				#libraries.apOff("hard", 1);
+				setprop("it-autoflight/input/ap1", 0);
 			}
+			
 			setprop("systems/electrical/on", 0);
 			setprop("/systems/thrust/thr-locked", 0);
 			setprop("/systems/electrical/outputs/adf", 0);
