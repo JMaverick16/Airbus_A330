@@ -377,7 +377,7 @@
 						<binding>
 							<command>nasal</command>
 							<script>
-							if (getprop("/options/system/allow-damage") != 1) {
+							if (getprop("/payload/armament/msg") != 1) {
 								acconfig.fail_dlg.open();
 							}
 							</script>
