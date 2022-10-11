@@ -6,6 +6,13 @@
 	<name>A330-243</name>
 	<path>a330-mrtt-main.ac</path>
 
+	<multiplay>
+		<refuel>
+		 	<type>probe</type>
+		 	<type>boom</type>
+		</refuel>
+	</multiplay>
+
 	<model>
 		<name>Rolls Royce Engines</name>
 		<path>Aircraft/Airbus_A330/Models/trent772c-60.xml</path>
