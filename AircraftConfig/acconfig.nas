@@ -98,6 +98,7 @@ setprop("/systems/acconfig/options/lecam-rate", 1);
 setprop("/systems/acconfig/options/iesi-rate", 1);
 setprop("/systems/acconfig/options/autopush/show-route", 1);
 setprop("/systems/acconfig/options/autopush/show-wingtip", 1);
+setprop("/systems/acconfig/options/fo-view", 0);
 var main_dlg = gui.Dialog.new("sim/gui/dialogs/acconfig/main/dialog", "Aircraft/Airbus_A330/AircraftConfig/main.xml");
 var welcome_dlg = gui.Dialog.new("sim/gui/dialogs/acconfig/welcome/dialog", "Aircraft/Airbus_A330/AircraftConfig/welcome.xml");
 var ps_load_dlg = gui.Dialog.new("sim/gui/dialogs/acconfig/psload/dialog", "Aircraft/Airbus_A330/AircraftConfig/psload.xml");
