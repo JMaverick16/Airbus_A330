@@ -5605,60 +5605,49 @@
 		<object-name>thr_l</object-name>
 		<property>fdm/jsbsim/fcs/throttle-lever[0]</property>
 		<interpolation>
-			<!--
 			<entry><ind>0.00000</ind><dep> 0</dep></entry>
 			<entry><ind>0.00999</ind><dep> 0</dep></entry>
 			<entry><ind>0.01000</ind><dep> 2</dep></entry>
-			<entry><ind>0.59999</ind><dep>24</dep></entry>
-			<entry><ind>0.60000</ind><dep>26</dep></entry>
-			<entry><ind>0.64999</ind><dep>26</dep></entry>
-			<entry><ind>0.65000</ind><dep>28</dep></entry>
-			<entry><ind>0.77999</ind><dep>33</dep></entry>
-			<entry><ind>0.78000</ind><dep>35</dep></entry>
-			<entry><ind>0.82999</ind><dep>35</dep></entry>
-			<entry><ind>0.83000</ind><dep>37</dep></entry>
-			<entry><ind>0.94999</ind><dep>43</dep></entry>
-			<entry><ind>0.95000</ind><dep>45</dep></entry>
-			<entry><ind>1.00000</ind><dep>45</dep></entry>
-			-->
-			<entry><ind>0.00000</ind><dep> 0</dep></entry> <!-- Idle -->
-			<entry><ind>0.62500</ind><dep>35</dep></entry>
-			<entry><ind>0.63000</ind><dep>35</dep></entry> <!-- CL -->
-			<entry><ind>0.63500</ind><dep>35</dep></entry>
-			<entry><ind>0.79500</ind><dep>50</dep></entry> 
-			<entry><ind>0.80000</ind><dep>50</dep></entry> <!-- MCT -->
-			<entry><ind>0.80500</ind><dep>50</dep></entry>
-			<entry><ind>1.00000</ind><dep>65</dep></entry> <!-- TOGA -->
+			<entry><ind>0.59999</ind><dep>33</dep></entry>
+			<entry><ind>0.60000</ind><dep>35</dep></entry>
+			<entry><ind>0.64999</ind><dep>35</dep></entry>
+			<entry><ind>0.65000</ind><dep>37</dep></entry>
+			<entry><ind>0.77999</ind><dep>48</dep></entry>
+			<entry><ind>0.78000</ind><dep>50</dep></entry>
+			<entry><ind>0.82999</ind><dep>50</dep></entry>
+			<entry><ind>0.83000</ind><dep>52</dep></entry>
+			<entry><ind>0.94999</ind><dep>63</dep></entry>
+			<entry><ind>0.95000</ind><dep>65</dep></entry>
+			<entry><ind>1.00000</ind><dep>65</dep></entry>
 		</interpolation>
 		<axis>
 			<object-name>trim.axis</object-name>
 		</axis>
 	</animation>
-	<!-- A330 doesn't need that, right?
 	<animation>
 		<name>Engine 1 throttle lever rev</name>
 		<type>rotate</type>
-		<object-name>thr_l</object-name>
+		<object-name>rev_l</object-name>
 		<property>fdm/jsbsim/fcs/reverse-lever[0]</property>
-		<factor>-3.5</factor>
+		<factor>5</factor>
 		<axis>
-			<object-name>trim.axis</object-name>
+			<object-name>rev_l.axis</object-name>
 		</axis>
 	</animation>
 	<animation>
 		<name>Engine 1 throttle lever rev 2</name>
 		<type>rotate</type>
-		<object-name>thr_l</object-name>
+		<object-name>rev_l</object-name>
 		<property>fdm/jsbsim/fcs/reverse-thr-lever[0]</property>
 		<interpolation>
-			<entry><ind>0.00</ind><dep>  0</dep></entry>
-			<entry><ind>0.50</ind><dep>-20</dep></entry>
-		</interpolation> 
+			<entry><ind>0.0</ind><dep> 0</dep></entry>
+			<entry><ind>0.5</ind><dep>40</dep></entry>
+		</interpolation>
 		<axis>
-			<object-name>trim.axis</object-name>
+			<object-name>rev_l.axis</object-name>
 		</axis>
 	</animation>
-	-->
+	
 	<animation>
 		<name>Engine 2 throttle lever pick</name>
 		<type>pick</type>
@@ -5692,77 +5681,44 @@
 		<object-name>thr_r</object-name>
 		<property>fdm/jsbsim/fcs/throttle-lever[1]</property>
 		<interpolation>
-			<!--
 			<entry><ind>0.00000</ind><dep> 0</dep></entry>
 			<entry><ind>0.00999</ind><dep> 0</dep></entry>
 			<entry><ind>0.01000</ind><dep> 2</dep></entry>
-			<entry><ind>0.59999</ind><dep>24</dep></entry>
-			<entry><ind>0.60000</ind><dep>26</dep></entry>
-			<entry><ind>0.64999</ind><dep>26</dep></entry>
-			<entry><ind>0.65000</ind><dep>28</dep></entry>
-			<entry><ind>0.77999</ind><dep>33</dep></entry>
-			<entry><ind>0.78000</ind><dep>35</dep></entry>
-			<entry><ind>0.82999</ind><dep>35</dep></entry>
-			<entry><ind>0.83000</ind><dep>37</dep></entry>
-			<entry><ind>0.94999</ind><dep>43</dep></entry>
-			<entry><ind>0.95000</ind><dep>45</dep></entry>
-			<entry><ind>1.00000</ind><dep>45</dep></entry>
-			-->
-			<entry><ind>0.00000</ind><dep> 0</dep></entry> <!-- Idle -->
-			<entry><ind>0.62500</ind><dep>35</dep></entry>
-			<entry><ind>0.63000</ind><dep>35</dep></entry> <!-- CL -->
-			<entry><ind>0.63500</ind><dep>35</dep></entry>
-			<entry><ind>0.79500</ind><dep>50</dep></entry> 
-			<entry><ind>0.80000</ind><dep>50</dep></entry> <!-- MCT -->
-			<entry><ind>0.80500</ind><dep>50</dep></entry>
-			<entry><ind>1.00000</ind><dep>65</dep></entry> <!-- TOGA -->
+			<entry><ind>0.59999</ind><dep>33</dep></entry>
+			<entry><ind>0.60000</ind><dep>35</dep></entry>
+			<entry><ind>0.64999</ind><dep>35</dep></entry>
+			<entry><ind>0.65000</ind><dep>37</dep></entry>
+			<entry><ind>0.77999</ind><dep>48</dep></entry>
+			<entry><ind>0.78000</ind><dep>50</dep></entry>
+			<entry><ind>0.82999</ind><dep>50</dep></entry>
+			<entry><ind>0.83000</ind><dep>52</dep></entry>
+			<entry><ind>0.94999</ind><dep>63</dep></entry>
+			<entry><ind>0.95000</ind><dep>65</dep></entry>
+			<entry><ind>1.00000</ind><dep>65</dep></entry>
 		</interpolation>
 		<axis>
 			<object-name>trim.axis</object-name>
 		</axis>
 	</animation>
-	<!-- A330 doesn't need that, right?
 	<animation>
 		<name>Engine 2 throttle lever rev</name>
 		<type>rotate</type>
-		<object-name>thr_r</object-name>
+		<object-name>rev_r</object-name>
 		<property>fdm/jsbsim/fcs/reverse-lever[1]</property>
-		<factor>-3.5</factor>
+		<factor>-5</factor>
 		<axis>
-			<object-name>trim.axis</object-name>
+			<object-name>rev_r.axis</object-name>
 		</axis>
 	</animation>
 	<animation>
 		<name>Engine 2 throttle lever rev 2</name>
 		<type>rotate</type>
-		<object-name>thr_r</object-name>
+		<object-name>rev_r</object-name>
 		<property>fdm/jsbsim/fcs/reverse-thr-lever[1]</property>
 		<interpolation>
-			<entry><ind>0.00</ind><dep> 0</dep></entry>
-			<entry><ind>0.50</ind><dep>-20</dep></entry>
+			<entry><ind>0.0</ind><dep>  0</dep></entry>
+			<entry><ind>0.5</ind><dep>-40</dep></entry>
 		</interpolation>
-		<axis>
-			<object-name>trim.axis</object-name>
-		</axis>
-	</animation>
-	-->
-
-	<animation>
-		<name>Reverse Thrust left lever</name>
-		<type>rotate</type>
-		<object-name>rev_l</object-name>
-		<property>controls/engines/engine[0]/reverser</property>
-		<factor>40</factor>
-		<axis>
-			<object-name>rev_l.axis</object-name>
-		</axis>
-	</animation>
-	<animation>
-		<name>Reverse Thrust right lever</name>
-		<type>rotate</type>
-		<object-name>rev_r</object-name>
-		<property>controls/engines/engine[1]/reverser</property>
-		<factor>-40</factor>
 		<axis>
 			<object-name>rev_r.axis</object-name>
 		</axis>
