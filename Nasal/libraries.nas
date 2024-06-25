@@ -4,8 +4,7 @@
 # Copyright (c) 2020 Josh Davidson (Octal450)
 
 print("------------------------------------------------------------------------");
-print("Copyright (c) 2017-2020 Josh Davidson (Octal450)");
-print("Copyright (c) 2017-2020 J Maverick 16");
+print("Copyright (c) 2017-2022 Josh Davidson (Octal450)");
 print("------------------------------------------------------------------------");
 
 setprop("/sim/replay/was-active", 0);
@@ -17,7 +16,7 @@ setprop("/sim/menubar/default/menu[3]/enabled", 0);
 setprop("/sim/menubar/default/menu[5]/item[9]/enabled", 0);
 setprop("/sim/menubar/default/menu[5]/item[10]/enabled", 0);
 setprop("/sim/menubar/default/menu[5]/item[11]/enabled", 0);
-setprop("/sim/multiplay/visibility-range-nm", 125);
+setprop("/sim/multiplay/visibility-range-nm", 200);
 
 # Dimmers
 setprop("/controls/lighting/ndl-norm", 1);

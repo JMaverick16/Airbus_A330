@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Copyright (c) 2020 Josh Davidson (Octal450) -->
+<!-- Copyright (c) 2022 Josh Davidson (Octal450) -->
 
 <!-- IT-AUTOFLIGHT -->
 
@@ -16,8 +16,8 @@
 			<expression>
 				<table>
 					<property>/fdm/jsbsim/velocities/vc-kts</property>
-					<entry><ind>140</ind><dep>1.8</dep></entry>
-					<entry><ind>360</ind><dep>2.8</dep></entry>
+					<entry><ind>140</ind><dep>1.6</dep></entry>
+					<entry><ind>360</ind><dep>2.6</dep></entry>
 				</table>
 			</expression>
 		</gain>
@@ -73,8 +73,8 @@
 			<expression>
 				<table>
 					<property>/fdm/jsbsim/velocities/vc-kts</property>
-					<entry><ind>140</ind><dep>1.8</dep></entry>
-					<entry><ind>360</ind><dep>2.8</dep></entry>
+					<entry><ind>140</ind><dep>1.6</dep></entry>
+					<entry><ind>360</ind><dep>2.6</dep></entry>
 				</table>
 			</expression>
 		</gain>

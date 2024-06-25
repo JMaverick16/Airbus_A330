@@ -1,6 +1,6 @@
 <!-- Airbus A330-200 FCS/FBW -->
 
-<!-- Copyright (c) 2020 Josh Davidson (Octal450) -->
+<!-- Copyright (c) 2022 Josh Davidson (Octal450) -->
 
 <system name="A332: FCS">
 	
@@ -1965,6 +1965,29 @@
 			<input>/controls/engines/engine[1]/cutoff-switch</input>
 			<c1>20</c1>
 		</lag_filter>
+		
+		<fcs_function name="fadec/limit/rated-thrust-factor">
+			<function>
+				<ifthen>
+					<eq>
+						<property>/systems/acconfig/autoconfig-running</property>
+						<value>1</value>
+					</eq>
+					<value>0</value>
+					<ifthen>
+						<nq> <!-- Prevent divide by 0 -->
+							<property>/controls/engines/throttle-scale</property>
+							<value>0</value>
+						</nq>
+						<quotient>
+							<value>1</value>
+							<property>/controls/engines/throttle-scale</property>
+						</quotient>
+						<value>1</value>
+					</ifthen>
+				</ifthen>
+			</function>
+		</fcs_function>
 	
 	</channel>
 	

@@ -1,10 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- Copyright (c) 2020 Josh Davidson (Octal450) -->
+<!-- Copyright (c) 2022 Josh Davidson (Octal450) -->
 
 <PropertyList include="a332-animations-kc.xml">
 	<name>A330-243</name>
 	<path>a330-mrtt-main.ac</path>
+
+	<multiplay>
+		<refuel>
+		 	<type>probe</type>
+		 	<type>boom</type>
+		</refuel>
+	</multiplay>
 
 	<model>
 		<name>Rolls Royce Engines</name>
