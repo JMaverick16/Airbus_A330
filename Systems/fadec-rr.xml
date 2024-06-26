@@ -226,7 +226,6 @@
 						<entry><ind>0.09</ind><dep>0.000</dep></entry>
 						<entry><ind>0.15</ind><dep>0.017</dep></entry>
 						<entry><ind>0.22</ind><dep>0.023</dep></entry>
-						<entry><ind>1.00</ind><dep>0.011</dep></entry>
 					</table>
 				</difference>
 			</expression>
@@ -256,7 +255,7 @@
 						<property>/engines/engine[0]/n1-actual</property> 
 						<value>3.5</value>
 					</pow>
-					<entry><ind>   24743.1</ind><dep>0.00</dep></entry>
+					<entry><ind>    3162.2</ind><dep>0.00</dep></entry>
 					<entry><ind>   55730.2</ind><dep>0.03</dep></entry>
 					<entry><ind>12101068.4</ind><dep>1.00</dep></entry>
 				</table>
@@ -363,7 +362,7 @@
 						<property>/engines/engine[1]/n1-actual</property> 
 						<value>3.5</value>
 					</pow>
-					<entry><ind>   24743.1</ind><dep>0.00</dep></entry>
+					<entry><ind>    3162.2</ind><dep>0.00</dep></entry>
 					<entry><ind>   55730.2</ind><dep>0.03</dep></entry>
 					<entry><ind>12101068.4</ind><dep>1.00</dep></entry>
 				</table>
