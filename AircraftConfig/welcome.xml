@@ -53,7 +53,7 @@
 		</text>
 		<text>
 			<halign>center</halign>
-			<label>This is a complex and advanced simulation of these amazing Airbus aircraft.</label>
+			<label>Airbus aircraft come with incredible nuances and complexity, which is what we have tried to achieve through our simulation here.</label>
 		</text>
 		<text>
 			<halign>center</halign>
@@ -61,7 +61,7 @@
 		</text>
 		<text>
 			<halign>center</halign>
-			<label>Development is carried out by Josh Davidson, J Maverick 16 and Jonathan Redpath.</label>
+			<label>=Josh Davidson, J Maverick 16 and Jonathan Redpath are our commanders for this project, the driving force!</label>
 		</text>
 		
 	</group>
