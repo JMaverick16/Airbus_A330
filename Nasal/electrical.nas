@@ -209,6 +209,7 @@ var ELEC = {
 		setprop("/systems/electrical/dc2-available", 0);
 		# Below are standard FG Electrical stuff to keep things working when the plane is powered
 		setprop("/systems/electrical/outputs/adf", 0);
+		setprop("/systems/electrical/outputs/adf[1]", 0);
 		setprop("/systems/electrical/outputs/audio-panel", 0);
 		setprop("/systems/electrical/outputs/audio-panel[1]", 0);
 		setprop("/systems/electrical/outputs/autopilot", 0);
@@ -217,6 +218,9 @@ var ELEC = {
 		setprop("/systems/electrical/outputs/bus", 0);
 		setprop("/systems/electrical/outputs/cabin-lights", 0);
 		setprop("/systems/electrical/outputs/dme", 0);
+		setprop("/systems/electrical/outputs/dme[1]", 0);
+		setprop("/systems/electrical/outputs/dme[2]", 0);
+		setprop("/systems/electrical/outputs/dme[3]", 0);
 		setprop("/systems/electrical/outputs/efis", 0);
 		setprop("/systems/electrical/outputs/flaps", 0);
 		setprop("/systems/electrical/outputs/fuel-pump", 0);
@@ -706,6 +710,7 @@ var ELEC = {
 			setprop("systems/electrical/on", 0);
 			setprop("/systems/thrust/thr-locked", 0);
 			setprop("/systems/electrical/outputs/adf", 0);
+			setprop("/systems/electrical/outputs/adf[1]", 0);
 			setprop("/systems/electrical/outputs/audio-panel", 0);
 			setprop("/systems/electrical/outputs/audio-panel[1]", 0);
 			setprop("/systems/electrical/outputs/autopilot", 0);
@@ -714,6 +719,9 @@ var ELEC = {
 			setprop("/systems/electrical/outputs/bus", 0);
 			setprop("/systems/electrical/outputs/cabin-lights", 0);
 			setprop("/systems/electrical/outputs/dme", 0);
+			setprop("/systems/electrical/outputs/dme[1]", 0);
+			setprop("/systems/electrical/outputs/dme[2]", 0);
+			setprop("/systems/electrical/outputs/dme[3]", 0);
 			setprop("/systems/electrical/outputs/efis", 0);
 			setprop("/systems/electrical/outputs/flaps", 0);
 			setprop("/systems/electrical/outputs/fuel-pump", 0);
@@ -741,6 +749,7 @@ var ELEC = {
 		} else {
 			setprop("/systems/electrical/on", 1);
 			setprop("/systems/electrical/outputs/adf", dc_volt_std);
+			setprop("/systems/electrical/outputs/adf[1]", dc_volt_std);
 			setprop("/systems/electrical/outputs/audio-panel", dc_volt_std);
 			setprop("/systems/electrical/outputs/audio-panel[1]", dc_volt_std);
 			setprop("/systems/electrical/outputs/autopilot", dc_volt_std);
@@ -749,6 +758,9 @@ var ELEC = {
 			setprop("/systems/electrical/outputs/bus", dc_volt_std);
 			setprop("/systems/electrical/outputs/cabin-lights", dc_volt_std);
 			setprop("/systems/electrical/outputs/dme", dc_volt_std);
+			setprop("/systems/electrical/outputs/dme[1]", dc_volt_std);
+			setprop("/systems/electrical/outputs/dme[2]", dc_volt_std);
+			setprop("/systems/electrical/outputs/dme[3]", dc_volt_std);
 			setprop("/systems/electrical/outputs/efis", dc_volt_std);
 			setprop("/systems/electrical/outputs/flaps", dc_volt_std);
 			setprop("/systems/electrical/outputs/fuel-pump", dc_volt_std);

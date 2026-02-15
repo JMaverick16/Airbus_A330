@@ -189,13 +189,13 @@ setlistener("/sim/signals/fdm-initialized", func {
 	readSettings();
 	if (getprop("/systems/acconfig/out-of-date") != 1 and getprop("/systems/acconfig/options/revision") < current_revision and getprop("/systems/acconfig/mismatch-code") == "0x000") {
 		updated_dlg.open();
-		if (getprop("/systems/acconfig/options/no-rendering-warn") != 1) {
-			renderingSettings.check();
+		if (getprop("/systems/acconfig/options/no-rendering-warn") != 1) { # NEEDS FIXING
+			#renderingSettings.check();
 		}
 	} else if (getprop("/systems/acconfig/out-of-date") != 1 and getprop("/systems/acconfig/mismatch-code") == "0x000" and getprop("/systems/acconfig/options/welcome-skip") != 1) {
 		welcome_dlg.open();
-		if (getprop("/systems/acconfig/options/no-rendering-warn") != 1) {
-			renderingSettings.check();
+		if (getprop("/systems/acconfig/options/no-rendering-warn") != 1) { # NEEDS FIXING
+			#renderingSettings.check();
 		}
 	}
 	setprop("/systems/acconfig/options/revision", current_revision);
@@ -208,7 +208,7 @@ setlistener("/sim/signals/fdm-initialized", func {
 	spinning.stop();
 });
 
-var renderingSettings = {
+var renderingSettings = { # NEEDS FIX FOR 2024.1+
 	check: func() {
 		var rembrandt = getprop("/sim/rendering/rembrandt/enabled");
 		var ALS = getprop("/sim/rendering/shaders/skydome");
