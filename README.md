@@ -1,7 +1,7 @@
 # Airbus_A330
-A very advanced simulation of the Airbus A330 Series for FlightGear originally developed by former Immersive Design Group (IDG) under the name of IDG-A33X and now rebranded and continued by Josh Davidson, J Maverick 16 and Jonathan Redpath.
+AIRCRAFT DEVELOPMENT HAS HALTED AWAITING RESTRUCTURING WITH INTEGRATEDSYSTEMS.
 
-Suitable for: 2020.1.1+
+Suitable for: 2024.1.1+
 
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Logo_Airbus_A330.svg/640px-Logo_Airbus_A330.svg.png)
 
