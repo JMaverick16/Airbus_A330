@@ -281,6 +281,7 @@ var colddark = func {
 		setprop("/controls/flight/speedbrake-arm", 0);
 		setprop("/controls/flight/speedbrake", 0);
 		setprop("/controls/gear/gear-down", 1);
+		setprop("/controls/gear/brake-parking", 1);
 		setprop("/controls/flight/elevator-trim", 0);
 		setprop("/controls/switches/beacon", 0);
 		setprop("/controls/switches/strobe", 0.0);
@@ -341,6 +342,7 @@ var beforestart = func {
 		setprop("/controls/flight/speedbrake-arm", 0);
 		setprop("/controls/flight/speedbrake", 0);
 		setprop("/controls/gear/gear-down", 1);
+		setprop("/controls/gear/brake-parking", 1);
 		setprop("/controls/flight/elevator-trim", 0);
 		libraries.systemsInit();
 		failReset();
@@ -427,6 +429,7 @@ var taxi = func {
 		setprop("/controls/flight/speedbrake-arm", 0);
 		setprop("/controls/flight/speedbrake", 0);
 		setprop("/controls/gear/gear-down", 1);
+		setprop("/controls/gear/brake-parking", 0);
 		setprop("/controls/flight/elevator-trim", 0);
 		libraries.systemsInit();
 		failReset();
