@@ -356,16 +356,6 @@
 						</binding>
 					</item>
 					<item>
-						<label>Announcements</label>
-						<binding>
-							<command>nasal</command>
-							<script>
-							var announce_dlg = gui.Dialog.new("sim/gui/dialogs/announce/dialog", "Aircraft/Airbus_A330/AircraftConfig/announce.xml");
-							announce_dlg.open();
-							</script>
-						</binding>
-					</item>
-					<item>
 						<label>Pushback</label>
 						<binding>
 							<command>dialog-show</command>
