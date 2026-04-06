@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- Copyright (c) 2022 Josh Davidson (Octal450) -->
+<!-- Copyright (c) 2026 Josh Davidson (Octal450) -->
 
 <!-- A3XX Aircraft Config Dialog -->
 
@@ -49,19 +49,15 @@
 		
 		<text>
 			<halign>center</halign>
-			<label>Welcome to the Airbus A330 Series!</label>
+			<label>Welcome to the A330!</label>
 		</text>
 		<text>
 			<halign>center</halign>
-			<label>This is a complex and advanced simulation of these amazing Airbus aircraft.</label>
+			<label>This is a complex simulation of these amazing Airbus aircraft.</label>
 		</text>
 		<text>
 			<halign>center</halign>
-			<label>Use the Aircraft Config to select livery, manage panel states, and more!</label>
-		</text>
-		<text>
-			<halign>center</halign>
-			<label>Development is carried out by Josh Davidson, J Maverick 16 and Jonathan Redpath.</label>
+			<label>Use Aircraft Config to select livery, manage panel states, and more!</label>
 		</text>
 		
 	</group>
@@ -72,7 +68,7 @@
 		<layout>hbox</layout>
 	
 		<checkbox>
-			<label>Do not show this dialog at FlightGear startup</label>
+			<label>Do not show this screen at FlightGear startup</label>
 			<halign>center</halign>
 			<property>/systems/acconfig/options/welcome-skip</property>
 			<binding>
@@ -100,7 +96,7 @@
 		
 		<button>
 			<halign>center</halign>
-			<legend>Open A/C Config</legend>
+			<legend>Aircraft Config</legend>
 			<pref-width>210</pref-width>
 			<binding>
 				<command>nasal</command>
@@ -114,7 +110,7 @@
 		</button>
 		<button>
 			<halign>center</halign>
-			<legend>Close This</legend>
+			<legend>Go Away</legend>
 			<pref-width>210</pref-width>
 			<binding>
 				<command>dialog-close</command>
